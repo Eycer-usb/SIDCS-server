@@ -1,5 +1,6 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { Users } from './users.interface';
+import { HttpException, HttpStatus } from '@nestjs/common';
 
 @Injectable()
 export class UsersService {
@@ -32,5 +33,13 @@ export class UsersService {
 
     async findOne(email: string): Promise<Users | undefined> {
         return this.users.find(user => user.email === email);
+    }
+
+    async create(user: Users) {
+        if(await this.findOne(user.email) !== undefined) {
+            throw new HttpException('User already exists', HttpStatus.BAD_REQUEST);
+        }
+        this.users.push(user);
+        return user;
     }
 }

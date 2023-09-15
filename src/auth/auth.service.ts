@@ -14,6 +14,11 @@ export class AuthService {
     if (!user) {
         throw new UnauthorizedException();
     }
+
+    if (user.password !== password) {
+        throw new UnauthorizedException( 'Wrong password' );
+    }
+
     const payload = {
         sub: user.id,
         email: user.email,
@@ -25,4 +30,8 @@ export class AuthService {
       access_token: await this.jwtService.signAsync(payload),
     };
   }
+
+    async register(user: any) {
+        return await this.usersService.create(user);
+    }
 }

@@ -9,4 +9,5 @@ export default (): TypeOrmModuleOptions => ({
     database: process.env.DATABASE_NAME,
     autoLoadEntities: true,
     synchronize: true,
+    entities: [__dirname + '/../src/**/*.entity.{js,ts}'],
     });

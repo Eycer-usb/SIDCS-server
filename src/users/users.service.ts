@@ -1,6 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Users } from './users.interface';
 import { HttpException, HttpStatus } from '@nestjs/common';
+import * as bcrypt from 'bcrypt';
+
 
 @Injectable()
 export class UsersService {
@@ -39,6 +41,7 @@ export class UsersService {
         if(await this.findOne(user.email) !== undefined) {
             throw new HttpException('User already exists', HttpStatus.BAD_REQUEST);
         }
+        user.password = await bcrypt.hash(user.password, 10);
         this.users.push(user);
         return user;
     }

@@ -46,6 +46,12 @@ export class AuthService {
   }
 
     async register(createUserDto: CreateUserDto) {
-        return await this.usersService.create(createUserDto);
+        if (await this.usersService.create(createUserDto)) {
+          return {
+            statusCode: 201,
+            status: "success",
+            message: 'User created successfully'
+          }
+        };
     }
 }

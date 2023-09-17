@@ -24,6 +24,7 @@ export class AuthController {
         return req.user;
     }
 
+    @HttpCode(HttpStatus.CREATED)
     @Post('register')
     register(@Body() body: CreateUserDto) {
         return this.authService.register(body);

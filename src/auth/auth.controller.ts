@@ -1,9 +1,10 @@
-import { Body, Controller, HttpCode, Post, Get, HttpStatus, Request, UseGuards } from '@nestjs/common';
+import { Body, Controller, HttpCode, Post, Get, HttpStatus, Request, UseGuards, Logger } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { dtoLogin } from './dto/login.dto';
+import { LoginDto } from './dto/login.dto';
 import { dtoRegister } from './dto/register.dto';
 import { JwtAuthGuard } from './jwt-auth.guard';
 import { LocalAuthGuard } from './local-auth.guard';
+import { CreateUserDto } from 'src/users/dto/create-user.dto';
 
 
 @Controller('auth')
@@ -24,7 +25,7 @@ export class AuthController {
     }
 
     @Post('register')
-    register(@Body() body: dtoRegister) {
+    register(@Body() body: CreateUserDto) {
         return this.authService.register(body);
     }
 }

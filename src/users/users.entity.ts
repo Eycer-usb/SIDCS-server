@@ -10,14 +10,14 @@ export class User {
     @Column({ type: 'varchar' ,length: 500 })
     name: string;
 
-    @Column({ type: 'varchar', length: 500 })
-    lastname: string;
+    @Column({ type: 'varchar', length: 500, nullable: true })
+    lastname?: string;
 
     @Column({ type: 'varchar', length: 500 })
     email: string;
 
     @Column({ type: 'varchar', length: 500 })
-    password: string;
+    password?: string;
 
     @Column({ type: 'varchar', length: 500 })
     role: string;

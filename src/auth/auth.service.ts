@@ -1,8 +1,9 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
-import { Users } from 'src/users/users.interface';
 import * as bcrypt from 'bcrypt';
+import { CreateUserDto } from 'src/users/dto/create-user.dto';
+import { User } from 'src/users/users.entity';
 
 
 @Injectable()
@@ -13,24 +14,24 @@ export class AuthService {
   ) {}
 
 
-  async validateUser(email: string, pass: string): Promise<any> {
-    const user = await this.usersService.findOne(email);
+  async validateUser(email: string, pass: string): Promise<Partial<User> | undefined> {
+    const user = await this.usersService.findByEmail(email);
 
     if (!user) {
-      throw new UnauthorizedException();
+      throw new NotFoundException("User not found");
     }
 
-    const isMatch = await bcrypt.compare(pass, user.password);
+    const isMatch = await bcrypt.compare(pass, user.password!);
     if (!isMatch) {
         throw new UnauthorizedException( 'Wrong password' );
     }
     if (user && isMatch) {
-        const { password, ...result } = user;
-        return result;
+        delete user['password'];
+        return user;
     }
   }
 
-  async signIn(user :  Users) {
+  async signIn(user: Partial<User>) {
 
     const payload = {
         sub: user.id,
@@ -44,7 +45,7 @@ export class AuthService {
     };
   }
 
-    async register(user: any) {
-        return await this.usersService.create(user);
+    async register(createUserDto: CreateUserDto) {
+        return await this.usersService.create(createUserDto);
     }
 }

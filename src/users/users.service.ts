@@ -63,6 +63,11 @@ export class UsersService {
     async findById(id: number): Promise<User | null> {
         return this.userRepository.findOneBy({id});
     }
-    
 
+    async generateVerificationCode(user: User): Promise<number> {
+        const code = Math.floor(Math.random() * (999999 - 100000)) + 100000;
+        user.verification_code = code;
+        await this.userRepository.save(user);
+        return code;
+    }
 }

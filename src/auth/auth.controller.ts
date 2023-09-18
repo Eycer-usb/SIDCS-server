@@ -16,10 +16,11 @@ export class AuthController {
         return this.authService.signIn(req.user);
     }
 
-    @UseGuards(JwtAuthGuard)
-    @Get('profile')
-    getProfile(@Request() req : any) {
-        return req.user;
+    @UseGuards(LocalAuthGuard)
+    @HttpCode(HttpStatus.OK)
+    @Post('verification-code')
+    getProfile(@Body () body: any) {
+        return this.authService.generateVerificationCode(body.email);
     }
 
     @HttpCode(HttpStatus.CREATED)

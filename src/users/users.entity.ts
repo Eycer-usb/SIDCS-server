@@ -13,7 +13,7 @@ export class User {
     @Column({ type: 'varchar', length: 500, nullable: true })
     lastname?: string;
 
-    @Column({ type: 'varchar', length: 500 })
+    @Column({ type: 'varchar', length: 500, unique: true })
     email: string;
 
     @Column({ type: 'varchar', length: 500 })
@@ -21,6 +21,9 @@ export class User {
 
     @Column({ type: 'varchar', length: 500, default: 'user' })
     role: string;
+
+    @Column({ type: 'integer', nullable: true })
+    verification_code?: number;
 
     @CreateDateColumn()
     created_at?: Date;

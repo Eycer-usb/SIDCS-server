@@ -19,7 +19,7 @@ export class User {
     @Column({ type: 'varchar', length: 500 })
     password?: string;
 
-    @Column({ type: 'varchar', length: 500 })
+    @Column({ type: 'varchar', length: 500, default: 'user' })
     role: string;
 
     @CreateDateColumn()

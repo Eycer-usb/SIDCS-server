@@ -1,4 +1,4 @@
-import { Body, Controller, HttpCode, Post, Get, HttpStatus, Request, UseGuards, Logger } from '@nestjs/common';
+import { Body, Controller, HttpCode, Post, Get, HttpStatus, Request, UseGuards, Logger, Param } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.guard';
 import { LocalAuthGuard } from './local-auth.guard';
@@ -16,16 +16,23 @@ export class AuthController {
         return this.authService.signIn(req.user);
     }
 
-    @UseGuards(LocalAuthGuard)
     @HttpCode(HttpStatus.OK)
-    @Post('verification-code')
-    getProfile(@Body () body: any) {
-        return this.authService.generateVerificationCode(body.email);
+    @Get('verify-email/:jwt')
+    verifyEmail(@Param('jwt') jwt: string) {
+        return this.authService.verifyEmail(jwt);
     }
+
 
     @HttpCode(HttpStatus.CREATED)
     @Post('register')
     register(@Body() body: CreateUserDto) {
         return this.authService.register(body);
     }
+
+    @HttpCode(HttpStatus.OK)
+    @Post('recover-password-code')
+    recoverPassword(@Body() body: any) {
+        return this.authService.recoverPasswordCode(body.email);
+    }
+
 }

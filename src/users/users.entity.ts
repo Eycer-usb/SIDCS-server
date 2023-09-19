@@ -22,6 +22,9 @@ export class User {
     @Column({ type: 'varchar', length: 500, default: 'user' })
     role: string;
 
+    @Column({ type: 'boolean', default: false })
+    verified: boolean;
+
     @Column({ type: 'integer', nullable: true })
     verification_code?: number;
 

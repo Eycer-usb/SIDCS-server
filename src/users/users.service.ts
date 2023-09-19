@@ -70,4 +70,18 @@ export class UsersService {
         await this.userRepository.save(user);
         return code;
     }
+
+    async verifyEmail(email: string){
+        const user = await this.findByEmail(email);
+        if (!user) {
+            throw new NotFoundException("User not found");
+        }
+        user.verified = true;
+        await this.userRepository.save(user);
+        return {
+            statusCode: 200,
+            status: "success",
+            message: 'User verified successfully'
+        }
+    }
 }

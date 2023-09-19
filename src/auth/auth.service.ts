@@ -44,60 +44,85 @@ export class AuthService {
       throw new NotFoundException("User not found");
     }
 
-    if (storagedUser.verification_code === null ||
-      storagedUser.verification_code !== user.verification_code) {
-      throw new ConflictException("Wrong verification code");
-    }
-    
-
     const payload = {
         sub: user.id,
         email: user.email,
         name: user.name,
         lastname: user.lastname,
-        role: user.role
+        role: user.role,
+        verified: user.verified,
     }
+
+    if (!payload.verified) {
+      
+      this.generateVerificationEmail(payload.email);
+      throw new UnauthorizedException( {
+        statusCode: 401,
+        status: "error",
+        message: 'User not verified. Email sent to verify account'
+      } );
+    }
+
     return {
       access_token: await this.jwtService.signAsync(payload),
     };
   }
 
-    async register(createUserDto: CreateUserDto) {
-        if (await this.usersService.create(createUserDto)) {
-          return {
-            statusCode: 201,
-            status: "success",
-            message: 'User created successfully'
-          }
-        };
-    }
-
-    async generateVerificationCode(email: string) {
-      const user = await this.usersService.findByEmail(email);
-      if (!user) {
-        throw new NotFoundException("User not found");
-      }
-      try {
-        this.usersService.generateVerificationCode(user);
-      }
-      catch (error) {
-        throw new InternalServerErrorException( 'Error on verification code generation' );
-      }
-
-      try {
-
-        // TODO: Send email with verification code
-        await this.emailService.sendUser2Fa(user, user.verification_code!.toString());
-
+  async register(createUserDto: CreateUserDto) {
+      if (await this.usersService.create(createUserDto)) {
         return {
-          statusCode: 200,
+          statusCode: 201,
           status: "success",
-          message: 'Verification code sent successfully'
-        }        
-      }
-      catch (error) {
-        Logger.log(error);
-        throw new InternalServerErrorException( 'Error sending verification code' );
-      }
+          message: 'User created successfully'
+        }
+      };
+  }
+
+  async generateVerificationEmail(email: string) {
+    const user = await this.usersService.findByEmail(email);
+    if (!user) {
+      throw new NotFoundException("User not found");
     }
+
+    try {
+
+      const payload = { email };
+      const jwt = await this.jwtService.signAsync(payload);
+      // TODO: Send email with verification code
+      await this.emailService.validateEmail(user, jwt);
+
+      return {
+        statusCode: 200,
+        status: "success",
+        message: 'Verification email sent successfully'
+      }        
+    }
+    catch (error) {
+      Logger.log(error);
+      throw new InternalServerErrorException( 'Error sending verification email' );
+    }
+  }
+
+  async verifyEmail(jwt: string) {
+    const payload = await this.jwtService.verifyAsync(jwt);
+    try{
+      return await this.usersService.verifyEmail(payload.email);
+    } catch (error) {
+      throw new InternalServerErrorException( 'Error on verification' );
+    }
+  }
+
+  async recoverPasswordCode(email: string) {
+    const user = await this.usersService.findByEmail(email);
+    if (!user) {
+      throw new NotFoundException("User not found");
+    }
+    try {
+      this.usersService.generateVerificationCode(user);
+      this.emailService.sendUserPasswordRecovery(user, user.verification_code!.toString());
+    }
+    catch (error) {
+      throw new InternalServerErrorException( 'Error on verification code generation' );
+    }
+  }
 }

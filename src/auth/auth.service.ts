@@ -4,13 +4,15 @@ import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
 import { User } from 'src/users/users.entity';
+import { EmailService } from 'src/email/email.service';
 
 
 @Injectable()
 export class AuthService {
   constructor(
     private usersService: UsersService,
-    private jwtService: JwtService
+    private jwtService: JwtService,
+    private emailService: EmailService
   ) {}
 
 
@@ -85,6 +87,7 @@ export class AuthService {
       try {
 
         // TODO: Send email with verification code
+        await this.emailService.sendUser2Fa(user, user.verification_code!.toString());
 
         return {
           statusCode: 200,
@@ -93,6 +96,7 @@ export class AuthService {
         }        
       }
       catch (error) {
+        Logger.log(error);
         throw new InternalServerErrorException( 'Error sending verification code' );
       }
     }

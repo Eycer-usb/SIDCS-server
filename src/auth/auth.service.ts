@@ -138,9 +138,12 @@ export class AuthService {
     if (!user) {
       throw new NotFoundException("User not found");
     }
-    if (user.verification_code !== request.verification_code) {
-      throw new UnauthorizedException( 'Wrong verification code' );
+
+    const isValidCode = await this.usersService.verifyCode(user, request.verification_code);
+    if (isValidCode instanceof InternalServerErrorException) {
+      throw isValidCode;
     }
+    
     try {
       await this.usersService.recoverPassword(user, request.password);
       return {

@@ -28,6 +28,9 @@ export class User {
     @Column({ type: 'integer', nullable: true })
     verification_code?: number;
 
+    @Column({ type: 'timestamp', nullable: true })
+    verification_code_expires_at?: Date;
+
     @CreateDateColumn()
     created_at?: Date;
 

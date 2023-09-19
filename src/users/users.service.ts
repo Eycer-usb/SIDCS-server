@@ -6,6 +6,7 @@ import { InternalServerErrorException } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import * as bcrypt from 'bcrypt';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class UsersService {
@@ -13,6 +14,7 @@ export class UsersService {
     constructor(
         @InjectRepository(User)
         private userRepository: Repository<User>,
+        private config: ConfigService
     ) {}
 
     async findByEmail(email: string): Promise<User | null> {
@@ -68,9 +70,30 @@ export class UsersService {
     async generateVerificationCode(user: User): Promise<number> {
         const code = Math.floor(Math.random() * (999999 - 100000)) + 100000;
         user.verification_code = code;
+        user.verification_code_expires_at  = new Date(Date.now() + this.config.get("code_duration_mill"));
         await this.userRepository.save(user);
         return code;
     }
+
+    async verifyCode(user: User, code: number){
+        const isValid = user.verification_code !== undefined &&
+                        user.verification_code_expires_at !== undefined && 
+                        user.verification_code_expires_at < new Date( Date.now() );
+
+        if (user.verification_code !== code) {
+            return new InternalServerErrorException("Code does not match");
+        }
+        else if (isValid) {
+            return new InternalServerErrorException("Code expired");
+        }
+
+        return {
+            statusCode: 200,
+            status: "success",
+            message: 'Code verified successfully'
+        };
+    }
+
 
     async verifyEmail(email: string){
         const user = await this.findByEmail(email);

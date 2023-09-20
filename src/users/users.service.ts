@@ -45,6 +45,9 @@ export class UsersService {
         }
     }
 
+    /**
+     * Update a user in the database
+     */
     async update( userDto: UpdateUserDto ): Promise<User | undefined> {
         const user = await this.userRepository.findOneBy({id: userDto.id});
         if (!user) {

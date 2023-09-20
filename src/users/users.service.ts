@@ -17,11 +17,17 @@ export class UsersService {
         private config: ConfigService
     ) {}
 
+    /**
+     * Find a user by email address
+     */
     async findByEmail(email: string): Promise<User | null> {
         if(!email) return null;
         return await this.userRepository.findOneBy({ email });
     }
 
+    /**
+     * Create a new user in the database 
+     */
     async create( userDto: CreateUserDto ): Promise<User | undefined> {
         const emailExists = await this.findByEmail(userDto.email);
         if (emailExists) {
@@ -51,6 +57,9 @@ export class UsersService {
         }
     }
 
+    /**
+     * Delete a user from the database
+     */
     async delete( id: number ): Promise<User | undefined> {
         try {
             return await this.delete(id);
@@ -59,14 +68,25 @@ export class UsersService {
         }
     }
 
+    /**
+     * Find all users in the database
+     */
     async findAll(): Promise<User[]> {
         return await this.userRepository.find();
     }
 
+
+    /**
+     * Find a user by id
+     */
     async findById(id: number): Promise<User | null> {
         return this.userRepository.findOneBy({id});
     }
 
+    /**
+     * Generate a verification code for a user and save it in the database
+     * with an expiration date stored in the config file 
+     */
     async generateVerificationCode(user: User): Promise<number> {
         const code = Math.floor(Math.random() * (999999 - 100000)) + 100000;
         user.verification_code = code;
@@ -75,6 +95,10 @@ export class UsersService {
         return code;
     }
 
+    /**
+     * Verify the code sent by email to a user to verify the email address
+     * and return a message if the code is valid or a exception if it is not
+     */
     async verifyCode(user: User, code: number){
         const isValid = user.verification_code !== undefined &&
                         user.verification_code_expires_at !== undefined && 
@@ -95,6 +119,9 @@ export class UsersService {
     }
 
 
+    /**
+     * Verify the email address of a user
+     */
     async verifyEmail(email: string){
         const user = await this.findByEmail(email);
         if (!user) {
@@ -109,6 +136,9 @@ export class UsersService {
         }
     }
 
+    /**
+     * Change the password of a user and save it in the database
+     */
     async recoverPassword(user: User, password: string){
         user.password = await bcrypt.hash(password, 10);
         await this.userRepository.save(user);

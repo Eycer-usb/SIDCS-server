@@ -11,6 +11,10 @@ import { RecoveryCodeDto } from './RecoveryCodeDto';
 export class AuthController {
     constructor(private authService : AuthService) {}
 
+    /**
+     * Endpoint to login a user and return a JWT token to be used in the header 
+     * of the requests to the API that require authentication 
+     */
     @UseGuards(LocalAuthGuard)
     @HttpCode(HttpStatus.OK)
     @Post('login')
@@ -18,28 +22,39 @@ export class AuthController {
         return this.authService.signIn(req.user);
     }
 
+    /**
+     * Endpoint to verify the email of a user after registration
+     */
     @HttpCode(HttpStatus.OK)
     @Get('verify-email/:jwt')
     verifyEmail(@Param('jwt') jwt: string) {
         return this.authService.verifyEmail(jwt);
     }
 
-
+    /**
+     * Endpoint to register a new user in the database and send an email
+     * to verify the email address
+     */
     @HttpCode(HttpStatus.CREATED)
     @Post('register')
     register(@Body() body: CreateUserDto) {
         return this.authService.register(body);
     }
 
+    /**
+     * Endpoint to send an email with a code to recover the password
+     * of a user that has forgotten it 
+     */
     @HttpCode(HttpStatus.OK)
     @Post('recover-password-code')
     recoverPassword(@Body() body: RecoveryCodeDto) {
-        if (!body.email) {
-            throw new BadRequestException("Email is required");
-        }
         return this.authService.recoverPasswordCode(body.email);
     }
 
+    /**
+     * Endpoint to change the password of a user that has forgotten it
+     * and has received a code to change it 
+     */
     @HttpCode(HttpStatus.OK)
     @Post('recover-password')
     recoverPasswordCode(@Body() body: RecoveryDto) {

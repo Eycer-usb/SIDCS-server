@@ -8,6 +8,9 @@ export class EmailService {
   constructor(private mailerService: MailerService,
               private config: ConfigService ) {}
 
+  /**
+   * Send an email to verify the email address of a user
+   */
   async validateEmail(user: User, jwt: string) {
     await this.mailerService.sendMail({
       to: user.email,
@@ -20,6 +23,9 @@ export class EmailService {
     });
   }
 
+  /**
+   * Send an email to recover the password of a user
+   */
   async sendUserPasswordRecovery(user: User, token: string) {
     await this.mailerService.sendMail({
       to: user.email,

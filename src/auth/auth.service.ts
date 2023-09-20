@@ -17,6 +17,9 @@ export class AuthService {
   ) {}
 
 
+  /**
+   * Validate a user by email and password
+   */
   async validateUser(email: string, pass: string): Promise<Partial<User> | undefined> {
     const user = await this.usersService.findByEmail(email);
 
@@ -34,6 +37,9 @@ export class AuthService {
     }
   }
 
+  /**
+   * Sign in a user and return a JWT token
+   */
   async signIn(user: Partial<User>) {
 
     if (!user.email) {
@@ -69,6 +75,9 @@ export class AuthService {
     };
   }
 
+  /**
+   * Register a new user in the database
+   */
   async register(createUserDto: CreateUserDto) {
       if (await this.usersService.create(createUserDto)) {
         await this.generateVerificationEmail(createUserDto.email);
@@ -80,6 +89,9 @@ export class AuthService {
       };
   }
 
+  /**
+   * Generate a JWT token to verify the email of a user
+   */
   async generateVerificationEmail(email: string) {
     const user = await this.usersService.findByEmail(email);
     if (!user) {
@@ -105,6 +117,9 @@ export class AuthService {
     }
   }
 
+  /**
+   * Verify the email of a user
+   */
   async verifyEmail(jwt: string) {
     try{
       const payload = await this.jwtService.verifyAsync(jwt);
@@ -133,6 +148,11 @@ export class AuthService {
     }
   }
 
+
+  /**
+   * Recover the password of a user that has forgotten it and has 
+   * received a code to change it
+   */
   async recoverPassword(request: RecoveryDto) {
     const user = await this.usersService.findByEmail(request.email);
     if (!user) {

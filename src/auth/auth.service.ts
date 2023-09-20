@@ -5,6 +5,7 @@ import * as bcrypt from 'bcrypt';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
 import { User } from 'src/users/users.entity';
 import { EmailService } from 'src/email/email.service';
+import { RecoveryDto } from './RecoveryDto';
 
 
 @Injectable()
@@ -70,6 +71,7 @@ export class AuthService {
 
   async register(createUserDto: CreateUserDto) {
       if (await this.usersService.create(createUserDto)) {
+        await this.generateVerificationEmail(createUserDto.email);
         return {
           statusCode: 201,
           status: "success",
@@ -104,8 +106,8 @@ export class AuthService {
   }
 
   async verifyEmail(jwt: string) {
-    const payload = await this.jwtService.verifyAsync(jwt);
     try{
+      const payload = await this.jwtService.verifyAsync(jwt);
       return await this.usersService.verifyEmail(payload.email);
     } catch (error) {
       throw new InternalServerErrorException( 'Error on verification' );
@@ -120,9 +122,35 @@ export class AuthService {
     try {
       this.usersService.generateVerificationCode(user);
       this.emailService.sendUserPasswordRecovery(user, user.verification_code!.toString());
+      return {
+        statusCode: 200,
+        status: "success",
+        message: 'Verification code sent successfully'
+      }
     }
     catch (error) {
       throw new InternalServerErrorException( 'Error on verification code generation' );
+    }
+  }
+
+  async recoverPassword(request: RecoveryDto) {
+    const user = await this.usersService.findByEmail(request.email);
+    if (!user) {
+      throw new NotFoundException("User not found");
+    }
+    if (user.verification_code !== request.verification_code) {
+      throw new UnauthorizedException( 'Wrong verification code' );
+    }
+    try {
+      await this.usersService.recoverPassword(user, request.password);
+      return {
+        statusCode: 200,
+        status: "success",
+        message: 'Password recovered successfully'
+      }
+    }
+    catch (error) {
+      throw new InternalServerErrorException( 'Error on password recovery' );
     }
   }
 }

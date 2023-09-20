@@ -16,6 +16,7 @@ export class UsersService {
     ) {}
 
     async findByEmail(email: string): Promise<User | null> {
+        if(!email) return null;
         return await this.userRepository.findOneBy({ email });
     }
 
@@ -82,6 +83,16 @@ export class UsersService {
             statusCode: 200,
             status: "success",
             message: 'User verified successfully'
+        }
+    }
+
+    async recoverPassword(user: User, password: string){
+        user.password = await bcrypt.hash(password, 10);
+        await this.userRepository.save(user);
+        return {
+            statusCode: 200,
+            status: "success",
+            message: 'Password recovered successfully'
         }
     }
 }

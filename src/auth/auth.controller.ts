@@ -1,8 +1,10 @@
-import { Body, Controller, HttpCode, Post, Get, HttpStatus, Request, UseGuards, Logger, Param } from '@nestjs/common';
+import { Body, Controller, HttpCode, Post, Get, HttpStatus, Request, UseGuards, Logger, Param, BadRequestException } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { JwtAuthGuard } from './jwt-auth.guard';
 import { LocalAuthGuard } from './local-auth.guard';
 import { CreateUserDto } from 'src/users/dto/create-user.dto';
+import { RecoveryDto } from './RecoveryDto';
+import { RecoveryCodeDto } from './RecoveryCodeDto';
 
 
 @Controller('auth')
@@ -31,8 +33,17 @@ export class AuthController {
 
     @HttpCode(HttpStatus.OK)
     @Post('recover-password-code')
-    recoverPassword(@Body() body: any) {
+    recoverPassword(@Body() body: RecoveryCodeDto) {
+        if (!body.email) {
+            throw new BadRequestException("Email is required");
+        }
         return this.authService.recoverPasswordCode(body.email);
+    }
+
+    @HttpCode(HttpStatus.OK)
+    @Post('recover-password')
+    recoverPasswordCode(@Body() body: RecoveryDto) {
+        return this.authService.recoverPassword(body);
     }
 
 }

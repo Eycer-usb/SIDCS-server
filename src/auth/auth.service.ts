@@ -24,7 +24,7 @@ export class AuthService {
     const user = await this.usersService.findByEmail(email);
 
     if (!user) {
-      throw new NotFoundException("User not found");
+      throw new ConflictException("User not found");
     }
 
     const isMatch = await bcrypt.compare(pass, user.password!);
@@ -64,7 +64,7 @@ export class AuthService {
       
       this.generateVerificationEmail(payload.email);
       throw new UnauthorizedException( {
-        statusCode: 401,
+        statusCode: 402,
         status: "error",
         message: 'User not verified. Email sent to verify account'
       } );
@@ -174,6 +174,21 @@ export class AuthService {
     }
     catch (error) {
       throw new InternalServerErrorException( 'Error on password recovery' );
+    }
+  }
+
+  /**
+   * Check if a user exists in the database
+   */
+  async userExists(email: string) {
+    const user = await this.usersService.findByEmail(email);
+    if (!user) {
+      throw new InternalServerErrorException("User not found");
+    }
+    return {
+      statusCode: 200,
+      status: "success",
+      message: 'User exists'
     }
   }
 }

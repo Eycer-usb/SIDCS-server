@@ -61,4 +61,13 @@ export class AuthController {
         return this.authService.recoverPassword(body);
     }
 
+    /**
+     * Endpoint to check if a user exists in the database
+     */
+    @HttpCode(HttpStatus.OK)
+    @Post('user/exists')
+    userExists(@Body() body: { email: string }) {
+        return this.authService.userExists(body.email);
+    }
+
 }

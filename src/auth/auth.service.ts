@@ -191,4 +191,16 @@ export class AuthService {
       message: 'User exists'
     }
   }
+
+  /**
+   * Refresh the JWT token of a user
+   */
+  async refreshToken(payload: any) {
+    return {
+      statusCode: 200,
+      status: "success",
+      message: 'Token refreshed successfully',
+      new_token: await this.jwtService.signAsync(payload)
+    }
+  }
 }

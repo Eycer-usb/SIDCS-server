@@ -70,4 +70,14 @@ export class AuthController {
         return this.authService.userExists(body.email);
     }
 
+    /**
+     * Endpoint to refresh the JWT token of a user
+     */
+    @HttpCode(HttpStatus.OK)
+    @Post('refresh-token')
+    @UseGuards(JwtAuthGuard)
+    refreshToken(@Request() req: any) {
+        return this.authService.refreshToken(req.user);
+    }
+
 }

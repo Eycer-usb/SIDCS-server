@@ -18,7 +18,7 @@ export class EmailService {
       template: './email-verification', // `.ejs` extension is appended automatically
       context: { // filling <%= %> brackets with content
         name: user.name,
-        link: `${this.config.get('CLIENT_URL')}/auth/verify-email/${jwt}`,
+        link: `${this.config.get('CLIENT_URL')}/verify-email/${jwt}`,
       },
     });
   }

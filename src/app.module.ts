@@ -8,6 +8,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { RolesModule } from './roles/roles.module';
 import { EmailModule } from './email/email.module';
 import { ZonaModule } from './zona/zona.module';
+import { LocalidadModule } from './localidad/localidad.module';
 import configuration from '../config/configuration';
 import typeOrmConfig from '../config/typeorm.config';
 
@@ -22,7 +23,8 @@ import typeOrmConfig from '../config/typeorm.config';
     UsersModule,
     RolesModule,
     EmailModule,
-    ZonaModule
+    ZonaModule,
+    LocalidadModule
   ],
   controllers: [AppController],
   providers: [AppService],

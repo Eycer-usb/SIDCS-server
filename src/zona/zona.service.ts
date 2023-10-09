@@ -32,7 +32,8 @@ export class ZonaService {
 
   async findOne(id: number): Promise<Zona | undefined> {
     const zona = await this.zonaRepository.findOneBy({id});
-    return zona? zona : undefined;
+    if(!zona) throw new NotFoundException("Zona not found" + ` ${id}`);
+    return zona;
   }
 
   async update(id: number, updateZonaDto: UpdateZonaDto){
@@ -58,7 +59,24 @@ export class ZonaService {
       throw new NotFoundException("Zona not found on delete");
     }
     try {
-      return this.zonaRepository.softDelete(id);
+      await this.zonaRepository.softDelete(id)
+      return {
+        status: 200,
+        message: 'Zona deleted successfully',
+      };
+    } catch (error) {
+      throw new InternalServerErrorException(`Error: ${error}}`);
+    }
+  }
+
+  async restore(id: number) {
+    if (id == null) throw new NotFoundException("Zona not found" + ` ${id}`);
+    try {
+      await this.zonaRepository.restore({id})
+      return {
+        status: 200,
+        message: 'Zona restored successfully',
+      };
     } catch (error) {
       throw new InternalServerErrorException(`Error: ${error}}`);
     }

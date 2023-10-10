@@ -1,6 +1,4 @@
-import { Localidad } from '../../localidad/entities/localidad.entity';
 import { Column, PrimaryGeneratedColumn, ManyToOne, CreateDateColumn, UpdateDateColumn, DeleteDateColumn } from 'typeorm';
-import { Zona } from 'src/zona/entities/zona.entity';
 
 export abstract class CentroSalud {
     @PrimaryGeneratedColumn()
@@ -12,8 +10,11 @@ export abstract class CentroSalud {
     @Column({ type: 'text' })
     direccion: string;
     
-    @Column({ type: 'varchar', length: 100 })
-    ubicacion: string;
+    @Column({ type: 'decimal', precision: 10, scale: 8 })
+    latitud: number;
+
+    @Column({ type: 'decimal', precision: 11, scale: 8 })
+    longitud: number;
 
     @Column({ type: 'varchar', length: 11 })
     telefono: string;

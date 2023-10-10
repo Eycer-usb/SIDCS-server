@@ -1,10 +1,12 @@
-import { Injectable } from '@nestjs/common';
-import { CreateLaboratorioClinicoDto } from './dto/laboratorio-clinico/create-laboratorio-clinico.dto';
-import { UpdateLaboratorioClinicoDto } from './dto/laboratorio-clinico/update-laboratorio-clinico.dto';
+import { Injectable, Logger } from '@nestjs/common';
+import { CreateLaboratorioClinicoDto } from '../dto/laboratorio-clinico/create-laboratorio-clinico.dto';
+import { UpdateLaboratorioClinicoDto } from '../dto/laboratorio-clinico/update-laboratorio-clinico.dto';
 
 @Injectable()
 export class LaboratorioClinicoService {
-  create(createLaboratorioClinicoDto: CreateLaboratorioClinicoDto) {
+  create(createLaboratorioClinicoDto: CreateLaboratorioClinicoDto, images: Array<Express.Multer.File>) {
+    Logger.log(createLaboratorioClinicoDto);
+    Logger.log(images);
     return 'This action adds a new centroSalud';
   }
 

@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, IsNumber, IsPhoneNumber, Min, Max, IsLongitude, IsLatitude } from 'class-validator';
+import { IsNotEmpty, IsString, IsNumber, IsPhoneNumber, Min, Max, IsLongitude, IsLatitude, IsInt } from 'class-validator';
 
 export class CreateCentroSaludDto {
     @IsNotEmpty()
@@ -22,22 +22,25 @@ export class CreateCentroSaludDto {
     telefono: string;
 
     @IsNotEmpty()
-    @IsNumber({ maxDecimalPlaces: 0 })
+    @IsInt()
     @Min(1)
     @Max(3)
     tamaño: number;
 
     @IsNotEmpty()
+    @IsInt()
     @Min(1)
     @Max(3)
     limpieza: number;
 
     @IsNotEmpty()
+    @IsInt()
     @Min(1)
     @Max(3)
     demanda: number;
     
     @IsNotEmpty()
-    @IsNumber()
+    @IsInt()
+    @Min(1)
     idLocalidad: number;    
 }

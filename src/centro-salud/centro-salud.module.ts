@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { LaboratorioClinicoService } from './laboratorio-clinico.service';
-import { LaboratorioClinicoController } from './laboratorio-clinico.controller';
+import { LaboratorioClinicoService } from './services/laboratorio-clinico.service';
+import { LaboratorioClinicoController } from './controllers/laboratorio-clinico.controller';
 
 @Module({
   controllers: [LaboratorioClinicoController],

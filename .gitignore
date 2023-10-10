@@ -41,3 +41,7 @@ lerna-debug.log*
 # dotenv
 .env
 .env.*
+
+# storange
+/storage/uploads/*
+!/storage/uploads/.gitkeep

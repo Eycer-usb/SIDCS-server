@@ -1,11 +1,12 @@
 import { Controller, FileTypeValidator,
-    MaxFileSizeValidator, ParseFilePipe,
-    Post, UploadedFiles, UseInterceptors } from '@nestjs/common';
+    Get, MaxFileSizeValidator, NotFoundException, Param, ParseFilePipe,
+    Post, Query, Res, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
     
 import { FilesInterceptor } from '@nestjs/platform-express';
 import { ImageService } from '../services/image.service';
-import multer, { diskStorage } from 'multer';
-import { join } from 'path';
+import { diskStorage } from 'multer';
+import { Response } from 'express';
+import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 @Controller('centro-salud')
 export class ImageController {
@@ -38,5 +39,23 @@ export class ImageController {
           )
           images: Array<Express.Multer.File>) {
     return this.imageService.create(images);
+  }
+
+  @Get('uploads/:filename')
+  @UseGuards(JwtAuthGuard)
+  getUploadedImages(@Param('filename') filename: string, @Res() res: Response) {
+    return res.sendFile(filename, { root: './storage/uploads' });
+  }
+
+  @Get('storage')
+  @UseGuards(JwtAuthGuard)
+  getImages(@Query('path') path: string, @Res() res: Response) {
+    if (path === undefined) {
+      path = '';
+    }
+    if (path.includes('..')) {
+      return res.status(403).send('Forbidden');
+    }
+    return res.sendFile(path, { root: './storage' });
   }
 }

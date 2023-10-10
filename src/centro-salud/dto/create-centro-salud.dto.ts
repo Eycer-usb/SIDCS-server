@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString, IsNumber, IsPhoneNumber, Min, Max, IsLongitude } from 'class-validator';
+import { IsNotEmpty, IsString, IsNumber, IsPhoneNumber, Min, Max, IsLongitude, IsLatitude } from 'class-validator';
 
 export class CreateCentroSaludDto {
     @IsNotEmpty()
@@ -14,7 +14,7 @@ export class CreateCentroSaludDto {
     longitud: number;
 
     @IsNotEmpty()
-    @IsLongitude()
+    @IsLatitude()
     latitud: number;
     
     @IsNotEmpty()

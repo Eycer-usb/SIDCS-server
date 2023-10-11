@@ -1,4 +1,5 @@
 import { CentroOdontologico } from 'src/centro-salud/entities/centro-odontologico.entity';
+import { CentroOftalmologico } from 'src/centro-salud/entities/centro-oftalmologico.entity';
 import { CentroSalud } from 'src/centro-salud/entities/centro-salud.entity';
 import { ClinicaPrivada } from 'src/centro-salud/entities/clinica-privada.entity';
 import { GrupoMedico } from 'src/centro-salud/entities/grupo-medico.entity';
@@ -24,6 +25,9 @@ export class Zona {
     
     @OneToMany(() => CentroOdontologico, centro => centro.zona)
     centrosOdontologicos: CentroOdontologico[];
+
+    @OneToMany(() => CentroOdontologico, centro => centro.zona)
+    centrosOftalmologicos: CentroOftalmologico[];
 
     @OneToMany(() => ClinicaPrivada, centro => centro.zona)
     clinicasPrivadas: ClinicaPrivada[];

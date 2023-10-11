@@ -3,6 +3,7 @@ import { LaboratorioClinico } from "./laboratorio-clinico.entity";
 import { CentroOdontologico } from "./centro-odontologico.entity";
 import { ClinicaPrivada } from "./clinica-privada.entity";
 import { GrupoMedico } from "./grupo-medico.entity";
+import { CentroOftalmologico } from "./centro-oftalmologico.entity";
 
 @Entity()
 export class Imagen {
@@ -17,6 +18,8 @@ export class Imagen {
     clinicaPrivada?: ClinicaPrivada;
     @ManyToOne(() => GrupoMedico, grupoMedico => grupoMedico.imagenes, { nullable: true })
     grupoMedico?: GrupoMedico;
+    @ManyToOne(() => CentroOftalmologico, centroOftalmologico => centroOftalmologico.imagenes, { nullable: true })
+    centroOftalmologico?: CentroOftalmologico;
 
     @CreateDateColumn()
     created_at?: Date;

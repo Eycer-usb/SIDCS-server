@@ -5,33 +5,32 @@ import { Zona } from "src/zona/entities/zona.entity";
 import { Imagen } from "./imagen.entity";
 
 @Entity()
-export class CentroOdontologico extends CentroSalud {
-    @ManyToOne(() => Localidad, localidad => localidad.centrosOdontologicos)
+export class CentroOftalmologico extends CentroSalud {
+    @ManyToOne(() => Localidad, localidad => localidad.centrosOftalmologicos)
     localidad: Localidad;
-    @ManyToOne(() => Zona, zona => zona.centrosOdontologicos)
+    @ManyToOne(() => Zona, zona => zona.centrosOftalmologicos)
     zona: Zona;
-    @OneToMany(() => Imagen, imagen => imagen.centroOdontologico)
+    @OneToMany(() => Imagen, imagen => imagen.centroOftalmologico)
     imagenes: Imagen[];
 
     @Column( { type: 'numeric', precision: 5, scale: 2, default: 0 } )
-    odontologiaGeneralDesde: number;
+    oftalmologiaGeneralDesde: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
     odontologiaGeneralHasta?: number;
 
     @Column( { default: false } )
-    ortodoncia: boolean;
+    tratamientoGlaucomaCataratas: boolean;
 
     @Column( { default: false } )
-    endodoncia: boolean;
+    protesisOculares: boolean;
 
     @Column( { default: false } )
-    cirugiaBucal: boolean;
+    tratamientosEspecializados: boolean;
 
     @Column( { default: false } )
-    protesis: boolean;
+    oncologia: boolean;
 
-    @Column( { default: false } )
-    rayosX: boolean;
-
+    @Column( { type:"text" } )
+    otros?: string;
 }

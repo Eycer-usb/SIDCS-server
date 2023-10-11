@@ -14,6 +14,7 @@ export class ImageController {
   constructor(private readonly imageService: ImageService) {}
 
   @Post('upload-images')
+  @UseGuards(JwtAuthGuard)
   @UseInterceptors(FilesInterceptor('files', undefined,
   {
     storage: diskStorage({

@@ -2,7 +2,7 @@ import { IsBoolean, IsCurrency, IsNotEmpty } from "class-validator";
 
 const digits = [1, 2, 3];
 
-export class CreateCentroOdontologicoDto {
+export class CreateCentroOftalmologicoDto {
     @IsNotEmpty()
     @IsCurrency({ digits_after_decimal: digits })
     odontologiaGeneralDesde: number;

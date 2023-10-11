@@ -31,6 +31,6 @@ export class CentroOftalmologico extends CentroSalud {
     @Column( { default: false } )
     oncologia: boolean;
 
-    @Column( { type:"text" } )
-    otros?: string;
+    @Column( { default:false } )
+    otros: boolean;
 }

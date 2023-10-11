@@ -74,7 +74,7 @@ export class ClinicaPrivada extends CentroSalud {
     perfilPreoperatorio?: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
-    apendictomia?: number;
+    apendicectomia?: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
     colicistectomiaLamparoscopica?: number;

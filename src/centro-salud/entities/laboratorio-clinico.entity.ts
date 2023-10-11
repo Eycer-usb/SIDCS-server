@@ -14,13 +14,13 @@ export class LaboratorioClinico extends CentroSalud {
     imagenes: Imagen[];
 
     @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    hematologia_completa: number;
+    hematologiaCompleta: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    perfil_20: number;
+    perfil20: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    perfil_tiroideo: number;
+    perfilTiroideo: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2 } )
     urocultivo: number;
@@ -32,5 +32,5 @@ export class LaboratorioClinico extends CentroSalud {
     orina: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    perfil_preoperatorio: number;
+    perfilPreoperatorio: number;
 }

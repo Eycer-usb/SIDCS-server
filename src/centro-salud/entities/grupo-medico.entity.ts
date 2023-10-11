@@ -3,7 +3,7 @@ import { CentroSalud } from "./centro-salud.entity";
 import { Localidad } from "src/localidad/entities/localidad.entity";
 import { Zona } from "src/zona/entities/zona.entity";
 import { Imagen } from "./imagen.entity";
-import { IsCurrency } from "class-validator";
+import { TipoGrupoMedico } from "src/tipo-grupo-medico/entities/tipo-grupo-medico.entity";
 
 @Entity()
 export class GrupoMedico extends CentroSalud {
@@ -13,6 +13,9 @@ export class GrupoMedico extends CentroSalud {
     zona: Zona;
     @OneToMany(() => Imagen, imagen => imagen.grupoMedico)
     imagenes: Imagen[];
+    @ManyToOne(() => TipoGrupoMedico, tipo => tipo.gruposMedicos)
+    tipo: TipoGrupoMedico;
+
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
     medicinaGeneral?: number;
@@ -102,7 +105,7 @@ export class GrupoMedico extends CentroSalud {
     perfilPreoperatorio?: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
-    apendictomia?: number;
+    apendicectomia?: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
     colicistectomiaLamparoscopica?: number;

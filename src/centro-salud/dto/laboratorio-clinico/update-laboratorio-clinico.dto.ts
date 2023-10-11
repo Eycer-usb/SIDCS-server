@@ -1,2 +1,4 @@
-import { UpdateCentroSaludDto } from '../update-centro-salud.dto';
-export class UpdateLaboratorioClinicoDto extends UpdateCentroSaludDto {}
+import { CreateLaboratorioClinicoDto } from "./create-laboratorio-clinico.dto";
+import { PartialType } from '@nestjs/mapped-types';
+
+export class UpdateLaboratorioClinicoDto extends PartialType(CreateLaboratorioClinicoDto) {}

@@ -1,31 +1,24 @@
 import { CreateCentroSaludDto } from '../create-centro-salud.dto';
-import { IsNotEmpty, IsCurrency } from 'class-validator';
+import { IsCurrency } from 'class-validator';
 export class CreateLaboratorioClinicoDto extends CreateCentroSaludDto {
     @IsCurrency({ digits_after_decimal: [0, 1, 2] })
-    @IsNotEmpty()
-    hematologia_completa: number;
+    hematologiaCompleta?: number;
 
     @IsCurrency({ digits_after_decimal: [0, 1, 2] })
-    @IsNotEmpty()
-    perfil_20: number;
+    perfil20?: number;
 
     @IsCurrency({ digits_after_decimal: [0, 1, 2] })
-    @IsNotEmpty()
-    perfil_tiroideo: number;
+    perfilTiroideo?: number;
 
     @IsCurrency({ digits_after_decimal: [0, 1, 2] })
-    @IsNotEmpty()
-    urocultivo: number;
+    urocultivo?: number;
 
     @IsCurrency({ digits_after_decimal: [0, 1, 2] })
-    @IsNotEmpty()
-    heces: number;
+    heces?: number;
 
     @IsCurrency({ digits_after_decimal: [0, 1, 2] })
-    @IsNotEmpty()
-    orina: number;
+    orina?: number;
 
     @IsCurrency({ digits_after_decimal: [0, 1, 2] })
-    @IsNotEmpty()
-    perfil_preoperatorio: number;
+    perfilPreoperatorio?: number;
 }

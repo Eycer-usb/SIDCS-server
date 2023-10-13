@@ -1,0 +1,2 @@
+DELETE FROM zona;
+ALTER SEQUENCE zona_id_seq RESTART WITH 1;

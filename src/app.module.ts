@@ -12,6 +12,7 @@ import { LocalidadModule } from './localidad/localidad.module';
 import { CentroSaludModule } from './centro-salud/centro-salud.module';
 import configuration from '../config/configuration';
 import typeOrmConfig from '../config/typeorm.config';
+import { TipoGrupoMedicoModule } from './tipo-grupo-medico/tipo-grupo-medico.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import typeOrmConfig from '../config/typeorm.config';
     EmailModule,
     ZonaModule,
     LocalidadModule,
+    TipoGrupoMedicoModule,
     CentroSaludModule
   ],
   controllers: [AppController],

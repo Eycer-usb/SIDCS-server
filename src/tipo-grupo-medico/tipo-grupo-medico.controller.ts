@@ -5,7 +5,7 @@ import { UpdateTipoGrupoMedicoDto } from './dto/update-tipo-grupo-medico.dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 
 
-@Controller('zona')
+@Controller('tipo-grupo-medico')
 export class TipoGrupoMedicoController {
   constructor(private readonly tipoService: TipoGrupoMedicoService) {}
 

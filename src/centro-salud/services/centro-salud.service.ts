@@ -24,14 +24,14 @@ export class CentroSaludService {
       private imagesService: ImageService
     ) {}
 
-  findAllCentrosDeSalud() {
-    const list = [
-        this.labRepository.find(),
-        this.odontoRepository.find(),
-        this.oftalmoRepository.find(),
-        this.clinicaRepository.find(),
-        this.grupoRepository.find()
-    ]
+  async findAllCentrosDeSalud() {
+    const list = {
+        'laboratorioClinico': await this.labRepository.find(),
+        centroOdontologico: await this.odontoRepository.find(),
+        centroOftalmologico: await this.oftalmoRepository.find(),
+        clinicaPrivada: await this.clinicaRepository.find(),
+        grupoMedico: await this.grupoRepository.find()
+    }
     return list;
   }
 

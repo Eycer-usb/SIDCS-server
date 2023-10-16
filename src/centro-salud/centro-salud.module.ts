@@ -14,6 +14,7 @@ import { ClinicaPrivadaController } from './controllers/clinica-privada.controll
 import { CentroOftalmologicoController } from './controllers/centro-oftalmologico.controller';
 import { CentroOdontologicoController } from './controllers/centro-odontologico.controller';
 import { CentroSaludService } from './services/centro-salud.service';
+import { CentroSaludController } from './controllers/centro-salud.controller';
 
 
 
@@ -31,7 +32,8 @@ import { CentroSaludService } from './services/centro-salud.service';
     ImageController, GrupoMedicoController,
     ClinicaPrivadaController,
     CentroOftalmologicoController,
-    CentroOdontologicoController
+    CentroOdontologicoController,
+    CentroSaludController
   ],
   providers: [ImageService, CentroSaludService],
 })

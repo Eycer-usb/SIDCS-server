@@ -10,7 +10,7 @@ export class ClinicaPrivada extends CentroSalud {
     localidad: Localidad;
     @ManyToOne(() => Zona, zona => zona.clinicasPrivadas)
     zona: Zona;
-    @OneToMany(() => Imagen, imagen => imagen.clinicaPrivada)
+    @OneToMany(() => Imagen, imagen => imagen.clinicaPrivada, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];
 
     @Column({ type: 'int' })

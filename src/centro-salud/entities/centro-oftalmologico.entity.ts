@@ -10,7 +10,7 @@ export class CentroOftalmologico extends CentroSalud {
     localidad: Localidad;
     @ManyToOne(() => Zona, zona => zona.centrosOftalmologicos)
     zona: Zona;
-    @OneToMany(() => Imagen, imagen => imagen.centroOftalmologico)
+    @OneToMany(() => Imagen, imagen => imagen.centroOftalmologico, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];
 
     @Column( { type: 'numeric', precision: 5, scale: 2, default: 0 } )

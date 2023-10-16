@@ -15,17 +15,24 @@ import { CentroOftalmologicoController } from './controllers/centro-oftalmologic
 import { CentroOdontologicoController } from './controllers/centro-odontologico.controller';
 import { CentroSaludService } from './services/centro-salud.service';
 import { CentroSaludController } from './controllers/centro-salud.controller';
+import { ZonaModule } from 'src/zona/zona.module';
+import { LocalidadModule } from 'src/localidad/localidad.module';
+import { TipoGrupoMedicoModule } from 'src/tipo-grupo-medico/tipo-grupo-medico.module';
 
 
 
 @Module({
-  imports: [ TypeOrmModule.forFeature([
+  imports: [ 
+    ZonaModule,
+    LocalidadModule,
+    TipoGrupoMedicoModule,
+    TypeOrmModule.forFeature([
     LaboratorioClinico,
     CentroOdontologico,
     CentroOftalmologico,
     ClinicaPrivada,
     GrupoMedico,
-    Imagen
+    Imagen,
   ]) ],
   controllers: [
     LaboratorioClinicoController,

@@ -8,5 +8,6 @@ import { Zona } from './entities/zona.entity';
   imports: [ TypeOrmModule.forFeature([Zona]) ],
   controllers: [ZonaController],
   providers: [ZonaService],
+  exports: [ZonaService]
 })
 export class ZonaModule {}

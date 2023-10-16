@@ -7,9 +7,9 @@ import { TipoGrupoMedico } from "src/tipo-grupo-medico/entities/tipo-grupo-medic
 
 @Entity()
 export class GrupoMedico extends CentroSalud {
-    @ManyToOne(() => Localidad, localidad => localidad.gruposMedicos)
+    @ManyToOne(() => Localidad, localidad => localidad.gruposMedicos, {eager: true})
     localidad: Localidad;
-    @ManyToOne(() => Zona, zona => zona.gruposMedicos)
+    @ManyToOne(() => Zona, zona => zona.gruposMedicos, {eager: true})
     zona: Zona;
     @OneToMany(() => Imagen, imagen => imagen.grupoMedico, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];

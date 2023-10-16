@@ -8,5 +8,6 @@ import { TipoGrupoMedico } from './entities/tipo-grupo-medico.entity';
   imports: [ TypeOrmModule.forFeature([TipoGrupoMedico]) ],
   controllers: [TipoGrupoMedicoController],
   providers: [TipoGrupoMedicoService],
+  exports: [TipoGrupoMedicoService]
 })
 export class TipoGrupoMedicoModule {}

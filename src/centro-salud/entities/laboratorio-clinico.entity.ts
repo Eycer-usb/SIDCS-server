@@ -6,9 +6,9 @@ import { Imagen } from "./imagen.entity";
 
 @Entity()
 export class LaboratorioClinico extends CentroSalud {
-    @ManyToOne(() => Localidad, localidad => localidad.laboratoriosClinicos)
+    @ManyToOne(() => Localidad, localidad => localidad.laboratoriosClinicos, { eager: true })
     localidad: Localidad;
-    @ManyToOne(() => Zona, zona => zona.laboratoriosClinicos)
+    @ManyToOne(() => Zona, zona => zona.laboratoriosClinicos, { eager: true })
     zona: Zona;
     @OneToMany(() => Imagen, imagen => imagen.laboratorioClinico, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];

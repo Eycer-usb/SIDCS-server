@@ -6,11 +6,11 @@ import { Imagen } from "./imagen.entity";
 
 @Entity()
 export class CentroOdontologico extends CentroSalud {
-    @ManyToOne(() => Localidad, localidad => localidad.centrosOdontologicos, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
+    @ManyToOne(() => Localidad, localidad => localidad.centrosOdontologicos, {eager: true})
     localidad: Localidad;
-    @ManyToOne(() => Zona, zona => zona.centrosOdontologicos)
+    @ManyToOne(() => Zona, zona => zona.centrosOdontologicos, { eager: true })
     zona: Zona;
-    @OneToMany(() => Imagen, imagen => imagen.centroOdontologico)
+    @OneToMany(() => Imagen, imagen => imagen.centroOdontologico, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];
 
     @Column( { type: 'numeric', precision: 5, scale: 2, default: 0 } )

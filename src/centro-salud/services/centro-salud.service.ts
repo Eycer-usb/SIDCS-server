@@ -7,6 +7,9 @@ import { GrupoMedico } from '../entities/grupo-medico.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { ImageService } from './image.service';
+import { ZonaService } from 'src/zona/zona.service';
+import { LocalidadService } from 'src/localidad/localidad.service';
+import { TipoGrupoMedicoService } from 'src/tipo-grupo-medico/tipo-grupo-medico.service';
 
 @Injectable()
 export class CentroSaludService {
@@ -21,7 +24,10 @@ export class CentroSaludService {
       private clinicaRepository: Repository<ClinicaPrivada>,
       @InjectRepository(GrupoMedico)
       private grupoRepository: Repository<GrupoMedico>,
-      private imagesService: ImageService
+      private imagesService: ImageService,
+      private zonaService: ZonaService,
+      private localidadService: LocalidadService,
+      private tipoService: TipoGrupoMedicoService
     ) {}
 
   async findAllCentrosDeSalud() {
@@ -61,7 +67,21 @@ export class CentroSaludService {
         break;
     }
     const { imagenes, ...asignable } = createDto;
+    
     Object.assign(instance!, asignable);
+    const zona = await this.zonaService.findOne(createDto.zonaId);
+    const localidad = await this.localidadService.findOne(createDto.localidadId);
+    if (!zona) throw new NotFoundException(`Zona not found`);
+    if (!localidad) throw new NotFoundException(`Localidad not found`);
+    instance!.zona = zona;
+    instance!.localidad = localidad;
+
+    if(instance! instanceof GrupoMedico) {
+      const tipo = await this.tipoService.findOne(createDto.tipoId);
+      if (!tipo) throw new NotFoundException(`Tipo not found`);
+      instance.tipo = tipo;
+    }
+    
     try {
       this.imagesService.storage(imagenes, type, instance!);
       const { repo, name } = this.getRepo(type);
@@ -133,6 +153,20 @@ export class CentroSaludService {
     try {
       const { imagenes, ...asignable } = updateDto;
       Object.assign(instance, asignable);
+      
+      const zona = await this.zonaService.findOne(updateDto.zonaId);
+      const localidad = await this.localidadService.findOne(updateDto.localidadId);
+      if (!zona) throw new NotFoundException(`Zona not found`);
+      if (!localidad) throw new NotFoundException(`Localidad not found`);
+      instance!.zona = zona;
+      instance!.localidad = localidad;
+
+      if(instance instanceof GrupoMedico) {
+        const tipo = await this.tipoService.findOne(updateDto.tipoId);
+        if (!tipo) throw new NotFoundException(`Tipo not found`);
+        instance.tipo = tipo;
+      }
+      
       if (imagenes) this.imagesService.update(imagenes, instance, type);
       await this.labRepository.save(instance);      
       const res = {

@@ -16,7 +16,7 @@ export abstract class CentroSalud {
     @Column({ type: 'decimal', precision: 11, scale: 8 })
     longitud: number;
 
-    @Column({ type: 'varchar', length: 11 })
+    @Column({ type: 'varchar', length: 13 })
     telefono: string;
 
     @Column({ type: 'int' })

@@ -10,7 +10,7 @@ export class LaboratorioClinico extends CentroSalud {
     localidad: Localidad;
     @ManyToOne(() => Zona, zona => zona.laboratoriosClinicos)
     zona: Zona;
-    @OneToMany(() => Imagen, imagen => imagen.laboratorioClinico)
+    @OneToMany(() => Imagen, imagen => imagen.laboratorioClinico, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];
 
     @Column( { type: 'numeric', precision: 5, scale: 2 } )

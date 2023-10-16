@@ -44,4 +44,8 @@ lerna-debug.log*
 
 # storange
 /storage/uploads/*
+/storage/centrosDeSalud/*
+/storage/deleted/*
 !/storage/uploads/.gitkeep
+!/storage/centrosDeSalud/.gitkeep
+!/storage/deleted/.gitkeep

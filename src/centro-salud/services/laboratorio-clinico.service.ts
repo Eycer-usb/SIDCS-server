@@ -1,24 +1,34 @@
-import { ConflictException, Inject, Injectable, InternalServerErrorException, Logger, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { CreateLaboratorioClinicoDto } from '../dto/laboratorio-clinico/create-laboratorio-clinico.dto';
 import { UpdateLaboratorioClinicoDto } from '../dto/laboratorio-clinico/update-laboratorio-clinico.dto';
-import { CentroSaludService } from './centro-salud.service';
 import { LaboratorioClinico } from '../entities/laboratorio-clinico.entity';
 import { Repository } from 'typeorm';
+import { ImageService } from './image.service';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class LaboratorioClinicoService {
-  constructor(private centroSaludService: CentroSaludService,
-              @Inject(LaboratorioClinico)
+  constructor(private imagesService: ImageService,
+              @InjectRepository(LaboratorioClinico)
               private labRepository: Repository<LaboratorioClinico>
               ) {}
 
   async create(createLaboratorioClinicoDto: CreateLaboratorioClinicoDto) {
     const lab = new LaboratorioClinico();
-    Object.assign(lab, createLaboratorioClinicoDto);
+    const { imagenes, ...asignable } = createLaboratorioClinicoDto;
+    Object.assign(lab, asignable);
     try {
-      return await this.labRepository.save(lab);
+      this.imagesService.storage(imagenes, 'laboratorioClinico', lab);
+      await this.labRepository.save(lab);
+      const res = {
+        status: 200,
+        message: 'Laboratorio Clinico created successfully',
+        data: await this.labRepository.findOneBy({id: lab.id})
+      }
+      return res;
     }
     catch (e) {
+      console.log(e)
       throw new InternalServerErrorException("Error on laboratorio clínico creation");
     }
   }
@@ -41,17 +51,26 @@ export class LaboratorioClinicoService {
       throw new ConflictException("Laboratorio clínico not found");
     }
     try {
-      Object.assign(lab, updateLaboratorioClinicoDto);
-      return await this.labRepository.update(id, lab);
+      const { imagenes, ...asignable } = updateLaboratorioClinicoDto;
+      Object.assign(lab, asignable);
+      if (imagenes) this.imagesService.update(imagenes, lab, 'laboratorioClinico');
+      await this.labRepository.save(lab);      
+      const res = {
+        status: 200,
+        message: 'Laboratorio Clinico updated successfully',
+        data: await this.labRepository.findOneBy({id: lab.id})
+      }
+      return res;
     }
     catch (e) {
+      console.log(e);
       throw new InternalServerErrorException("Error en la actualización del laboratorio clínico");
     }
   }
 
   async remove(id: number) {
-    const zona = this.labRepository.findOneBy({id});
-    if (!zona) {
+    const lab = this.labRepository.findOneBy({id});
+    if (!lab) {
       throw new NotFoundException("Laboratorio clínico not found on delete");
     }
     try {

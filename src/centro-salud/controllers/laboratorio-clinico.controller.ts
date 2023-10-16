@@ -9,33 +9,37 @@ export class LaboratorioClinicoController {
   constructor(private readonly labService: LaboratorioClinicoService) {}
 
   @Post()
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   create(@Body() createLaboratorioClinicoDto: CreateLaboratorioClinicoDto) {
     return this.labService.create(createLaboratorioClinicoDto);
   }
 
   @Get()
+  @UseGuards(JwtAuthGuard)
   findAll() {
     return this.labService.findAll();
   }
 
   @Get(':id')
+  @UseGuards(JwtAuthGuard)
   findOne(@Param('id') id: string) {
     return this.labService.findOne(+id);
   }
 
   @Patch(':id')
+  @UseGuards(JwtAuthGuard)
   update(@Param('id') id: string, @Body() updateLaboratorioClinicoDto: UpdateLaboratorioClinicoDto) {
     return this.labService.update(+id, updateLaboratorioClinicoDto);
   }
 
   @Delete(':id')
+  @UseGuards(JwtAuthGuard)
   remove(@Param('id') id: string) {
     return this.labService.remove(+id);
   }
 
   @Patch('restore/:id')
-  // @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   restore(@Param('id') id: string) {
     return this.labService.restore(+id);
   }

@@ -33,4 +33,10 @@ export class LaboratorioClinicoController {
   remove(@Param('id') id: string) {
     return this.labService.remove(+id);
   }
+
+  @Patch('restore/:id')
+  // @UseGuards(JwtAuthGuard)
+  restore(@Param('id') id: string) {
+    return this.labService.restore(+id);
+  }
 }

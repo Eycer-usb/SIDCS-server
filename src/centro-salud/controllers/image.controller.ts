@@ -1,4 +1,4 @@
-import { Controller, FileTypeValidator,
+import { Controller, Delete, FileTypeValidator,
     Get, MaxFileSizeValidator, NotFoundException, Param, ParseFilePipe,
     Post, Query, Res, UploadedFiles, UseGuards, UseInterceptors } from '@nestjs/common';
     
@@ -58,5 +58,17 @@ export class ImageController {
       return res.status(403).send('Forbidden');
     }
     return res.sendFile(path, { root: './storage' });
+  }
+
+  @Delete('storage/:filename')
+  @UseGuards(JwtAuthGuard)
+  deleteUpload(@Param('filename') filename: string) {
+    if (filename === undefined) {
+      throw new NotFoundException();
+    }
+    if (filename.includes('..')) {
+      throw new NotFoundException();
+    }
+    return this.imageService.deleteUpload(filename);
   }
 }

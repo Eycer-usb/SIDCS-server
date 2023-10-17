@@ -127,4 +127,12 @@ export class ImageService {
             return instance;
         }
     }
+
+    deleteUpload(filename: string) {
+        if(this.fs.existsSync(`storage/uploads/${filename}`)) {
+          this.fs.renameSync(`storage/uploads/${filename}`, `storage/deleted/${filename}`);
+          return { message: 'File deleted' };
+        }
+        throw new Error("File not found");
+    }
 }

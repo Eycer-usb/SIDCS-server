@@ -5,10 +5,10 @@ const digits = [1, 2, 3];
 export class CreateCentroOftalmologicoDto {
     @IsNotEmpty()
     @IsCurrency({ digits_after_decimal: digits })
-    odontologiaGeneralDesde: number;
+    oftalmologiaGeneralDesde: number;
 
     @IsCurrency({ digits_after_decimal: digits })
-    odontologiaGeneralHasta?: number;
+    oftalmologiaGeneralHasta?: number;
 
     @IsBoolean()
     tratamientoGlaucomaCataratas?: boolean;

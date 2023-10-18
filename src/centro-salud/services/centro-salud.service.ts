@@ -31,14 +31,66 @@ export class CentroSaludService {
     ) {}
 
   async findAllCentrosDeSalud() {
-    const list = {
-        'laboratorioClinico': await this.labRepository.find(),
-        centroOdontologico: await this.odontoRepository.find(),
-        centroOftalmologico: await this.oftalmoRepository.find(),
-        clinicaPrivada: await this.clinicaRepository.find(),
-        grupoMedico: await this.grupoRepository.find()
-    }
+    // const list = {
+    //     'laboratorioClinico': await this.labRepository.find(),
+    //     centroOdontologico: await this.odontoRepository.find(),
+    //     centroOftalmologico: await this.oftalmoRepository.find(),
+    //     clinicaPrivada: await this.clinicaRepository.find(),
+    //     grupoMedico: await this.grupoRepository.find()
+    // }
+    const list = [
+      ...(await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico'}, lab)}),
+      ...((await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico'}, odonto)})),
+      ...(await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico'}, oftalmo)}),
+      ...(await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada'}, clinica)}),
+      ...(await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico'}, grupo)})
+    ]
     return list;
+  }
+
+  async findQuery(query: any) {
+    const zonaId = query.zonaId;
+    const localidadId = query.localidadId;
+    const tipoCentroDeSalud = query.tipoCentroDeSalud;
+    const tipoGrupoMedicoId = query.tipoGrupoMedicoId;
+    let result: Array<any> = [];
+    if( tipoCentroDeSalud && tipoCentroDeSalud != 'undefined' && tipoCentroDeSalud != 'null')
+    {
+      switch (tipoCentroDeSalud) {
+        case 'laboratorioClinico':
+          result = (await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico'}, lab)});
+          break;
+        case 'centroOdontologico':
+          result = (await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico'}, odonto)});
+          break;
+        case 'centroOftalmologico':
+          result = (await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico'}, oftalmo)});
+          break;
+        case 'clinicaPrivada':
+          result = (await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada'}, clinica)});
+          break;
+        case 'grupoMedico':
+          result = (await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico'}, grupo)});
+          break;
+        default:
+          throw new NotFoundException(`Tipo ${tipoCentroDeSalud} not found`);
+      }
+    }
+    else {
+      result = await this.findAllCentrosDeSalud();
+    }
+    if (zonaId && zonaId != 'undefined' && zonaId != 'null') {
+      result = result.filter(centro => centro.zona != null && centro.zona.id == zonaId);
+    }
+    if (localidadId && localidadId != 'undefined' && localidadId != 'null') {
+      result = result.filter(centro => centro.localidad != null && centro.localidad.id == localidadId);
+    }
+    if (tipoGrupoMedicoId && tipoGrupoMedicoId != 'undefined' && tipoGrupoMedicoId != 'null') {
+      result = result.filter( centro => centro.tipo != null && centro.tipo.id == tipoGrupoMedicoId );
+
+    }
+    console.log(result)
+    return result;    
   }
 
   async create(createDto: any, type: string) {

@@ -19,18 +19,18 @@ export class CentroOftalmologico extends CentroSalud {
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
     odontologiaGeneralHasta?: number;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable: true } )
     tratamientoGlaucomaCataratas: boolean;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable: true } )
     protesisOculares: boolean;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable: true } )
     tratamientosEspecializados: boolean;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable: true } )
     oncologia: boolean;
 
-    @Column( { default:false } )
+    @Column( { default:false, nullable:true } )
     otros: boolean;
 }

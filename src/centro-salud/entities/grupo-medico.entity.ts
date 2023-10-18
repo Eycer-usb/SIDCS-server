@@ -13,7 +13,7 @@ export class GrupoMedico extends CentroSalud {
     zona: Zona;
     @OneToMany(() => Imagen, imagen => imagen.grupoMedico, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];
-    @ManyToOne(() => TipoGrupoMedico, tipo => tipo.gruposMedicos)
+    @ManyToOne(() => TipoGrupoMedico, tipo => tipo.gruposMedicos, {eager: true})
     tipo: TipoGrupoMedico;
 
 

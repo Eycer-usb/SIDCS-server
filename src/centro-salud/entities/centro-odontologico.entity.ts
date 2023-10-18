@@ -19,19 +19,19 @@ export class CentroOdontologico extends CentroSalud {
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
     odontologiaGeneralHasta?: number;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable:true } )
     ortodoncia: boolean;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable:true } )
     endodoncia: boolean;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable:true } )
     cirugiaBucal: boolean;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable:true } )
     protesis: boolean;
 
-    @Column( { default: false } )
+    @Column( { default: false, nullable:true } )
     rayosX: boolean;
 
 }

@@ -20,7 +20,7 @@ export abstract class CentroSalud {
     telefono: string;
 
     @Column({ type: 'int' })
-    tamaño: number;
+    tamano: number;
 
     @Column({ type: 'int' })
     limpieza: number;

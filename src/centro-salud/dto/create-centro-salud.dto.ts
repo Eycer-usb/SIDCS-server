@@ -25,7 +25,7 @@ export class CreateCentroSaludDto {
     @IsInt()
     @Min(1)
     @Max(3)
-    tamaño: number;
+    tamano: number;
 
     @IsNotEmpty()
     @IsInt()

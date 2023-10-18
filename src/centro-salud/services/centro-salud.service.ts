@@ -84,6 +84,7 @@ export class CentroSaludService {
     
     try {
       this.imagesService.storage(imagenes, type, instance!);
+      console.log(instance!)
       const { repo, name } = this.getRepo(type);
       await repo.save(instance!);
       const res = {

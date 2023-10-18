@@ -13,24 +13,24 @@ export class LaboratorioClinico extends CentroSalud {
     @OneToMany(() => Imagen, imagen => imagen.laboratorioClinico, { cascade: true, onUpdate: 'CASCADE', onDelete: 'CASCADE', eager: true })
     imagenes: Imagen[];
 
-    @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    hematologiaCompleta: number;
+    @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
+    hematologiaCompleta?: number;
 
-    @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    perfil20: number;
+    @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
+    perfil20?: number;
 
-    @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    perfilTiroideo: number;
+    @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
+    perfilTiroideo?: number;
 
-    @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    urocultivo: number;
+    @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
+    urocultivo?: number;
 
-    @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    heces: number;
+    @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
+    heces?: number;
 
-    @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    orina: number;
+    @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
+    orina?: number;
 
-    @Column( { type: 'numeric', precision: 5, scale: 2 } )
-    perfilPreoperatorio: number;
+    @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
+    perfilPreoperatorio?: number;
 }

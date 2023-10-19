@@ -39,11 +39,11 @@ export class CentroSaludService {
     //     grupoMedico: await this.grupoRepository.find()
     // }
     const list = [
-      ...(await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico'}, lab)}),
-      ...((await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico'}, odonto)})),
-      ...(await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico'}, oftalmo)}),
-      ...(await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada'}, clinica)}),
-      ...(await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico'}, grupo)})
+      ...(await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico', route: "laboratorio-clinico"}, lab)}),
+      ...((await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico', route: "centro-odontologico"}, odonto)})),
+      ...(await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico', route: "centro-oftalmologico"}, oftalmo)}),
+      ...(await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada', route: "clinica-privada"}, clinica)}),
+      ...(await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico', route: "grupo-medico"}, grupo)})
     ]
     return list;
   }
@@ -58,19 +58,19 @@ export class CentroSaludService {
     {
       switch (tipoCentroDeSalud) {
         case 'laboratorioClinico':
-          result = (await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico'}, lab)});
+          result = (await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico', route: "laboratorio-clinico"}, lab)});
           break;
         case 'centroOdontologico':
-          result = (await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico'}, odonto)});
+          result = (await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico', route: "centro-odontologico"}, odonto)});
           break;
         case 'centroOftalmologico':
-          result = (await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico'}, oftalmo)});
+          result = (await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico', route: "centro-oftalmologico"}, oftalmo)});
           break;
         case 'clinicaPrivada':
-          result = (await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada'}, clinica)});
+          result = (await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada', route: "clinica-privada"}, clinica)});
           break;
         case 'grupoMedico':
-          result = (await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico'}, grupo)});
+          result = (await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico', route: "grupo-medico"}, grupo)});
           break;
         default:
           throw new NotFoundException(`Tipo ${tipoCentroDeSalud} not found`);

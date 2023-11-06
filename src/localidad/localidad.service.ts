@@ -11,37 +11,59 @@ import { InternalServerErrorException } from '@nestjs/common';
 export class LocalidadService {
   constructor(
     @InjectRepository(Localidad)
-    private zonaRepository: Repository<Localidad>,
+    private localidadRepository: Repository<Localidad>,
   ) {}
 
   async create(createLocalidadDto: CreateLocalidadDto): Promise<Localidad | undefined> {
     const zona = new Localidad();
     try {
       Object.assign(zona, createLocalidadDto);
-      return this.zonaRepository.save(zona);
+      return this.localidadRepository.save(zona);
     } catch (error) {
       throw new InternalServerErrorException(`Error: ${error}`);
     }
   }
 
-  async findAll(): Promise<Localidad[] | undefined> {
-    return this.zonaRepository.find();
+  async findAll(zonasAsStringArray: any): Promise<Localidad[] | undefined> {
+    if (zonasAsStringArray ) {
+      const all = await this.localidadRepository.find();
+      let zonas
+      if(Array.isArray(zonasAsStringArray)){
+        zonas = zonasAsStringArray.map((zona: any) => parseInt(zona));
+      }
+      else{
+        zonas = [parseInt(zonasAsStringArray)];
+      }
+
+      let response = [];
+      for(let i = 0; i < all.length; i++){
+        for(let j = 0; j < all[i].zonas.length; j++){
+          if(zonas.includes(all[i].zonas[j].id)){
+            response.push(all[i]);
+            break;
+          }
+        }
+      }
+      console.log(response);
+      return response;
+    }
+    return this.localidadRepository.find();
   }
 
   async findOne(id: number): Promise<Localidad | undefined> {
-    const zona = await this.zonaRepository.findOneBy({id});
+    const zona = await this.localidadRepository.findOneBy({id});
     if(!zona) throw new NotFoundException("Localidad not found" + ` ${id}`);
     return zona;
   }
 
   async update(id: number, updateLocalidadDto: UpdateLocalidadDto){
-    const zona = await this.zonaRepository.findOneBy({id});
+    const zona = await this.localidadRepository.findOneBy({id});
     if (!zona) {
       throw new NotFoundException("Localidad not found on update");
     }
     try {
       Object.assign(zona, updateLocalidadDto);
-      await this.zonaRepository.update(id, zona);
+      await this.localidadRepository.update(id, zona);
       return {
         status: 200,
         message: 'Localidad updated successfully',
@@ -52,12 +74,12 @@ export class LocalidadService {
   }
 
   async remove(id: number) {
-    const zona = this.zonaRepository.findOneBy({id});
+    const zona = this.localidadRepository.findOneBy({id});
     if (!zona) {
       throw new NotFoundException("Localidad not found on delete");
     }
     try {
-      await this.zonaRepository.softDelete(id)
+      await this.localidadRepository.softDelete(id)
       return {
         status: 200,
         message: 'Localidad deleted successfully',
@@ -70,7 +92,7 @@ export class LocalidadService {
   async restore(id: number) {
     if (id == null) throw new NotFoundException("Localidad not found" + ` ${id}`);
     try {
-      await this.zonaRepository.restore({id})
+      await this.localidadRepository.restore({id})
       return {
         status: 200,
         message: 'Localidad restored successfully',

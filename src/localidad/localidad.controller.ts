@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Query } from '@nestjs/common';
 import { LocalidadService } from './localidad.service';
 import { CreateLocalidadDto } from './dto/create-localidad.dto';
 import { UpdateLocalidadDto } from './dto/update-localidad.dto';
@@ -16,8 +16,8 @@ export class LocalidadController {
 
   @Get()
   @UseGuards(JwtAuthGuard)
-  findAll() {
-    return this.localidadService.findAll();
+  get( @Query('zonas') zonas: any) {
+    return this.localidadService.findAll(zonas);
   }
 
   @Get(':id')

@@ -12,7 +12,7 @@ export class Localidad {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @ManyToMany(() => Zona, zona => zona.localidades)
+    @ManyToMany(() => Zona, zona => zona.localidades, {eager: true})
     zonas: Zona[];
 
     @OneToMany(() => LaboratorioClinico, laboratorioClinico => laboratorioClinico.localidad)

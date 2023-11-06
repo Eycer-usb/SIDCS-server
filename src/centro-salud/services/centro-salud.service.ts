@@ -31,13 +31,6 @@ export class CentroSaludService {
     ) {}
 
   async findAllCentrosDeSalud() {
-    // const list = {
-    //     'laboratorioClinico': await this.labRepository.find(),
-    //     centroOdontologico: await this.odontoRepository.find(),
-    //     centroOftalmologico: await this.oftalmoRepository.find(),
-    //     clinicaPrivada: await this.clinicaRepository.find(),
-    //     grupoMedico: await this.grupoRepository.find()
-    // }
     const list = [
       ...(await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico', route: "laboratorio-clinico"}, lab)}),
       ...((await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico', route: "centro-odontologico"}, odonto)})),
@@ -48,48 +41,48 @@ export class CentroSaludService {
     return list;
   }
 
+  getIdCS(type:string){
+    switch (type) {
+      case 'Laboratorio Clinico':
+        return 'laboratorioClinico';
+      case 'Centro Odontologico':
+        return 'centroOdontologico'
+      case 'Centro Oftalmologico':
+        return 'centroOftalmologico';
+      case 'Clinica Privada':
+        return 'clinicaPrivada';
+      case 'Grupo Medico':
+        return 'grupoMedico';
+      default:
+        throw new NotFoundException(`Type ${type} not found`);
+    }
+  }
+
   async findQuery(query: any) {
-    const zonaId = query.zonaId;
-    const localidadId = query.localidadId;
-    const tipoCentroDeSalud = query.tipoCentroDeSalud;
-    const tipoGrupoMedicoId = query.tipoGrupoMedicoId;
-    let result: Array<any> = [];
-    if( tipoCentroDeSalud && tipoCentroDeSalud != 'undefined' && tipoCentroDeSalud != 'null')
-    {
-      switch (tipoCentroDeSalud) {
-        case 'laboratorioClinico':
-          result = (await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico', route: "laboratorio-clinico"}, lab)});
-          break;
-        case 'centroOdontologico':
-          result = (await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico', route: "centro-odontologico"}, odonto)});
-          break;
-        case 'centroOftalmologico':
-          result = (await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico', route: "centro-oftalmologico"}, oftalmo)});
-          break;
-        case 'clinicaPrivada':
-          result = (await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada', route: "clinica-privada"}, clinica)});
-          break;
-        case 'grupoMedico':
-          result = (await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico', route: "grupo-medico"}, grupo)});
-          break;
-        default:
-          throw new NotFoundException(`Tipo ${tipoCentroDeSalud} not found`);
+    let result: Array<any> = await this.findAllCentrosDeSalud();
+
+    // For every argument in query, filter result
+    for (const property in query) {
+      if (query.hasOwnProperty(property)) {
+        const value = query[property];
+        const key = property.includes('Id') && property != 'tipoCentroSaludId' ? property.slice(0, -2) : property ;
+        // If is an array of ids, filter by id
+        if (Array.isArray(value) && property != 'tipoCentroSaludId') {
+          console.log('Filtering by ', key, value)
+          result = result.filter(item => value.includes(item[key]?.id));
+          console.log(result)
+        }
+        else if (property == 'tipoCentroSaludId') {
+          console.log('Filtering by ', key, value)
+          result = result.filter(item => value.includes(this.getIdCS(item.tipoCentroSalud)));
+          console.log(result)
+        }
+        // If is a string, filter by name
+        else if (typeof value === 'string') {
+          result = result.filter(item => item[key].toLowerCase().includes(value.toLowerCase()));
+        }
       }
     }
-    else {
-      result = await this.findAllCentrosDeSalud();
-    }
-    if (zonaId && zonaId != 'undefined' && zonaId != 'null') {
-      result = result.filter(centro => centro.zona != null && centro.zona.id == zonaId);
-    }
-    if (localidadId && localidadId != 'undefined' && localidadId != 'null') {
-      result = result.filter(centro => centro.localidad != null && centro.localidad.id == localidadId);
-    }
-    if (tipoGrupoMedicoId && tipoGrupoMedicoId != 'undefined' && tipoGrupoMedicoId != 'null') {
-      result = result.filter( centro => centro.tipo != null && centro.tipo.id == tipoGrupoMedicoId );
-
-    }
-    console.log(result)
     return result;    
   }
 

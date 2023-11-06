@@ -1,11 +1,11 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Body, Controller, Get, Post, Query } from '@nestjs/common';
 import { CentroSaludService } from '../services/centro-salud.service';
 
 @Controller('centro-salud')
 export class CentroSaludController {
     constructor( private centroSaludService: CentroSaludService ) { }
-    @Get()
-    async find(@Query() query: any) {
-        return await this.centroSaludService.findQuery(query);
+    @Post()
+    async find(@Body() body: any) {
+        return await this.centroSaludService.findQuery(body.body);
     }
 }

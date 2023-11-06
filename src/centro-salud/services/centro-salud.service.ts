@@ -221,11 +221,11 @@ export class CentroSaludService {
       }
       
       if (imagenes) this.imagesService.update(imagenes, instance, type);
-      await this.labRepository.save(instance);      
+      await repo.save(instance);      
       const res = {
         status: 200,
         message: `${name} updated successfully`,
-        data: await this.labRepository.findOneBy({id: instance.id})
+        data: await repo.findOneBy({id: instance.id})
       }
       return res;
     }

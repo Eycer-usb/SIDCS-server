@@ -50,14 +50,8 @@ export class ImageController {
 
   @Get('storage')
   @UseGuards(JwtAuthGuard)
-  getImages(@Query('path') path: string, @Res() res: Response) {
-    if (path === undefined) {
-      path = '';
-    }
-    if (path.includes('..')) {
-      return res.status(403).send('Forbidden');
-    }
-    return res.sendFile(path, { root: './storage' });
+  getImages(@Query('filename') filename: string, @Res() res: Response) {
+    return this.imageService.get(filename, res);
   }
 
   @Delete('storage/:filename')

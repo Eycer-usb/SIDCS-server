@@ -135,4 +135,21 @@ export class ImageService {
         }
         throw new Error("File not found");
     }
+
+    get( filename: string, res: any) {
+      if (filename === undefined) {
+        throw new InternalServerErrorException();
+      }
+      if (filename.includes('..')) {
+        throw new InternalServerErrorException();
+      }
+      let rootPath;
+      if(this.existsInUploads([filename])) 
+        rootPath = './storage/uploads';
+      else if(this.exists([filename]))
+        rootPath = './storage/centrosDeSalud';
+      else
+        throw new Error("Image not found");
+      return res.sendFile(filename, { root: rootPath });
+    }
 }

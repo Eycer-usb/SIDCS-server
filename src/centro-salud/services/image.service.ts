@@ -7,7 +7,6 @@ import { GrupoMedico } from '../entities/grupo-medico.entity';
 import { Imagen } from '../entities/imagen.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { assert } from 'console';
 
 @Injectable()
 export class ImageService {

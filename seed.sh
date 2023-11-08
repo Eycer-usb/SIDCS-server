@@ -20,11 +20,11 @@ TablesSeeder=(
 
 # Drop tables
 for (( idx=${#TablesSeeder[@]}-1 ; idx>=0 ; idx-- )) ; do
-    sudo -u postgres psql -U $DATABASE_USERNAME -d $DATABASE_NAME -a -f ./src/database/${TablesSeeder[$idx]}/down.sql
+    psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -f ./src/database/${TablesSeeder[$idx]}/down.sql
 done
 
 # Seed tables
 for table in ${TablesSeeder[@]};
 do
-    sudo -u postgres psql -U $DATABASE_USERNAME -d $DATABASE_NAME -a -f ./src/database/$table/up.sql
+    psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -f ./src/database/$table/up.sql
 done

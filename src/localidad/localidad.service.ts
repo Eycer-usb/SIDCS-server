@@ -44,7 +44,6 @@ export class LocalidadService {
           }
         }
       }
-      console.log(response);
       return response;
     }
     return this.localidadRepository.find();

@@ -68,14 +68,10 @@ export class CentroSaludService {
         const key = property.includes('Id') && property != 'tipoCentroSaludId' ? property.slice(0, -2) : property ;
         // If is an array of ids, filter by id
         if (Array.isArray(value) && property != 'tipoCentroSaludId') {
-          console.log('Filtering by ', key, value)
           result = result.filter(item => value.includes(item[key]?.id));
-          console.log(result)
         }
         else if (property == 'tipoCentroSaludId') {
-          console.log('Filtering by ', key, value)
           result = result.filter(item => value.includes(this.getIdCS(item.tipoCentroSalud)));
-          console.log(result)
         }
         // If is a string, filter by name
         else if (typeof value === 'string') {
@@ -129,7 +125,6 @@ export class CentroSaludService {
     
     try {
       this.imagesService.storage(imagenes, type, instance!);
-      console.log(instance!)
       const { repo, name } = this.getRepo(type);
       await repo.save(instance!);
       const res = {

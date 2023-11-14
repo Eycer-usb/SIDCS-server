@@ -48,10 +48,10 @@ export class GrupoMedico extends CentroSalud {
     medicinaFyR?: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
-    psiquiatra?: number;
+    psiquiatria?: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
-    psicolgia?: number;
+    psicologia?: number;
 
     @Column( { type: 'numeric', precision: 5, scale: 2, nullable: true } )
     rayosXDeTorax?: number;

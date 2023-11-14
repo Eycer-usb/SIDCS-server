@@ -50,7 +50,7 @@ export class CreateGrupoMedicoDto extends CreateCentroSaludDto {
 
     @IsOptional()
     @IsCurrency({ digits_after_decimal: decimals })
-    psiquiatra?: number;
+    psiquiatria?: number;
 
     @IsOptional()
     @IsCurrency({ digits_after_decimal: decimals })

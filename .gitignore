@@ -49,3 +49,6 @@ lerna-debug.log*
 !/storage/uploads/.gitkeep
 !/storage/centrosDeSalud/.gitkeep
 !/storage/deleted/.gitkeep
+
+# Virtual Env
+env

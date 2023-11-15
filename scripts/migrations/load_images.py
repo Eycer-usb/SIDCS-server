@@ -1,4 +1,5 @@
 import os
+from prepare import download_zips
 
 def move_imagenes_to_storage():
     print('Moving images to storage...')
@@ -22,5 +23,6 @@ def decompress_imagen():
     
 
 if __name__ == '__main__':
+    download_zips()
     decompress_imagen()
     move_imagenes_to_storage()

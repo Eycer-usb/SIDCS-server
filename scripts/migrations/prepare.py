@@ -16,7 +16,6 @@ import pandas as pd
 import requests
 import re
 
-
 locations_csv = 'csv/localidades.csv'
 imagen_header = ["url","laboratorioClinicoId", "centroOftalmologicoId",
     "centroOdontologicoId","clinicaPrivadaId", "grupoMedicoId" ]
@@ -146,7 +145,26 @@ def decompress_imagen():
         os.system('rm -rf ' + dirname + '/imagenes/' + name)
         os.system('mkdir -p ' + dirname + '/imagenes/' + name)
         os.system('unzip -j ' + path_zip + '/' + file + ' -d ' + dirname + '/imagenes/' + name + ' > /dev/null')
-    
+
+def download_zips():
+    print("Downloading zips")
+    zips = {
+        "laboratorioClinico": "https://drive.google.com/uc?id=1O7dj5RHyF1MrsIM8yZjLCxJ4PdpdU92n&export=download&confirm=t&uuid=afa39a03-bca7-4486-8741-1b8e62696f0b",
+        "centroOftalmologico": "",
+        "centroOdontologico": "",
+        "clinicaPrivada": "",
+        "grupoMedico": ""
+    }
+    for f in zips:
+        link = zips[f]
+        if link != '':
+            dirname = os.path.dirname(__file__)
+            path_zip =  dirname + '/zip'
+            os.system('mkdir -p ' + path_zip)
+            os.system('rm -rf ' + path_zip + '/*')            
+            command = "wget '" + link + "' -O " + path_zip + '/' + f + '.zip'
+            os.system(command)
+
 
 def move_imagenes_to_storage():
     print('Moving images to storage...')
@@ -169,6 +187,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 3 and sys.argv[1] == 'imagen':
         table_name = sys.argv[1]
         migrations_path = sys.argv[2]
+        download_zips()
         decompress_imagen()
         prepare_imagen(table_name, migrations_path)
         move_imagenes_to_storage()
@@ -184,5 +203,6 @@ if __name__ == '__main__':
         main(name, path, migrations_path, sheet_name)
     else:
         print('Missing arguments')
-        print('Usage: python prepare.py <table_name> <path_to_csv_file> <path_to_migrations_folder> <sheet_name>')
+        print('Usage: python3 prepare.py <table_name> <path_to_excel_file> <path_to_migrations_folder> <sheet_name>')
+        print('Usage: python3 prepare.py imagen <path_to_migrations_folder> ')
 

@@ -1,0 +1,87 @@
+nombre,direccion,latitud,longitud,tamano,limpieza,demanda,urocultivo,heces,orina,localidadId,zonaId,hematologiaCompleta,perfil20,perfilTiroideo,perfilPreoperatorio,telefono
+Laboratorio Olimpo,"Av. Andrés Bello entre 1era y 2da Transversal, Edificio Everi PB.",10.491225,-66.8556711,1,3,2,18.0,5.0,5.0,7,1,7.0,22.0,21.0,39.0,424-2813235
+Laboratorio CayPac,"Edificio Yoraco Av. Caurimare, con Av. Neveri, 1080, Miranda, Venezuela",10.4859376,-66.8759801,1,3,1,,4.0,4.0,3,1,4.0,10.0,10.0,15.0,414-1190245
+Laboratorio Médico de Referencia,"Av. El Mirador, Edificio Torre 18, Piso 2, La Campiña",10.4972671,-66.8762407,2,3,1,15.0,3.0,3.0,4,1,7.0,25.0,48.0,33.0,212-7300989
+Laboratorio Clínico Microbiológico Elizabeth Gutiérrez,"Av. Libertador, Edif. Majestic, Piso 1",10.496796,-66.874966,2,2,2,28.6,11.5,11.5,4,1,,37.2,31.5,28.6,0212-763.59.09
+Hormolab21,Centro Comercial Unico. Piso 2. Local 21,10.4899778,-66.8709373,3,2,2,18.0,3.0,3.0,4,1,5.0,15.0,15.0,15.0,2129523219
+Laboratorio Bioelectrónico,"Policlínica Americana. Piso 1, consultorio 1-D. El Rosal",10.4894104,-66.8671531,2,2,1,18.0,5.0,4.0,6,1,8.0,45.0,36.0,28.0,212-9515462
+Vive Salud Lab,"Av. Juan Pablo II, entre Av. Libertador y Av. Santa Ana, local #1 Av. Principal de Bello Campo, 1060, Miranda",10.4902979,-66.8509203,1,3,1,25.0,6.0,6.0,6,1,10.0,25.0,62.0,36.0,0412-081.54.53
+Grupo Clínico Chacao,"Av. San Ignacio de Loyola, Edif. San Carlos, PB, Local 3, Chacao, Caracas",10.4943499,-66.85583,1,2,1,27.0,5.0,5.0,6,1,5.0,20.0,31.0,25.0,0212-267.53.23
+Laboratorio 747,"Calle Choroni, Chuao",10.482323,-66.842441,3,3,1,35.0,5.0,5.0,9,1,10.0,30.0,30.0,30.0,0424-206.32.06
+Laboratorio Clínico Ciencia,"Av. Santiago de León , Residencia California PB. California Norte",10.4798442,-66.8227543,2,3,1,26.0,4.0,4.0,12,1,6.0,25.0,45.0,27.0,0414-2012080
+Laboratorio de Especialidades Clínicas Mi California Norte,"Av. Francisco de Miranda, Torre Profesional La California, Piso 1",10.4901567,-66.8283351,3,3,1,15.0,4.0,4.0,12,1,7.0,17.0,17.0,26.0,212-2324341
+Analab,"Av. Francisco de Miranda, Edif. A. Mezzanina",10.4796095,-66.8197145,2,1,2,,,,12,1,,15.0,,30.0,0424-2778566
+Laboratorio Clínico AISA,"Centro Médico Profesional Las Mercedes. Piso 2, Consultorio Nº 26",10.4825258,-66.8648338,1,2,2,19.0,5.0,5.0,5,1,5.0,15.0,20.0,39.0,212-9911979
+"Laboratorio Clínico Bacterológico Hecsilab, C.A.","Edif. Tamanaco, Piso 4, 4C., Avenida Paseo Eraso con Calle Chivacoa, San Román ",10.47577,-66.8610129,2,3,1,20.0,3.0,3.0,5,1,5.0,20.0,20.0,25.0,0414-181.22.66
+Laboratorio Clínico Blau,"Av.Franciso de Miranda con calle los Laboratorios. Edif QUORUM,Piso 2 , Ofic 2E",10.4901567,-66.8283351,3,3,1,10.0,4.0,5.0,11,1,7.0,19.0,24.0,24.0,212-2324341
+Laboratorio Clínico Analizar,"Av. Francisco de Miranda Centro Empresarial Don Bosco , Mezzanina. Local 19",10.4887661,-66.8259122,1,2,1,26.0,4.0,3.0,11,1,5.0,20.0,30.0,25.0,414-2325738
+Laboratorio Clínico Brailab,"Av. Francisco de Miranda Centro Seguros La Paz, Mezzanina Local 8",10.4870208,-66.825196,1,2,1,15.0,5.0,5.0,11,1,10.0,20.0,25.0,20.0,0424-1729473
+KMC Laboratorio,"Av. Rómulo Gallegos, Centro Gerencial Los Andes , piso 8 oficina 8F",10.4930788,-66.826139,1,2,1,30.0,5.0,5.0,11,1,5.0,20.0,25.0,25.0,0412-3250035
+Laboratorio Clínico Sanarox,"Av. de los Ruices, C.C Los Ruices local 18 y 20",10.5029027,-66.8438405,2,3,2,22.0,3.0,4.0,10,1,8.5,19.0,30.0,24.0,212-2329032 /0412-0410561
+Laboratorio Duolab,"3era Av. de Los Palos Grandes entre la 4ta y 5ta transversal. Quinta Don Federico, local N°10",10.5029027,-66.8438405,2,2,1,25.0,6.0,6.0,8,1,10.0,25.0,62.0,36.0,0424-2149718
+Grupo Servi Medi MARIGUITAR C.A.,"Calle Vargas con Calle Sucre, Callejon Z con calle N2,  Zona Colonial de Petare",10.4704412,-66.9783809,1,2,3,10.0,5.0,5.0,15,1,5.0,10.0,10.0,10.0,0412-7272766 / 0424-2564855
+Laboratorio Clínico ALFA Diagnostic II S.C,"Calle Madeleine, con Avenida Pérez de León, diagonal a la Plaza Sucre, Petare",10.4770675,-66.80917,2,3,3,23.03,3.5,3.5,15,1,3.79,15.21,15.5,23.62,0212-2716418 / 0412-0980416
+"Laboratorio Clínico NeutroLab, C.A.","Calle Las Flores, Edif. Apuliana, Piso 3, Local 31, Sabana Grande, Caracas",10.496111,-66.875976,2,2,2,29.0,6.0,6.0,2,1,7.0,20.0,30.0,28.0,0212-761.66.12
+Laboratorio Clínico Lamdabab,"Av. Sucre, Agua Salud",10.5109666,-66.9499507,1,3,1,30.0,1.5,1.5,30,2,5.0,7.0,25.0,18.0,212-8706770
+Laboratorio Biomedical,"Diagonal al Hospital de Niños J.M de los Rios, frente al supermercado Gamma, al lado de la farmacia Ávila, San Bernardino",10.507828,-66.90034,2,3,2,20.0,3.0,3.0,19,2,4.0,12.0,25.0,25.0,
+Laboratorio Clínico Maysalu,"Avenida Norte, Torre a Veroes, Edificio Lander, Mini Centro Comercial Plaza Bolívar, PB.",10.5075429,-66.9179126,2,3,3,15.0,2.0,2.0,26,2,8.0,13.0,15.0,15.0,4141208420
+Mundo Salud,"Av. Universidad, Edf Atlantidad, Piso Mezzanina",10.5041767,-66.9171752,1,2,2,20.0,5.0,5.0,23,2,5.0,15.0,25.0,25.0,412-6033707
+Del Valle Villarroel,"Av. Urdaneta, Edf. Iberia, Piso PB",10.5066595,-66.9104124,2,2,2,16.0,2.0,2.0,23,2,4.0,12.0,17.0,15.0,424-8390243
+Laboratorio Paria,"Av. Urdaneta, Pasaje Seguridad",10.5082154,-66.9154065,1,3,2,22.0,4.0,4.0,23,2,7.0,15.0,28.0,19.0,212-5648520
+Laboratorio Clínico Fyez ,"Esquina El Cristo a Vientos, Av. Fuerzas Armadas",10.4990039,-66.913204,2,3,1,21.0,3.0,4.0,23,2,5.0,15.0,26.0,21.0,212-5421111
+Servicios Lab Mahfy,"Calle Colombia, Catia",10.5142665,-66.9460042,1,3,2,25.0,2.0,2.0,32,2,3.0,8.0,24.0,20.0,412-3376897
+Laboaratorio Clínico Lolebat 2014 C.A,"Calle Colombia, Catia",10.5082146,-66.9257063,1,3,1,25.0,2.0,2.0,32,2,3.0,7.0,25.0,18.0,424-3295565
+Laboratorio Maritza Chanchamire,Calle el Cristo Boulevar de Catia,10.5146259,-66.9486589,1,3,2,15.0,2.0,2.0,32,2,3.0,10.0,15.0,15.0,212-8735145
+Laboratorio Amylab,C-C- Atlantico Propatria,10.5082047,-66.9875086,1,2,1,16.0,1.0,2.0,34,2,3.0,11.0,12.0,13.0,424-1624031
+Bacteriolab San Bernardino,"Av. Cajigal, Edif. Gaigel",10.3648531,-66.963071,2,3,1,15.0,5.0,5.0,20,2,5.0,12.0,25.0,20.0,424-2813235
+Grupo Salud Krisogab l&d,"Los Anaucos, San Bernardino.",10.5046253,-66.9007901,1,2,1,15.0,2.0,2.0,20,2,5.0,12.0,25.0,15.0,212-5519597
+Laboratorio AnaLuz,"Av. Ávila con Av. Panteón, Edif. Panávila, Local B",10.5111702,-66.9044404,2,3,1,15.0,4.0,4.0,20,2,6.0,15.0,20.0,25.0,
+Olimag,"Av. Fuerzas Armadas, Esq. Enrrique, Edf. El Say, Piso PB",10.5082154,-66.9154065,1,2,1,18.0,2.0,2.0,24,2,5.0,16.0,34.0,16.0,412-8318850
+Red Salud,"Av. Fuerzas Armadas, Edf. Torres de San Jose, PB Local b-3",10.5082154,-66.9154065,3,3,2,18.0,4.0,4.0,24,2,6.0,12.0,34.0,25.0,212-5522575
+Innova Diagnostic,"San José, al lado emergencias Hospital Vargas",10.5173932,-66.9144619,1,2,1,20.0,3.0,3.0,24,2,4.0,15.0,20.0,15.0,414-9170379
+Biomedical,"San José, frente Hospital Vargas",10.5167178,-66.9146674,2,2,2,20.0,3.0,3.0,24,2,5.0,12.0,25.0,25.0,
+El Arbol,"San José, Providecia a San Nicolas",10.5152524,-66.9149061,2,2,1,24.0,3.0,3.0,24,2,5.0,10.0,20.0,20.0,412-9842441
+Daolin,"San Jose, Calle Santa Isabel",10.5151432,-66.9118333,2,2,1,29.0,2.0,2.0,24,2,6.0,10.0,28.0,20.0,212-5648170
+Elucared Laboratorio,"Esq. de Hoyo, Santa Teresa",10.4993525,-66.9181153,2,3,2,28.0,4.0,4.0,28,2,8.0,20.0,27.0,20.0,212-4827220
+Metamaxlab,Esq. Castan a Candilito,10.4978408,-66.9154965,2,2,2,35.0,2.0,2.0,28,2,7.0,10.0,36.0,22.0,212-6148961
+Instituto de Inmunología UCV,Universidad Central de Venezuela Instituto de Inmunología.,10.4919954,-66.8930651,2,3,3,,,,35,3,,,15.0,,0212-693.74.52
+Dispensario Santo Domingo Savio,"Av. Guzman Blanco, Vereda 91, Coche",10.4468433,-66.9291032,1,2,1,12.0,3.0,3.0,43,3,4.0,12.0,21.0,16.0,
+Laboratorio 333.1,Estadio de la Academia Militar / Ultimo local,10.459621,-66.90309,1,2,1,25.0,3.0,3.0,43,3,5.0,15.0,20.0,22.0,412-3283894
+Unilab El Cementerio,"Av. Capitán de Navía Felipe Estévez, entre Av. Los jabillos y Los Cármenes, Sector Los Castaños, El Cementerio.",10.4795678,-66.9146951,2,3,1,20.0,3.0,3.0,38,3,6.0,12.0,18.0,18.0,0424-127.40.13
+Marini II,"Calle el Degredo, Nro. 17, El Cementerio.",10.477762,-66.917526,1,2,1,30.0,2.0,2.0,38,3,5.0,10.0,35.0,15.0,0212-631.14.48
+Odontoestética,"Av. Capitán de Navía Felipe Estévez, Local 6 PB, El Cementerio.",10.4786394,-66.916523,2,2,1,18.0,2.0,2.0,38,3,5.0,13.0,22.0,18.0,0212-633.56.52
+Laboratorio Lyocar,"Av. Intercomunal El Valle, Centro Comercial El Valle, Piso 7",10.467401,-66.904915,1,2,1,27.0,3.0,3.0,41,3,7.0,18.0,41.0,17.0,0212-8898344
+ClivaLab,"Centro Comercial El Valle, Piso Fiesta",10.467286,-66.904735,1,2,1,18.0,3.0,3.0,41,3,5.0,15.0,35.0,15.0,212-6716789
+Hormolab 21,"Av. Intercomunal El Valle, Centro Comercial El Valle, Piso 7",10.467401,-66.904915,1,2,2,18.0,3.0,3.0,41,3,5.0,10.0,15.0,15.0,0212-8905064
+Laboratorio Clínico Test Confiable,"Av. las Americas, Las Acacias",10.4849516,-66.8981815,2,3,2,25.0,3.0,3.0,39,3,5.0,18.0,26.0,35.0,212-6939466
+Laboratorio La Fortaleza,"Avenida Roosevelt, Esq. Calle El Cortijo, Torre Los Rosales, PB.",10.4813573,-66.9049016,2,3,2,20.0,3.0,3.0,39,3,6.0,20.0,25.0,25.0,212-6680468
+Unilab Los Chaguaramos,"Av. Ciudad Universitaria, Edif. Centro Las Cumbres, PB. Oficina 3A, Los Chaguaramos.",10.486236,-66.8890455,2,3,1,20.0,3.0,3.0,46,3,6.0,12.0,18.0,18.0,0414-931.83.89
+Laboratorio Clínico Marini,"Av. Intercomunal El Valle, Edificio CTV",10.459403,-66.915851,1,3,2,25.0,2.0,3.0,42,3,5.0,10.0,25.0,15.0,0212-6720258
+Hema-Lab CA,"Calle Cristóbal Rojas, entre calle Reinaldo Jahn y Simón Planas, Santa Mónica.",10.459403,-66.915851,1,3,2,26.0,3.0,3.0,47,3,5.0,34.0,47.0,49.0,0414-233.15.75
+Centro Médico Diagnóstico Fe,Calle Real de Antímano,10.4628048,-66.9843476,1,2,2,18.0,2.0,2.0,61,4,5.0,15.0,15.0,15.0,414-1358994
+Cendilab,Centro Comercial San Martín,10.4915359,-66.9745874,2,3,2,12.0,2.0,2.0,54,4,4.0,10.0,15.0,16.0,414-9134656
+Centro Ortopédico Los Niños,Centro Comercial Los Molinos,10.4912503,-66.9445366,1,2,1,15.0,3.0,3.0,54,4,5.0,20.0,25.0,18.0,
+Grupo Médico San Martín,Centro Comercial San Martín,10.4919714,-66.940079,2,3,2,15.0,2.0,2.0,54,4,5.0,10.0,20.0,15.0,
+Laboratorio Clínico Profesional Dg&M CA,"Avenida San Martín, Centro comercial San Martín",10.491275,-66.9412568,2,3,2,15.0,2.0,2.0,54,4,5.0,10.0,20.0,15.0,424-2710655
+Grupo Rivas Rodriguez y Asociados,Centro Comercial Los Molinos,10.4913509,-66.9418599,1,2,2,20.0,3.0,3.0,54,4,6.0,10.0,25.0,18.0,
+Nursinlab,"C.C. Los Molinos, Av. San Martin",10.4913509,-66.9418599,1,2,2,15.0,2.0,2.0,54,4,5.0,10.0,15.0,15.0,4242470870
+Aranza el Marquez,"Local KB, Centro Plaza, Calle Madariaga.",10.4880909,-66.9382416,2,3,2,35.0,10.0,10.0,53,4,20.0,20.0,30.0,65.0,212-4342936
+Laboratorio Clínico Bio Euro,Av. Los Samanes.,10.4909217,-66.9271582,3,3,3,30.0,8.0,8.0,53,4,20.0,21.0,35.0,60.0,212-4812412
+Centro Médico Ruiz Sevillano,"Calle, San José,La Vega",10.4733506,-66.9463724,3,3,3,18.0,5.0,5.0,57,4,9.0,17.0,25.0,25.0,424-1651780
+Laboratorio Clínico AsistenLab,"Piso 2, Centro Comercial Colonial, C. Real De La Vega.",10.4733506,-66.9463724,1,3,3,20.0,2.0,2.0,57,4,2.0,10.0,15.0,15.0,424-2536271
+Fácil Salud,"Piso 2, Centro Comercial Colonial, C. Real De La Vega.",10.4695278,-66.9477222,2,3,3,20.0,3.0,3.0,57,4,5.0,12.0,25.0,15.0,412-3689006
+Laboratorio Clínico Goncalves,Ruiz Pineda,10.433602,-67.0018562,1,3,1,20.0,5.0,5.0,63,4,5.0,20.0,20.0,20.0,416-6341353
+CIMSAVID,"UD3 - Bloque 15, PB. Local 4, Caricuao.",10.4330705,-66.9712338,2,3,3,12.0,2.0,2.0,66,4,5.0,12.0,12.0,12.0,
+Laboratorio Clínico Bacteriológico Lic. Vilma Sánchez,"UD3, CC Caricuao.",10.4332355,-66.972024,1,2,2,12.0,2.0,2.0,66,4,5.0,12.0,12.0,12.0,
+Laboratorio Clínico Hibelab,UD6 Caricuao,10.4323744,-66.9654215,2,3,2,15.0,2.0,2.0,66,4,5.0,15.0,15.0,15.0,212-4324915
+Centro Médico Integral Ojo de Agua,"Carretera Baruta-Placer, Sector Ojo de Agua, Estación de Servicio PDV  Ojo de Agua, Baruta",10.4266518,-66.8765871,2,3,2,25.0,4.5,4.5,68,5,7.0,12.0,28.0,15.0,0212-9641962
+Laboratorio Clínico La Coromoto C.A.,"Baruta, Minicentro Comercial Galería, Piso 1",10.4354635,-66.8754383,1,2,1,22.0,5.0,5.0,68,5,8.0,18.0,25.0,22.0,412-1567612
+Centro Bioanalítico RQ C.A.,"Carreteta Baruta, PB Clínica el Placer ",10.4280343,-66.8761267,1,3,1,16.0,6.0,6.0,68,5,6.0,23.0,26.0,36.0,412-90381114 / 424-1222941
+Laboratorio Clínico Humboldt,"C.C Parque Humboldt, Mezz - 4, Prados del Este.",10.4503173,-66.8751011,2,2,1,24.0,4.0,4.0,67,5,6.0,18.0,28.0,27.0,0212-6242289
+"Laboratorios BioAguilar, C.A","C.C La Piramide, Nivel Mezzanina local 28",10.4528134,-66.8739118,1,2,1,18.0,2.0,3.0,67,5,7.0,15.0,20.0,20.0,0412-3878355
+Laboratorio Clínico MCS,"Av. Principal del Cafetal, entre Santa Sofía y Santa Marta, El Cafetal",10.4785042,-66.8430666,2,3,1,30.0,5.0,5.0,73,5,10.0,25.0,28.0,35.0,0212-514.39.81
+Laboratorio SermeLab HCH,"Local B, Av. Bella Vista, Casa No. 3, El Hatillo",10.4226111,-66.8248333,2,3,2,,5.0,5.0,71,5,5.0,12.0,,19.0,
+Laboratorio Clínico Biomatic,"Concresa, CC Parque Humbolt",10.4467457,-66.8751059,2,3,1,18.0,5.0,5.0,71,5,5.0,15.0,18.0,30.0,4241906563
+Laboratorio Clínico Examina,"Sector la Guairita I, Av prolongación los Guayabitos, Centro Expreso Baruta, Piso 3 , Ofic O-301 , Urb La Trinidad .",10.4333642,-66.8706642,3,3,1,18.0,3.0,4.0,69,5,6.0,20.0,17.0,24.0,212-9414186 / 212-9413767
+ConfortLab,"Centro Comercial Expreso Baruta, Nivel PB, Local 23",10.4328212,-66.872668,2,3,1,24.0,4.5,4.5,69,5,5.0,16.5,29.0,22.5,0414-2224735
+ThelabBiodiagnostica,"La Trinidad, edif. CENTRO-VEN, piso 1, oficina A-3",10.4356667,-66.8628889,2,2,2,20.0,3.0,5.0,69,5,5.0,10.0,20.0,,0212-9455207

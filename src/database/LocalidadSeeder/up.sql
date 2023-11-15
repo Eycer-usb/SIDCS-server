@@ -67,7 +67,7 @@ INSERT INTO public.localidad (descripcion) VALUES ('Carapita');
 INSERT INTO public.localidad (descripcion) VALUES ('La Católica Andrés Bello');
 INSERT INTO public.localidad (descripcion) VALUES ('Antimano');
 INSERT INTO public.localidad (descripcion) VALUES ('Mamera');
-INSERT INTO public.localidad (descripcion) VALUES ('Ruiz Pineda');
+INSERT INTO public.localidad (descripcion) VALUES ('Ruíz Pineda');
 INSERT INTO public.localidad (descripcion) VALUES ('Caricuao');
 INSERT INTO public.localidad (descripcion) VALUES ('Las Adjuntas');
 INSERT INTO public.localidad (descripcion) VALUES ('Zoológico');

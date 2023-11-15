@@ -51,4 +51,4 @@ lerna-debug.log*
 !/storage/deleted/.gitkeep
 
 # Virtual Env
-env
+env/

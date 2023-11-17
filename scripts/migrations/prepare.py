@@ -149,7 +149,7 @@ def decompress_imagen():
 def download_zips():
     print("Downloading zips")
     zips = {
-        "laboratorioClinico": "https://drive.google.com/uc?id=1O7dj5RHyF1MrsIM8yZjLCxJ4PdpdU92n&export=download&confirm=t&uuid=afa39a03-bca7-4486-8741-1b8e62696f0b",
+        "laboratorioClinico": "https://drive.google.com/uc?export=download&id=1WK-bFRE4Jb8Nmfzepn6UwxzNFVVA7v9r&confirm=t&uuid=cca6516b-cd24-41af-9229-2eef46314a04",
         "centroOftalmologico": "",
         "centroOdontologico": "",
         "clinicaPrivada": "",

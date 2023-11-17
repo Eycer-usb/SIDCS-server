@@ -24,11 +24,17 @@ TablesCSV=(
 )
 
 TableName=(
-    'laboratorio_clinico'
     'imagen'
+    'laboratorio_clinico'
 )
 
+
 # Drop tables
+for table in ${TableName[@]};
+do
+    psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "DELETE FROM ${table}";
+    psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "ALTER SEQUENCE ${table}_id_seq RESTART WITH 1;"
+done
 for (( idx=${#TablesSeeder[@]}-1 ; idx>=0 ; idx-- )) ; do
     psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -f ./src/database/${TablesSeeder[$idx]}/down.sql
 done
@@ -37,16 +43,6 @@ done
 for table in ${TablesSeeder[@]};
 do
     psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -f ./src/database/$table/up.sql
-done
-
-
-# Seed tables from csv
-
-# Drop tables
-for table in ${TableName[@]};
-do
-    psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "DELETE FROM ${table}";
-    psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "ALTER SEQUENCE ${table}_id_seq RESTART WITH 1;"
 done
 
 psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "\copy 

@@ -1,10 +1,10 @@
 echo Start building...
 
-sudo apt -y update
-sudo apt -y upgrade
+apt -y update
+apt -y upgrade
 
-sudo apt -y install python3
-sudo apt -y install python3-pip
+apt -y install python3
+apt -y install python3-pip
 
 npm install
 npx @nestjs/cli build

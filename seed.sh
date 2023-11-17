@@ -28,7 +28,7 @@ TableName=(
     'laboratorio_clinico'
 )
 
-
+echo "Start seeding..."
 # Drop tables
 for table in ${TableName[@]};
 do
@@ -62,3 +62,5 @@ psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "\copy
         \"centroOftalmologicoId\", \"centroOdontologicoId\",
         \"clinicaPrivadaId\",\"grupoMedicoId\"
         ) FROM './src/database/imagen.csv' DELIMITER ',' CSV HEADER;"
+
+echo "Seeding finished!"

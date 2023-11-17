@@ -12,14 +12,14 @@ Laboratorio Clínico Ciencia,"Av. Santiago de León , Residencia California PB. 
 Laboratorio de Especialidades Clínicas Mi California Norte,"Av. Francisco de Miranda, Torre Profesional La California, Piso 1",10.4901567,-66.8283351,3,3,1,15.0,4.0,4.0,12,1,7.0,17.0,17.0,26.0,212-2324341
 Analab,"Av. Francisco de Miranda, Edif. A. Mezzanina",10.4796095,-66.8197145,2,1,2,,,,12,1,,15.0,,30.0,0424-2778566
 Laboratorio Clínico AISA,"Centro Médico Profesional Las Mercedes. Piso 2, Consultorio Nº 26",10.4825258,-66.8648338,1,2,2,19.0,5.0,5.0,5,1,5.0,15.0,20.0,39.0,212-9911979
-"Laboratorio Clínico Bacterológico Hecsilab, C.A.","Edif. Tamanaco, Piso 4, 4C., Avenida Paseo Eraso con Calle Chivacoa, San Román ",10.47577,-66.8610129,2,3,1,20.0,3.0,3.0,5,1,5.0,20.0,20.0,25.0,0414-181.22.66
+"Laboratorio Clínico Bacterológico Hecsilab, C.A.","Edif. Tamanaco, Piso 4, 4C., Avenida Paseo Eraso con Calle Chivacoa, San Román ",10.4757222,-66.8584444,2,3,1,20.0,3.0,3.0,5,1,5.0,20.0,20.0,25.0,0414-181.22.66
 Laboratorio Clínico Blau,"Av.Franciso de Miranda con calle los Laboratorios. Edif QUORUM,Piso 2 , Ofic 2E",10.4901567,-66.8283351,3,3,1,10.0,4.0,5.0,11,1,7.0,19.0,24.0,24.0,212-2324341
 Laboratorio Clínico Analizar,"Av. Francisco de Miranda Centro Empresarial Don Bosco , Mezzanina. Local 19",10.4887661,-66.8259122,1,2,1,26.0,4.0,3.0,11,1,5.0,20.0,30.0,25.0,414-2325738
 Laboratorio Clínico Brailab,"Av. Francisco de Miranda Centro Seguros La Paz, Mezzanina Local 8",10.4870208,-66.825196,1,2,1,15.0,5.0,5.0,11,1,10.0,20.0,25.0,20.0,0424-1729473
 KMC Laboratorio,"Av. Rómulo Gallegos, Centro Gerencial Los Andes , piso 8 oficina 8F",10.4930788,-66.826139,1,2,1,30.0,5.0,5.0,11,1,5.0,20.0,25.0,25.0,0412-3250035
 Laboratorio Clínico Sanarox,"Av. de los Ruices, C.C Los Ruices local 18 y 20",10.5029027,-66.8438405,2,3,2,22.0,3.0,4.0,10,1,8.5,19.0,30.0,24.0,212-2329032 /0412-0410561
 Laboratorio Duolab,"3era Av. de Los Palos Grandes entre la 4ta y 5ta transversal. Quinta Don Federico, local N°10",10.5029027,-66.8438405,2,2,1,25.0,6.0,6.0,8,1,10.0,25.0,62.0,36.0,0424-2149718
-Grupo Servi Medi MARIGUITAR C.A.,"Calle Vargas con Calle Sucre, Callejon Z con calle N2,  Zona Colonial de Petare",10.4704412,-66.9783809,1,2,3,10.0,5.0,5.0,15,1,5.0,10.0,10.0,10.0,0412-7272766 / 0424-2564855
+Grupo Servi Medi MARIGUITAR C.A.,"Calle Vargas con Calle Sucre, Callejon Z con calle N2,  Zona Colonial de Petare",10.4719286,-66.8019631,1,2,3,10.0,5.0,5.0,15,1,5.0,10.0,10.0,10.0,0412-7272766 / 0424-2564855
 Laboratorio Clínico ALFA Diagnostic II S.C,"Calle Madeleine, con Avenida Pérez de León, diagonal a la Plaza Sucre, Petare",10.4770675,-66.80917,2,3,3,23.03,3.5,3.5,15,1,3.79,15.21,15.5,23.62,0212-2716418 / 0412-0980416
 "Laboratorio Clínico NeutroLab, C.A.","Calle Las Flores, Edif. Apuliana, Piso 3, Local 31, Sabana Grande, Caracas",10.496111,-66.875976,2,2,2,29.0,6.0,6.0,2,1,7.0,20.0,30.0,28.0,0212-761.66.12
 Laboratorio Clínico Lamdabab,"Av. Sucre, Agua Salud",10.5109666,-66.9499507,1,3,1,30.0,1.5,1.5,30,2,5.0,7.0,25.0,18.0,212-8706770
@@ -59,7 +59,7 @@ Unilab Los Chaguaramos,"Av. Ciudad Universitaria, Edif. Centro Las Cumbres, PB. 
 Laboratorio Clínico Marini,"Av. Intercomunal El Valle, Edificio CTV",10.459403,-66.915851,1,3,2,25.0,2.0,3.0,42,3,5.0,10.0,25.0,15.0,0212-6720258
 Hema-Lab CA,"Calle Cristóbal Rojas, entre calle Reinaldo Jahn y Simón Planas, Santa Mónica.",10.459403,-66.915851,1,3,2,26.0,3.0,3.0,47,3,5.0,34.0,47.0,49.0,0414-233.15.75
 Centro Médico Diagnóstico Fe,Calle Real de Antímano,10.4628048,-66.9843476,1,2,2,18.0,2.0,2.0,61,4,5.0,15.0,15.0,15.0,414-1358994
-Cendilab,Centro Comercial San Martín,10.4915359,-66.9745874,2,3,2,12.0,2.0,2.0,54,4,4.0,10.0,15.0,16.0,414-9134656
+Cendilab,Centro Comercial San Martín,10.4923056,-66.9394722,2,3,2,12.0,2.0,2.0,54,4,4.0,10.0,15.0,16.0,414-9134656
 Centro Ortopédico Los Niños,Centro Comercial Los Molinos,10.4912503,-66.9445366,1,2,1,15.0,3.0,3.0,54,4,5.0,20.0,25.0,18.0,
 Grupo Médico San Martín,Centro Comercial San Martín,10.4919714,-66.940079,2,3,2,15.0,2.0,2.0,54,4,5.0,10.0,20.0,15.0,
 Laboratorio Clínico Profesional Dg&M CA,"Avenida San Martín, Centro comercial San Martín",10.491275,-66.9412568,2,3,2,15.0,2.0,2.0,54,4,5.0,10.0,20.0,15.0,424-2710655

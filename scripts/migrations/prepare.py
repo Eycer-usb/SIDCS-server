@@ -15,6 +15,7 @@ import os
 import pandas as pd
 import requests
 import re
+from load_images import download_zips, decompress_imagen, move_imagenes_to_storage
 
 locations_csv = 'csv/localidades.csv'
 imagen_header = ["url","laboratorioClinicoId", "centroOftalmologicoId",
@@ -134,47 +135,7 @@ def prepare_imagen(name, migrations_path):
         out = pd.concat([out, iteration])
 
     out.to_csv(os.path.join(migrations_path, name + '.csv'), index=False)
-        
-def decompress_imagen():
-    print('Decompressing images...')
-    dirname = os.path.dirname(__file__)
-    path_zip =  dirname + '/zip'
-    files = [ f for f in os.listdir(path_zip) if os.path.isfile(os.path.join(path_zip, f)) and f.endswith('.zip') ]
-    for file in files:
-        name = file[:-4]
-        os.system('rm -rf ' + dirname + '/imagenes/' + name)
-        os.system('mkdir -p ' + dirname + '/imagenes/' + name)
-        os.system('unzip -j ' + path_zip + '/' + file + ' -d ' + dirname + '/imagenes/' + name + ' > /dev/null')
 
-def download_zips():
-    print("Downloading zips")
-    zips = {
-        "laboratorioClinico": "https://drive.google.com/uc?export=download&id=1WK-bFRE4Jb8Nmfzepn6UwxzNFVVA7v9r&confirm=t&uuid=cca6516b-cd24-41af-9229-2eef46314a04",
-        "centroOftalmologico": "",
-        "centroOdontologico": "",
-        "clinicaPrivada": "",
-        "grupoMedico": ""
-    }
-    for f in zips:
-        link = zips[f]
-        if link != '':
-            dirname = os.path.dirname(__file__)
-            path_zip =  dirname + '/zip'
-            os.system('mkdir -p ' + path_zip)
-            os.system('rm -rf ' + path_zip + '/*')            
-            command = "wget '" + link + "' -O " + path_zip + '/' + f + '.zip'
-            os.system(command)
-
-
-def move_imagenes_to_storage():
-    print('Moving images to storage...')
-    dirname = os.path.dirname(__file__)
-    path_zip =  dirname + '/zip'
-    files = [ f for f in os.listdir(path_zip) if os.path.isfile(os.path.join(path_zip, f)) and f.endswith('.zip') ]
-    for file in files:
-        name = file[:-4]
-        os.system('cp ' + dirname + '/imagenes/' + name + '/* ' + dirname + '/../../storage/centrosDeSalud' + ' > /dev/null')
-    
 def main(name, path, migrations_path, sheet_name):
 
     df = pd.read_excel(path, sheet_name=sheet_name)

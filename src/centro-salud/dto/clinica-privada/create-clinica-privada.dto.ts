@@ -1,13 +1,11 @@
-import { IsNotEmpty, IsInt, Min, IsCurrency, IsIn, Max, IsOptional } from 'class-validator';
+import { IsNotEmpty, IsInt, Min, IsCurrency, IsIn, Max, IsOptional, IsBoolean } from 'class-validator';
 
 const digits = [1, 2, 3];
 
 export class CreateClinicaPrivadaDto {
-    @IsInt()
-    @Min(1)
-    @Max(3)
-    @IsNotEmpty()
-    emergencia: number;
+    @IsOptional()
+    @IsBoolean()
+    emergencia: boolean;
 
     @IsOptional()
     @IsCurrency({ digits_after_decimal: digits })

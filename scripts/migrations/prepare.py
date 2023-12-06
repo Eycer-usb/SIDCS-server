@@ -42,6 +42,104 @@ laboratorio_clinico_dict = {
     'telefono': 'TELÉFONOS'
 }
 
+centro_oftalmologico_header = [
+    "nombre","direccion","latitud","longitud", "telefono",
+    "tamano","limpieza","demanda",
+    "localidadId","zonaId",
+    "oftalmologiaGeneralDesde",
+    "tratamientoGlaucomaCataratas", "protesisOculares",
+    "tratamientosEspecializados", "oncologia", "otros"
+]
+
+centro_oftalmologico_dict = {
+    'zonaId': 'ZONA',
+    'nombre': 'NOMBRE',
+    'direccion': 'DIRECCIÓN',
+    'tamano': 'TAMAÑO',
+    'limpieza': 'LIMPIEZA',
+    'demanda': 'DEMANDA',
+    'oftalmologiaGeneralDesde': 'OFTALMOLOGÍA GENERAL',
+    'tratamientoGlaucomaCataratas': 'TRAT. GLAUCOMA, CATARATAS',
+    'protesisOculares': 'PRÓTESIS OCULARES',
+    'tratamientosEspecializados': 'TRAT. ESPECIALIZADOS',
+    'oncologia': 'ONCOLOGÍA',
+    'otros': 'OTROS',
+    'telefono': 'TELÉFONOS'
+}
+
+centro_odontologico_header = [
+    "nombre","direccion","latitud","longitud", "telefono",
+    "tamano","limpieza","demanda",
+    "localidadId","zonaId",
+    "odontologiaGeneralDesde",
+    "ortodoncia", "endodoncia", "cirugiaBucal", 'protesis', "rayosX"
+]
+
+centro_odontologico_dict = { 
+    'zonaId': 'ZONA',
+    'nombre': 'NOMBRE',
+    'direccion': 'DIRECCIÓN',
+    'tamano': 'TAMAÑO',
+    'limpieza': 'LIMPIEZA',
+    'demanda': 'DEMANDA',
+    'odontologiaGeneralDesde': 'ODONTOLOGÍA GENERAL',
+    'ortodoncia': 'ORTODONCIA',
+    'endodoncia': 'ENDODONCIA',
+    'cirugiaBucal': 'CIRUGÍA BUCAL',
+    'protesis': 'PRÓTESIS',
+    'rayosX': 'RAYOS X',
+    'telefono': 'TELÉFONOS'
+ }
+clinica_privada_header = [
+    "nombre","direccion","latitud","longitud", "telefono",
+    "tamano","limpieza","demanda",
+    "localidadId","zonaId",
+    "emergencia", "medicinaGeneral", "medicinaInterna",
+    "pediatria", "ginecologia", "obstetricia", "cardiologia",
+    "rayosXDeTorax", "tomografiaAbdominalPelvica", "resonanciaCerebral",
+    "ecoAbdominal", "mamografia", "densitometriaOsea", "hematologiaCompleta",
+    "perfil20", "perfilTiroideo", "urocultivo", "heces", "orina",
+    "perfilPreoperatorio", "apendicectomia", "colicistectomiaLamparoscopica", "herniorrafiaIngiunal",
+    "cesarea", "partoNormal", "hospitalizacion"
+]
+clinica_privada_dict = {
+    'zonaId': 'ZONA',
+    'nombre': 'NOMBRE',
+    'direccion': 'DIRECCIÓN',
+    'tamano': 'TAMAÑO',
+    'limpieza': 'LIMPIEZA',
+    'demanda': 'DEMANDA',
+    'emergencia': 'EMERGENCIA',
+    'medicinaGeneral': 'MEDICINA GENERAL',
+    'medicinaInterna': 'MEDICINA INTERNA',
+    'pediatria': 'PEDIATRÍA',
+    'ginecologia': 'GINECOLOGÍA',
+    'obstetricia': 'OBSTETRICIA',
+    'cardiologia': 'CARDIOLOGÍA',
+    'perfilPreoperatorio': 'PERFIL PRE-OPERATORIO',
+    'rayosXDeTorax': 'RAYOS X DE TÓRAX',
+    'tomografiaAbdominalPelvica': 'TOMOGRAFÍA ABDOMINAL PÉLVICA',
+    'resonanciaCerebral': 'RESONANCIA CEREBRAL',
+    'ecoAbdominal': 'ECO ABDOMINAL',
+    'mamografia': 'MAMOGRAFÍA',
+    'densitometriaOsea': 'DENSITOMETRÍA ÓSEA',
+    'hematologiaCompleta': 'HEMATOLOGÍA COMPLETA',
+    'perfil20': 'PERFIL 20',
+    'perfilTiroideo': 'PERFIL TIROIDEO',
+    'urocultivo': 'UROCULTIVO',
+    'heces': 'HECES',
+    'orina': 'ORINA',
+    'apendicectomia': 'APENDICECTOMÍA',
+    'colicistectomiaLamparoscopica': 'COLECISTECTOMÍA LAMPAROSCÓPICA',
+    'herniorrafiaIngiunal': 'HERNIORRAFÍA INGUINAL',
+    'cesarea': 'CESÁREA',
+    'partoNormal': 'PARTO NORMAL',
+    'hospitalizacion': 'DÍA DE HOSPITALIZACIÓN',
+    'telefono': 'TELÉFONOS'
+}
+grupo_medico_header = [] # TODO Fill
+grupo_medico_dict = {} # TODO Fill
+
 def get_locations_dictionary() -> dict:
     dirname = os.path.dirname(__file__)
     df = pd.read_csv(os.path.join(dirname, locations_csv))
@@ -50,8 +148,10 @@ def get_locations_dictionary() -> dict:
 
 def get_foreign_key_locations(df: pd.DataFrame) -> pd.DataFrame:
     locations_dic = get_locations_dictionary()
-    return df['ZONA.1'].apply(lambda row: locations_dic[row])
-
+    if 'ZONA.1' in df.columns:
+        return df['ZONA.1'].apply(lambda row: locations_dic[row])
+    else:
+        return df['METRO'].apply(lambda row: locations_dic[row])
 def unshorten_url(url):
     return requests.head(url, allow_redirects=True).url
 
@@ -82,6 +182,14 @@ def init_dataframe(table_name) -> pd.DataFrame:
     columns = []
     if table_name == 'laboratorioClinico':
         columns = laboratorio_clinico_header
+    elif table_name == 'centroOftalmologico':
+        columns = centro_oftalmologico_header
+    elif table_name == 'centroOdontologico':
+        columns = centro_odontologico_header
+    elif table_name == 'clinicaPrivada':
+        columns = clinica_privada_header
+    elif table_name == 'grupoMedico':
+        columns = grupo_medico_header
     else:
         raise Exception('Invalid table name')
     return pd.DataFrame(columns=columns)
@@ -89,18 +197,58 @@ def init_dataframe(table_name) -> pd.DataFrame:
 def get_dict(name: str) -> dict:
     if name == 'laboratorioClinico':
         return laboratorio_clinico_dict
+    elif name == 'centroOftalmologico':
+        return centro_oftalmologico_dict
+    elif name == 'centroOdontologico':
+        return centro_odontologico_dict
+    elif name == 'clinicaPrivada':
+        return clinica_privada_dict
+    elif name == 'grupoMedico':
+        return grupo_medico_dict
     else:
         raise Exception('Invalid table name')
+
+def convert_if_boolean(value: str) -> bool:
+    if  str(value).strip() == 'Sí':
+        return 'true'
+    elif  str(value).strip() == 'SÍ':
+        return 'true'
+    elif  str(value).strip() == 'si':
+        return 'true'
+    elif  str(value).strip() == 'Si':
+        return 'true'
+    elif  str(value).strip() == 'No':
+        return 'false'
+    elif  str(value).strip() == 'NO':
+        return 'false'
+    elif  str(value).strip() == 'no':
+        return 'false'
+    elif  str(value).strip() != '' and not pd.isnull(value):
+        return value
+    else:
+        return None
+
+def clean_string(value: str) -> str:
+    if not pd.isnull(value) and isinstance(value, str) and value:
+        rs = value.replace("\n", " ")
+        return str(rs).strip()
+    else:
+        return value
 
 def fill_dataframe(df: pd.DataFrame, name: str) -> pd.DataFrame:
     out = init_dataframe(name)
     items = get_dict(name).items()
     for key, value in items:
-        out[key] = df[value]
+        out[key] = df[value].apply(lambda row: convert_if_boolean(row))
+        out[key] = out[key].apply(lambda row: clean_string(row))
+
     out['localidadId'] = get_foreign_key_locations(df)
     lat_long = get_lat_long(df)
     out['latitud'] = lat_long['latitud']
     out['longitud'] = lat_long['longitud']
+    out['tamano'] = out['tamano'].fillna(1).astype('int32')
+    out['demanda'] = out['demanda'].fillna(1).astype('int32')
+    out['limpieza'] = out['limpieza'].fillna(1).astype('int32')
     
     return out    
 

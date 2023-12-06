@@ -3,7 +3,7 @@ INSERT INTO public.localidad (descripcion) VALUES ('Plaza Venezuela');
 INSERT INTO public.localidad (descripcion) VALUES ('Sabana Grande');
 INSERT INTO public.localidad (descripcion) VALUES ('Bello Monte');
 INSERT INTO public.localidad (descripcion) VALUES ('Chacaito');
-INSERT INTO public.localidad (descripcion) VALUES ('La Mercedes');
+INSERT INTO public.localidad (descripcion) VALUES ('Las Mercedes');
 INSERT INTO public.localidad (descripcion) VALUES ('Chacao');
 INSERT INTO public.localidad (descripcion) VALUES ('Altamira');
 INSERT INTO public.localidad (descripcion) VALUES ('Miranda');

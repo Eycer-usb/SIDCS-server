@@ -3,11 +3,11 @@ import os
 def download_zips():
     print("Downloading zips")
     zips = {
-        "laboratorioClinico": "https://drive.google.com/uc?export=download&id=1r2bzeogZglwZM1uVUtzu8HegU2MfHnqn&confirm=t&uuid=2f8ddbf0-39f0-4a10-933c-5c5ebb82f162&at=AB6BwCAR9Sstt2p5iuU1hUSZxMrI:1701810849671",
-        "centroOftalmologico": "https://drive.google.com/uc?export=download&id=1Y5tdbABV4PzxlSmO62rfUWYLW_4iL-SG&confirm=t&uuid=29962443-e0fd-4dff-9529-12d51621fb8e&at=AB6BwCAttpB21S1EnTvpCPA9qoQK:1701810868571",
-        "centroOdontologico": "https://drive.google.com/uc?export=download&id=1Auu9IBxcAoHoAG3XaQKOVLkyCZ00QeCc&confirm=t&uuid=2715abb7-65ae-4ee7-b639-8ebfafe8f80a&at=AB6BwCAlwo1luV7s8ZkN0KmAEZV2:1701810908323",
-        "clinicaPrivada": "https://drive.google.com/uc?export=download&id=1EVdOMQCylPCg5PPuQMu8C4K4Qh5nREp3&confirm=t&uuid=aa7d7aba-b59c-43d9-8afc-d433714541dc&at=AB6BwCDv3eB6utr9PcXPU7rD9SvH:1701810923633",
-        # "grupoMedico": ""
+        "laboratorioClinico": "https://drive.google.com/uc?export=download&id=185zOPpWURwgkKOFrkkolDAhEqrVFBw8-&confirm=t&uuid=a0a5ab4b-dd51-4e09-b140-d08060a0837f&at=AB6BwCArs7K7X72f89AdyZmiVF4F:1702568646711",
+        "centroOftalmologico": "https://drive.google.com/uc?export=download&id=18PB86kwuJ2SAAu3oNDuOoILODUgZi9QV&confirm=t&uuid=28fff727-657f-4883-898e-884ce612247c&at=AB6BwCAiy28cmgFBwNY9M1jwa-Lu:1702568941249",
+        "centroOdontologico": "https://drive.google.com/uc?export=download&id=1TZq8PMIHCZJkyXnkFFWqEXmNuCsGtS0T&confirm=t&uuid=9d138d1d-a809-42d9-b4a0-e72ae2481126&at=AB6BwCB4Z9uUO3ajPzXWJVMtWaYu:1702568977892",
+        "clinicaPrivada": "https://drive.google.com/uc?export=download&id=1ThOeadUXlyrtuqYoPedAa_fUqR6DMVj4&confirm=t&uuid=05e73fbd-92a6-43e5-96cb-e7f099de2f95&at=AB6BwCBCIqo_R7VSND5gpdYRZcu-:1702568907333",
+        "grupoMedico": "https://drive.google.com/uc?export=download&id=18Z-nYvndVpmCyTSOuLIImT8n26M6wv2c&confirm=t&uuid=2e9c4c36-f1ad-46d7-ae00-fccbb21f9b10&at=AB6BwCCpJJNWjkiGl37g622w4tHm:1702568694509"
     }
     dirname = os.path.dirname(__file__)
     path_zip =  dirname + '/zip'

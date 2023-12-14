@@ -1,4 +1,4 @@
-import { CreateDateColumn, DeleteDateColumn, Entity, ManyToOne, OneToMany, PrimaryColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { LaboratorioClinico } from "./laboratorio-clinico.entity";
 import { CentroOdontologico } from "./centro-odontologico.entity";
 import { ClinicaPrivada } from "./clinica-privada.entity";
@@ -7,7 +7,11 @@ import { CentroOftalmologico } from "./centro-oftalmologico.entity";
 
 @Entity()
 export class Imagen {
-    @PrimaryColumn( { type: 'varchar' } )
+
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column( { type: 'varchar' } )
     url: string;
 
     @ManyToOne(() => LaboratorioClinico, laboratorioClinico => laboratorioClinico.imagenes, { nullable: true })

@@ -29,6 +29,7 @@ TableName=(
     'centro_odontologico'
     'centro_oftalmologico'
     'clinica_privada'
+    'grupo_medico'
 )
 
 echo "Start seeding..."
@@ -97,6 +98,20 @@ psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "\copy
         \"colicistectomiaLamparoscopica\", \"herniorrafiaIngiunal\",
         cesarea, \"partoNormal\", hospitalizacion
     ) FROM './src/database/clinicaPrivada.csv' DELIMITER ',' CSV HEADER;"
+
+psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "\copy 
+    public.grupo_medico (
+    nombre,direccion,latitud,longitud,telefono,tamano,limpieza,demanda,
+    \"localidadId\",\"zonaId\",\"medicinaGeneral\",\"medicinaInterna\",
+    pediatria,ginecologia,obstetricia,cardiologia,gastro,neurologia,
+    \"medicinaFyR\",\"observacionesConsulta\",
+    \"rayosXDeTorax\",\"tomografiaAbdominalPelvica\",\"resonanciaCerebral\",
+    \"ecoAbdominal\", mamografia,\"densitometriaOsea\",epirometria,eeg,
+    \"observacionesDiagnostico\",\"hematologiaCompleta\",perfil20,
+    \"perfilTiroideo\",urocultivo,heces,orina,\"perfilPreoperatorio\",
+    apendicectomia,\"colicistectomiaLamparoscopica\",\"herniorrafiaIngiunal\",
+    cesarea,\"partoNormal\",hospitalizacion
+    ) FROM './src/database/grupoMedico.csv' DELIMITER ',' CSV HEADER;"
 
 
 psql -h $DATABASE_HOST -U $DATABASE_USERNAME -d $DATABASE_NAME -a -c "\copy

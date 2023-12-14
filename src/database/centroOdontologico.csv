@@ -1,133 +1,153 @@
 nombre,direccion,latitud,longitud,telefono,tamano,limpieza,demanda,localidadId,zonaId,odontologiaGeneralDesde,ortodoncia,endodoncia,cirugiaBucal,protesis,rayosX
-Clínica Dental La Castellana,"Av.Francisco de Miranda, Edif. Sede Gerencial la Castellana, Ofi A3",10.4952909,-66.8533276,424-1941668,2,3,1,7,1,20,true,,,,
-On Harmony,"Av. Eugenio Mendoza, La Castellana, Centro Letonia, Piso 13",10.4967054,-66.8513318,424-1935254,3,3,1,7,1,50,true,true,true,true,
-Koch-Tineo Clínica Odontológica,"Final de Av San Felipe, Centro Coinasa, Nivel Mezzanina, La Castellana",10.4990556,-66.8512778,412-3368478,3,3,1,7,1,140,true,true,,true,
-Odontología Integral,"Calle Independencia, con Calle Coromoto, Edif. Omnis, Clínica Odontológica Integral, Bello Campo, Caracas",10.4927756,-66.852234,0212-265.23.91,3,2,2,7,1,30,true,true,true,true,true
-Clínica Dental Humboldt,"Av. Francisco de Miranda con Av. Luis Roche, Edif Humboldt, Piso 1, local 3-B.",10.4953411,-66.8507475,0412-9091648,1,2,2,7,1,30,true,true,true,true,false
-Od. Yessika Zurita y Od. Luisanny Hernández,"Av. Francisco de Miranda, Centro Plaza, Torre C. Piso 16, oficina 16-D.",10.4980782,-66.8490204,0414-2910494 / 0414-4779611,1,2,2,7,1,30,false,true,true,true,false
-Centro Médico Flight,"Av. Francisco de Miranda, Edificio Mene Grande, Piso 1- oficina 03",10.4969415,-66.848648,0414-9163274,1,3,1,7,1,20,,true,,,false
-Altamira Dental Group,"Av. Sur Altamira, Edificio Taurisano, Piso 2, Local 24",10.4926699,-66.8517422,2122650842,1,3,1,7,1,60,true,true,true,true,false
-Clínica Dental Dr. Jose Luis Noriega,"Av. Juan Pablo II, Edif San Luis, Piso 1 Ofic. 102",10.4934065,-66.8525447,0424-1874688 ; 0212-2657422,1,3,2,7,1,20,true,true,true,true,false
-Clínica Dental,Av. Francisco de Miranda. Edificio Mariscal Sucre.,10.493245,-66.853629,0212-2657616 ; 0212-2658671,1,2,1,7,1,30,true,true,true,true,false
-Centro Odontológico,"Av.Francisco de Miranda, Centro Plaza, Nivel 5, local CC. 5-11, Los Palos Grandes",10.497986,-66.846146,212-2849601,1,2,1,7,1,50,true,true,true,true,false
-Castellana Dental,"Av.Francisco de Miranda, con pricinpal a La Castellana. Edif Sede Gerencial, piso 3, Ofi. 3-C",10.4952909,-66.8533276,212-2638395,2,3,1,7,1,30,true,true,true,true,
-Dr. Velez Díaz,"Torre Banco Lara, Piso 8, Of. 8B1, La Castellana",10.4960358,-66.8508529,414-3260934,1,3,2,7,1,28,true,true,true,true,true
-Clínica Dental ProDental Care,"Av. Principal de La Castellana, con 2da Transversal, Edif. Bancaracas, piso 6 oficina 6-07",10.4975264,-66.8534817,416-6311065,2,3,1,7,1,100,true,true,true,true,false
-Metaclinic,"Av San Felipe, Qta METACLINIC , diagonal al Locatel de la Castellana",10.5009736,-66.8539403,412-6303704,3,3,1,7,1,80,true,true,true,,true
-Centro Odontológico - Radiologico Humboldt,"Av. Francisco de Miranda con Av. Luis Roche, Edf. Humboldt PB, local B-2.",10.4953416,-66.8507767,0212-2612068 / 0424-2272570,2,2,1,7,1,35,true,true,,true,true
-Centro Odontológico Fischer,"Av. Andrés Bello, Multicentro Los Palos Grandes, PB. Altamira.",10.4980274,-66.847901,0414-3655766,2,3,2,7,1,20,true,true,true,true,false
-Proboca Salud 5,"C.C. Bello Campo, Nivel Jardín. Local 74",10.4935509,-66.8508269,2122664334,2,3,2,7,1,40,true,true,true,true,false
-Dental Clinic,"Avenida Beethoven, Torre Financiera Piso 2, Colinas de Bello Monte",10.4893269,-66.8786331,S/N,1,3,1,3,1,30,true,true,true,true,false
-Centro Nacional de Ortodoncia,"Edif Royal Palace, Plaza Brion de Chacaíto al lado del café Don Disco",10.4912932,-66.8701592,412-0216223,2,2,1,4,1,15,true,true,true,true,true
-Consultorio Odontológico La Campiña,"Torre 18, Piso 1, oficina 1-B, Av. El Mirador, con Calle Empalme.",10.4973275,-66.8762845,424-1387877,1,2,1,4,1,20,true,true,true,true,false
-Rosaldent,"Policlínica Americana. Piso 6, consultorio 6B",10.4894104,-66.8671531,412-6165119,2,3,2,4,1,40,true,true,true,true,false
-Clínica Odontológica La Florida,"Calle San Rafael, La Florida",10.5027878,-66.880355,0424-171.43.86,3,2,1,4,1,20,true,true,true,true,false
-Dra. Magaly Romero Q.,"Av. Libertador, Edif. Libertador 75, Piso 7, Ofic. B, Caracas",10.496577,-66.874356,0212-762.32.49,2,2,1,4,1,30,true,true,false,true,false
-Odonto Especialidades CCS,"Av. Libertador, Torre Maracaibo. Piso 4, oficina 4-F",10.496715,-66.874588,0212-763.31.59,2,3,2,4,1,40,true,true,true,true,false
-Grupo Dental Acuario,"Av. Francisco Solano, Edif Galerias Bolivar, torre b, piso 3, ofic 36-B",10.495828,-66.879252,0212-763.57.98,2,3,2,4,1,35,true,true,true,true,false
-Clinica Dental Tecnosonrisas,"Calle Chacaito, Edf. Vittoria, Piso 1. Ofc 18",10.4907563,-66.8704586,,1,3,3,4,1,20,true,true,true,true,true
-BIOSALUD,"Av. Francisco de Miranda, Torre Profesional La California, Piso 11, Ofic. 11-1",10.4805661,-66.8206325,0412-7052727,2,3,1,12,1,20,true,true,true,true,true
-Punto Dental,"Av. Santiago de León de Caracas, La California Norte",10.4809323,-66.8198559,0412-8298536,2,2,2,12,1,20,true,true,true,true,true
-Mundo Ortodoncia,"Av. Francisco de Miranda, C.C. Unicentro El Marqués , nivel 3, local 307-308",10.4825379,-66.820832,0416-6107984,3,3,2,12,1,30,true,true,true,true,true
-DentoSmile,"Av. Francisco de Miranda, C.C. Unicentro El Marqués , nivel 1, local 218",10.4834733,-66.8213658,0412-2152220,1,3,1,12,1,20,true,true,,true,true
-Odontólogo José Lara,"Av. Francisco de Miranda. Torre Profesional La California , piso 5. Consultorio 5-1",10.4805661,-66.8206325,0414-2824842,1,2,1,12,1,50,,true,true,true,false
-Bienestar Salud,"Av. Rómulo gallegos , Centro Aloa planta principal ,local M36",10.4948729,-66.8183043,0212-2382441 / 0412- 5304061,2,3,1,12,1,20,true,true,true,true,true
-Contino Dental Group,"Pirámide invertida del CCCT. Piso 5, consultorio 512",10.4857143,-66.85414,4125303305,3,3,2,6,1,0,true,true,true,true,false
-Grupo Odontológico Integral,"Av. Francisco de Miranda. Edificio Cosmos. Mezzanina, Oficina G",10.4918673,-66.8578356,424-1625828,1,2,1,6,1,50,true,true,true,true,false
-"DENTAL VIP, Especialidades Odontológicas S.C.","Av. Libertador, Multicentro Empresarial del Este, Torre Miranda, Núcleo A, Piso 14, Ofic. 143-A, Chacao, Caracas",10.4922179,-66.8539779,0212-261.52.51,2,2,1,6,1,30,true,true,true,true,false
-Clínica Dental Hallak,"Calle Cecilio Acosta, Chacao, Caracas 1060, Miranda",10.4955478,-66.8542619,0414-130.62.90,2,2,1,6,1,20,true,true,true,true,true
-Dra. Maria Pompei Spena (Centro Clínico San José),"Av. José Felix Rivas, con Mohedano, Centro Clínico San José, Nivel 3, Consultorio 31, Chacao, Caracas",10.4957144,-66.8535788,0212-265.99.41,1,2,1,6,1,20,false,true,false,true,false
-iDent Centro Odontológico,"Calle Sucre, Edificio Don Emilio Planta Baja. Local B, Caracas 1060, Miranda",10.4940681,-66.8539096,0212-265.15.12,1,3,1,6,1,30,true,true,true,true,false
-Consultorio Dr. Ana Abreu,Edificio Caro. Piso 2. Oficina 23-A,10.4933115,-66.8555892,424-1659786,1,2,1,6,1,15,true,true,true,true,false
-Espacio Salud Bucal,Edificio Caro. Piso 3. Oficina 31,10.4935654,-66.8554736,424-1599442,1,2,1,6,1,35,true,true,true,true,false
-Clínica Dental Dr. Carlos Bosque,Centro Perú. Piso 3. Oficina 34,10.4924049,-66.8579522,212-2669597,1,2,1,6,1,20,true,true,true,true,false
-Consultorio Odontológico,"Centro Profesional Miranda. Piso 5, local 5-B",10.4918759,-66.8593963,212-2646610,1,2,1,6,1,40,true,true,true,true,false
-Od. Jesica De Sousa,"Chacao, Torre EXA, Caracas.",10.4907019,-66.8595835,424-1595583,1,3,2,6,1,30,true,true,true,true,true
-Romano's Dental,"Sambil, Ccs. Nivel Autopista Plaza Jardin",10.4901176,-66.8547678,212-6888093,2,3,1,6,1,50,true,true,true,true,false
-Centro de Especialidades Odontológicas,"Av. Araure (Ppal. De Chuao), Edif. CEO, Chuao.",10.48231,-66.8455904,0414-324.29.41 / 0212-991.90.66,3,3,2,9,1,100,true,true,true,true,true
-Centro Odontológico Tamanaco,"CCCT, Torre D 210",10.4838809,-66.8572955,212-9593824,1,3,2,9,1,50,true,true,true,true,false
-BlancoNassif,"CCCT, Pirámide Invertida",10.4843889,-66.8550833,212-9598458,1,3,2,9,1,80,true,true,false,false,false
-Grupo de Especialidades Odontológicas Tamanaco,"Pirámide Invertida, Piso 4",10.4850075,-66.8580223,0212-9590128,2,3,2,9,1,0,,,,,
-Unidad Odontólogica Los Dos Caminos,"Av. El Carmen, Edif.Centro, Los Dos Caminos",10.494552,-66.8324065,212-2370863,2,2,2,10,1,20,true,true,true,true,true
-Zdent,"C.C Millennium Mall, Av. Rómulo Gallegos a Torre de Oficinas, piso 4 4-02, Local N. 202",10.4955379,-66.8350343,412-6833078,3,3,1,10,1,80,true,true,true,true,true
-CMO DentalClinic,"Sobre Maxi Donas, Torre Empresarial Qvrada, Avenida Sucre de, Nivel Mezanina",10.4964722,-66.8343056,414-4395532,2,3,1,10,1,60,true,true,true,true,false
-Unidad Radiológica Millenium,"C.C Millennium Mall, Av. Rómulo Gallegos a Torre de oficinas, piso 2, Local N. 202",10.4955379,-66.8350343,424-2511400,2,3,1,10,1,20,true,true,true,true,true
-Consultorio Odontológico Recalub,"Edificio Matilde, Ala A. Piso 1, Oficina 1-2. Av. Rómulo Gallegos, Av. el Carmen",10.4956017,-66.83102,412-4643567,1,3,1,10,1,10,true,true,true,true,true
-Consultorio Odontológico GF,"Av. Francisco de Miranda, Edificio Miravila, Piso 2",10.4839797,-66.8210072,412-4643567,2,2,1,10,1,10,true,true,true,true,true
-Star Dental Group,"Av. Francisco de Miranda, con Av. Ppal de los Ruices, Centro Empresarial Miranda. Nivel Mezzanina",10.4914788,-66.8320856,0414-3395198,1,2,1,10,1,15,true,true,false,true,false
-OKYS Dental,"Av. Francisco de Miranda con Calle Los Laboratorios. C.E. QUORUM, piso 2, Oficina 2-F",10.4901858,-66.8306543,424-1656746,1,3,1,11,1,0,true,true,false,true,true
-BO Medical,"Calle San Isidro, entre Av. Rómulo Gallegos y 4ta transversal",10.492292,-66.821750,0424-1232337,1,1,1,11,1,30,true,true,true,true,false
-Sonríe Clínica Odontológica,Av. Principal de las Mercedes,10.4804888,-66.8607,212-9936895,3,2,1,5,1,25,true,true,true,true,true
-Sanadent,"Edificio California Mall, Mezzanina, Local 5",10.4814024,-66.8623534,212-9934014,1,2,1,5,1,40,true,true,true,true,false
-OdontoSpa,Centro Comercial Automercado. Local S-06. Av. Principal de Las Mercedes,10.4858667,-66.8651105,212-9934019,2,3,1,5,1,20,true,true,true,true,false
-DentalWorld,"Entre 4 av y 1 transversal de los Palos Grandes, Edificio Caroni piso1 Oficinas 2 y 3",10.4987703,-66.8454897,414-3012221,1,2,1,8,1,40,true,true,true,true,true
-Dr. Camen Arvelo,"Los Palos Grandes, Edif Pascal TorreB , Piso 1 Of,11-B",10.4980599,-66.8444597,424-1959035,2,3,3,8,1,20,true,true,true,,true
-OD Mónica Mata,"Zona Colonial de Petare, Calle La Paz, Planta Baja",10.4776126,-66.8123391,414-1047363,1,2,3,15,1,0,true,,,,true
-Centro Médico Odontológico Corazón de Jesús,"Zona Colonial de Petare, Calle La Paz",10.4772892,-66.8103098,0212-2381879,1,3,3,15,1,5,true,true,true,true,true
-Unidad Crismar,"Av. Urdaneta, Centro Profesional Urdaneta",10.5071732,-66.9141975,0414-208.88.27,2,2,2,23,2,0,true,true,true,true,true
-Umol,"Av. Urdaneta, Edf. Caoma",10.5074177,-66.9120866,0426-104-88.66,2,2,1,23,2,10,true,false,true,true,false
-Consultorio Odontológico LF,"Av. Fuerzas Armadas, San Luis, Edf. del Valle",10.5134391,-66.910305,0212-425.29.28,2,2,2,23,2,0,true,true,false,true,false
-Zona Dental,"Av. Fuerzas Armadas, Esq. Crucesita a San Miguel, Edf, Mireya",10.5107642,-66.9127892,0212-551-89-51,2,3,2,23,2,5,false,false,false,true,true
-Centro Médico Karam,"Edif. Centro Ejecutivo, La Hoyada",10.5025285,-66.916945,"0424-109,44,58",2,2,2,23,2,20,true,true,false,true,false
-Centro Clínico Odontológico,"Av. Lecuna, Diagonal a Nvo. Circo",10.5000546,-66.9145239,0424-193.77.33,2,2,1,25,2,5,true,true,true,true,true
-Tu Odontologa La Candelaria,"Av. Urdaneta, Edf. Doral",10.506368,-66.9102533,0212-578-30.66,1,3,1,22,2,15,true,true,true,true,true
-Clínica Dental,"Av. Urdaneta Centro Profesional, Ofc. 4c Piso 4",10.5071732,-66.9141975,0414-265.35.72,2,2,2,22,2,0,true,true,false,true,false
-Centro Odontológico Daolin,"San José, Calle Santa Isabel",10.5151432,-66.9118333,0212-564.81.70,3,3,1,24,2,0,true,true,true,true,true
-Tu Mundo Dental,"Av. Lecuna, Frente Teatro Municipal",10.5007335,-66.9153336,0212-484.45.79,1,2,2,28,2,20,true,true,true,true,true
-Dispensario Santo Domingo Savio,"Av. Guzman Blanco, Vereda 91",10.4468433,-66.9291032,S/N,1,2,1,43,3,5,true,true,true,true,false
-Odontoestética,"Av. Capitán de Navía Felipe Estévez, Local 6 PB, El Cementerio.",10.4786394,-66.916523,0212-633.56.52,2,2,1,38,3,10,true,true,true,true,true
-Consultorio Odontológico,"Calle el Degredo, Nro. 18, Local 18D, El Cementerio.",10.477872,-66.917528,0414-254.08.70,1,3,1,38,3,15,true,true,true,true,false
-Unidad Médica Santa Lucía,"Av. Capitán de Navía Felipe Estévez, entre Bogota y Providencia, Los Castaños, El Cementerio.",10.478871,-66.916308,0414-117.24.38,1,3,1,38,3,5,true,false,false,true,false
-Mana. Especialidades ORTOPLUS,"Av. Principal del Cementerio, Centro Ciudad Comercial El Cementerio, P.A., Local 1-PA.",10.4837797,-66.9129857,0424-168.05.75,3,3,2,38,3,10,true,true,true,true,true
-Centro de Bienestar Social Las Acacias,"Transveral 7, entre Av. Los Samanes y Calle Atrás de los Totumos, Casa Gladys Mariana #43",10.4766782,-66.9113527,0212-631.69.82,3,2,1,38,3,20,true,true,true,false,false
-Odonto Angeles,"Av Nueva Gradana, El Peaje.",10.4850351,-66.9092338,212-6333623,1,2,1,38,3,20,true,true,false,false,true
-"Ortho Denten, CA.","Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 5",10.4669309,-66.9054801,0426-5139031,2,3,2,41,3,0,true,true,true,true,false
-Denten CA,"Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 6",10.467401,-66.904915,0414-9135053,2,2,2,41,3,0,true,true,true,true,true
-Grupo Médico Odontológico Dra. Zaraell Lopez Rodriguez,"Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 7",10.467401,-66.904915,0212-6723890,1,2,2,41,3,10,true,false,true,true,false
-MCO Grupo Odontológico,"Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 9",10.467401,-66.904915,0412-0119845,1,2,1,41,3,0,true,true,true,true,false
-Unidad Médica y Odontológica Inty Salute,Centro Comercial El Valle / Piso 3,10.467286,-66.904735,414-2455581,1,2,3,41,3,5,true,false,true,true,false
-Centro Médico Alianza,Centro Comercial El Valle / Piso 4,10.467286,-66.904735,416-6322087,1,2,2,41,3,0,true,true,true,false,false
-Dental Art,"Centro Comercial Los Chaguaramos, Nivel PB, Local 19, Los Chagauaramos.",10.486326,-66.884409,0424-206.63.55,1,3,1,46,3,20,true,true,true,true,false
-MENAS RADIOGRAPHIC CENTER,"Centro Comercial Los Chaguaramos, Piso 11, Ofic. 11-7, Los Chaguaramos.",10.4860237,-66.8844639,0212-661.18.98,1,3,1,46,3,20,true,true,true,true,true
-Undamo,"Calle Risquez, entre Av. Ciencias y Facultad. Qta. Clager, Los Chaguaramos.",10.4840159,-66.8886438,0212-661.50.28,3,3,1,46,3,40,true,true,true,true,false
-I.M.Q Dr. Jimenez Rojas,"Calle Humboldt, Edif. Instituto Médico Dr. Jiménez Rojas, Urb. Los Chaguaramos.",10.4859122,-66.8863925,0414-302.97.33,3,3,1,46,3,30,true,true,true,true,true
-CEM Centro de Especialidades Médicas,"C. C. Los Proceres, Nivel 1, Local CSIIIPI-02, III Etapa, Los Ilustres.",10.473011,-66.894609,0424-144.79.68,2,3,1,48,3,20,true,true,true,true,true
-Centro Médico Odontológico Garcia Lovera,"Av. Intercomunal El Valle, Calle 8",10.4594608,-66.9164353,0412-6719921,2,2,1,42,3,10,true,false,true,true,false
-Centro Médico Odontológico Salto Angel,"Av. Intercomunal El Valle, Calle 14",10.4565291,-66.9200744,0212-6823052,1,2,1,42,3,30,true,false,true,true,true
-Unidad Odontológica Integral,"Av. Intercomunal El Valle, Calle 11",10.4579463,-66.9181849,0212-6812852,1,2,2,42,3,5,false,true,true,true,false
-Centro Médico Milenio,"Centro Comercial Los Molinos, San Martín",10.3738449,-67.6005635,S/N,1,2,1,54,4,10,true,true,false,true,true
-Elohim Grupo de Especialidades Médica,"Centro Comercial Los Molinos, San Martín",10.4914768,-66.9425387,S/N,1,2,1,54,4,10,true,true,false,true,true
-"Danic Dental 2021, C.A.","Av. José Antonio Paez, frente a la estación de servicos PDV, El Paraíso el Torreon, piso 2",10.486692,-66.933333,414-0295339,2,3,3,53,4,5,true,true,true,true,true
-Paraiso Dental,"C.C. Centro Paez, El Paraíso",10.4905043,-66.9275461,212-4819776,2,3,3,53,4,10,true,false,true,false,false
-Centro Integral,"Avenida Los Samanes , C.C. Euro",10.4905148,-66.9275568,412-3743622,3,3,3,53,4,10,false,false,false,false,false
-EO Diagnóstico,"Avenida Los Samanes, C.C. Euro",10.4907361,-66.9246646,212-4814845,2,3,3,53,4,10,false,false,true,true,false
-Centro Comunitario de Atención Integral CECAMI,"Calle Principal de Santa Cruz, Las Adjuntas",10.186536,-66.8201208,S/N,1,2,2,65,4,5,true,true,false,true,false
-Centro Médico Dr. Vargas,"Calle El Río, Las Adjuntas",10.186536,-66.8201208,S/N,1,3,1,65,4,5,true,true,false,true,false
-Clínica Dental Dr. Leonardo Ramirez,"La Paz, Avenida Rotaria",10.487167,-66.946197,414-2114486,1,2,1,55,4,10,true,true,false,true,true
-Centro Médico Odontológico LPG C.A.,C. Los Bloques,10.4688056,-66.9450556,412-1256897,1,3,2,57,4,5,true,false,true,true,false
-Consultorio Odontológico.,Calle San Antonio,10.4699167,-66.9467778,212-4717386,1,3,3,57,4,5,true,true,true,true,false
-Consultorio Doctora Grajales Lara.,"Calle San José, C.C. El Colonial",10.4695,-66.9479167,412-5907019,1,3,2,57,4,5,false,false,false,true,false
-Grupo Odontológico I.C.E.,"Calle San José, C.C. El Colonial",10.469353,-66.947909,212-8302656,2,1,2,57,4,5,false,false,false,true,true
-Grupo Médico Popular Caricuao Plaza,Avenida Principal de Ruiz Pineda Centro Comercial Caricuao Plaza,10.4342391,-66.9999722,S/N,1,3,1,63,4,5,true,true,false,true,true
-Medical Center Ruiz Pineda,UD7 Caricuao Frente a Biblioteca Aquiles Nazoa,10.186536,-66.8201208,S/N,1,3,1,63,4,5,true,true,false,true,false
-Centro UD5 Caricuao,UD5 Caricuao Centro Comercial Procar Frente Clínica Popular Caricuao,10.4337451,-66.9633031,S/N,1,2,1,66,4,5,true,true,false,true,true
-Centro Profesional Baruta,"Calle Bolivar #21, edif, Villa Carmen",10.4342136,-66.8781826,0412-0179337,2,2,1,68,5,10,,true,true,,
-BaruDent,"Calle Sucre, Caracas 1080, Miranda",10.4354027,-66.8761302,0212-9422928,3,3,2,68,5,20,true,true,true,true,true
-Unidad Médica Plaza Baruta,"Baruta, Calle Negro Primero",10.4345232,-66.877937,0212-9459546,2,3,2,68,5,30,,,true,true,
-Angel Correa (Consultorio Odontológico),"Calle Bolívar con Calle Urdaneta, Edif. Dulcura, Baruta",10.4342345,-66.8791295,424-8259839,2,3,2,68,5,20,false,true,true,true,true
-Centro Médico Integral Las Minas,AV. Principal Las Minas de Baruta,10.447298,-66.8650976,0212-9441351,2,2,2,68,5,5,true,true,true,true,
-Dra. Ana Karina Albero,Carretera Baruta-Las Minas de Baruta,10.4473914,-66.8626981,0424-2132684,1,1,1,68,5,10,true,true,true,true,true
-Centro Odontomédico Las Minas,Las Minas de Baruta,10.4478764,-66.8647934,212-9411079,2,3,3,68,5,10,true,true,true,true,true
-Unidad Radiológica 2G Dr. Elina Grippa G.,"C.C. Terra Plaza, piso 2",10.4466636,-66.8732073,212-9777359,2,3,2,67,5,0,false,false,false,true,true
-Sistema Integral de Salud Oral Sis,"C.C. Terra Plaza, piso 2",10.4468044,-66.873339,212-9765469,2,3,2,67,5,80,true,true,true,true,false
-Centro de Planificación Digital Retex TR3SD,"C.C. Terra Plaza, piso 2",10.4468958,-66.8734366,412-5555277,2,3,1,67,5,0,false,false,false,false,true
-Zonadental,"C.C. Terra Plaza, piso 2",10.4465987,-66.8731924,424-1719388,2,3,2,67,5,60,true,true,true,true,true
-Unidad Odontológica La Pirámide,"C.C. Pirámide, planta baja",10.4530686,-66.8734069,412-7774332,2,3,2,67,5,60,true,true,true,true,true
-Duran Studio Dental,"C.C Terras Plaza, nivel C1",10.4467318,-66.8732977,0414-2223687,2,3,2,67,5,60,true,true,true,true,
-Odonto Tepuy,Edif. Trinidad Tepuy Piso 3,10.4310654,-66.8514261,4241622111,2,3,1,71,5,30,true,true,true,true,true
-Dra. Ana Maria Quijano,"Av. Principal de La Trinidad, Caracas 1080, Miranda",10.4336388,-66.8664026,0212-9444679,2,3,2,69,5,30,true,,,true,
-Centro Odontológico Sorocaima,"Av. Principal de La Trinidad, entre Calle San José y Calle San Enrique",10.4336388,-66.8664026,212-9451424,2,3,2,69,5,0,false,true,true,true,true
-Dental Center by Dr. Dam Caracas,"Av. Principal de La Trinidad, entre Calle San Pedro y Calle San Ernesto",10.4339045,-66.8642596,212-9414191,3,3,2,69,5,40,true,true,true,true,true
-Oral-Systems,"Santa Fe, Edif. Artico, piso 1, ofic, 14-A, Av. José María Vargas",10.4634967,-66.8681902,212-9753542,1,3,3,72,5,0,false,false,true,true,false
-CCS3Dental,C.C. Santa Fe,10.4662383,-66.8740427,2129752115,2,3,1,72,5,50,true,true,true,true,false
-DentalSmile,C.C. Santa Fe,10.4665851,-66.8740252,4122222375,2,3,1,72,5,40,true,true,true,true,true
+Clínica Dental La Castellana,"Av. Francisco de Miranda, Edif. Sede Gerencial la Castellana, Ofi A3",10.495542960073777, -66.8507392711641,424-1941668,2,3,1,7,1,20,true,,,,
+On Harmony,"Av. Eugenio Mendoza, La Castellana, Centro Letonia, Piso 13",10.497103635550971, -66.85099920608252,424-1935254,3,3,1,7,1,50,true,true,true,true,
+Koch-Tineo Clínica Odontológica,"Final de Av San Felipe, Centro Coinasa, Nivel Mezzanina, La Castellana",10.499068337516201, -66.8512784477722,412-3368478,3,3,1,7,1,140,true,true,,true,
+Odontología Integral,"Calle Independencia, con Calle Coromoto, Edif. Omnis, Clínica Odontológica Integral, Bello Campo, Caracas",10.49328197207899, -66.85098945499522,0212-265.23.91,3,2,2,7,1,30,true,true,true,true,true
+Clínica Dental Humboldt,"Av. Francisco de Miranda con Av. Luis Roche, Edif Humboldt, Piso 1, local 3-B.",10.495383286991801, -66.84817260426247,0412-9091648,1,2,2,7,1,30,true,true,true,true,false
+Od. Yessika Zurita y Od. Luisanny Hernández,"Av. Francisco de Miranda, Centro Plaza, Torre C. Piso 16, oficina 16-D.",10.498086540739825, -66.84644561592437,0414-2910494 / 0414-4779611,1,2,2,7,1,30,false,true,true,true,false
+Centro Médico Flight,"Av. Francisco de Miranda, Edificio Mene Grande, Piso 1- oficina 03",10.496463440029505, -66.84617861037066,0414-9163274,1,3,1,7,1,20,,true,,,false
+Altamira Dental Group,"Av. Sur Altamira, Edificio Taurisano, Piso 2, Local 24",10.49285978969163, -66.84921021534498,2122650842,1,3,1,7,1,60,true,true,true,true,false
+Clínica Dental Dr. Jose Luis Noriega,"Av. Juan Pablo II, Edif San Luis, Piso 1 Ofic. 102",10.493393313242935, -66.85212627538631,0424-1874688 ; 0212-2657422,1,3,2,7,1,20,true,true,true,true,false
+Clínica Dental,Av. Francisco de Miranda. Edificio Mariscal Sucre.,10.493661622295225, -66.83221578907713,0212-2657616 ; 0212-2658671,1,2,1,7,1,30,true,true,true,true,false
+Centro Odontológico,"Av.Francisco de Miranda, Centro Plaza, Nivel 5, local CC. 5-11, Los Palos Grandes",10.498076206417448, -66.84605852466694,212-2849601,1,2,1,7,1,50,true,true,true,true,false
+Castellana Dental,"Av.Francisco de Miranda, con pricinpal a La Castellana. Edif Sede Gerencial, piso 3, Ofi. 3-C",10.49534909216595, -66.85058615765055,212-2638395,2,3,1,7,1,30,true,true,true,true,
+Dr. Velez Díaz,"Torre Banco Lara, Piso 8, Of. 8B1, La Castellana",10.496450077123468, -66.85086540442208,414-3260934,1,3,2,7,1,28,true,true,true,true,true
+Clínica Dental ProDental Care,"Av. Principal de La Castellana, con 2da Transversal, Edif. Bancaracas, piso 6 oficina 6-07",10.497860529960516, -66.85104923325827,416-6311065,2,3,1,7,1,100,true,true,true,true,false
+Metaclinic,"Av San Felipe, Qta METACLINIC , diagonal al Locatel de la Castellana",10.50115342994317, -66.85288874338207,412-6303704,3,3,1,7,1,80,true,true,true,,true
+Centro Odontológico - Radiologico Humboldt,"Av. Francisco de Miranda con Av. Luis Roche, Edf. Humboldt PB, local B-2.",10.49875653177289, -66.84920805180329,0212-2612068 / 0424-2272570,2,2,1,7,1,35,true,true,,true,true
+Centro Odontológico Fischer,"Av. Andrés Bello, Multicentro Los Palos Grandes, PB. Altamira.",10.498044942527224, -66.84533464110453,0414-3655766,2,3,2,7,1,20,true,true,true,true,false
+Proboca Salud 5,"C.C. Bello Campo, Nivel Jardín. Local 74",10.49369859157185, -66.85083762883625,2122664334,2,3,2,7,1,40,true,true,true,true,false
+Asociación Damas Salesianas Complejo Don Bosco,"Av. San Juan Bosco, entre Transv. 6 y 7 (Frente a la Clínica El Ávila)",10.505527773542685, -66.85065301976682,412-6395257,2,3,3,7,1,20,true,true,true,true,true
+Dental Clinic,"Avenida Beethoven, Torre Financiera Piso 2, Colinas de Bello Monte",10.489416571115527, -66.8779053,,1,3,1,3,1,30,true,true,true,true,false
+Centro Nacional de Ortodoncia,"Edif Royal Palace, Plaza Brion de Chacaíto al lado del café Don Disco",10.491514738948055, -66.86859278990778,412-0216223,2,2,1,4,1,15,true,true,true,true,true
+Consultorio Odontológico La Campiña,"Torre 18, Piso 1, oficina 1-B, Av. El Mirador, con Calle Empalme.",10.497454091234344, -66.8737096,424-1387877,1,2,1,4,1,20,true,true,true,true,false
+Rosaldent,"Policlínica Americana. Piso 6, consultorio 6B",10.489568778581358, -66.86499982403765,412-6165119,2,3,2,4,1,40,true,true,true,true,false
+Clínica Odontológica La Florida,"Calle San Rafael, La Florida",10.50509804105824, -66.87687885705562,0424-171.43.86,3,2,1,4,1,20,true,true,true,true,false
+Dra. Magaly Romero Q.,"Av. Libertador, Edif. Libertador 75, Piso 7, Ofic. B, Caracas",10.496609939889185, -66.87435739697176,0212-762.32.49,2,2,1,4,1,30,true,true,false,true,false
+Odonto Especialidades CCS,"Av. Libertador, Torre Maracaibo. Piso 4, oficina 4-F",10.496748311976104, -66.87465167576087,0212-763.31.59,2,3,2,4,1,40,true,true,true,true,false
+Grupo Dental Acuario,"Av. Francisco Solano, Edif Galerias Bolivar, torre b, piso 3, ofic 36-B",10.495907512930478, -66.87919122783316,0212-763.57.98,2,3,2,4,1,35,true,true,true,true,false
+Clínica Dental Tecnosonrisas,"Calle Chacaito, Edf. Vittoria, Piso 1. Ofc 18",10.490727288885196, -66.87022122449801,,1,3,3,4,1,20,true,true,true,true,true
+Centro Campo Alegre Especialidades Odontológicas,"Av. Francisco de Miranda, Edif. Roraima",10.491872380346742, -66.86340588341278,424-1580859,1,3,2,4,1,20,true,true,true,true,true
+BIOSALUD,"Av. Francisco de Miranda, Torre Profesional La California, Piso 11, Ofic. 11-1",10.480604137624237, -66.8179830044222,0412-7052727,2,3,1,12,1,20,true,true,true,true,true
+Punto Dental,"Av. Santiago de León de Caracas, La California Norte",10.481371104227794, -66.81948252520652,0412-8298536,2,2,2,12,1,20,true,true,true,true,true
+Mundo Ortodoncia,"Av. Francisco de Miranda, C.C. Unicentro El Marqués , nivel 3, local 307-308",10.482583981178937, -66.8182583165579,0416-6107984,3,3,2,12,1,30,true,true,true,true,true
+DentoSmile,"Av. Francisco de Miranda, C.C. Unicentro El Marqués , nivel 1, local 218",10.483495749486464, -66.81881009986046,0412-2152220,1,3,1,12,1,20,true,true,,true,true
+Odontólogo José Lara,"Av. Francisco de Miranda. Torre Profesional La California , piso 5. Consultorio 5-1",10.480563672371343, -66.81805648091026,0414-2824842,1,2,1,12,1,50,,true,true,true,false
+Bienestar Salud,"Av. Rómulo gallegos , Centro Aloa planta principal ,local M36",10.494790892996125, -66.8157873742589,0212-2382441 / 0412- 5304061,2,3,1,12,1,20,true,true,true,true,true
+Contino Dental Group,"Pirámide invertida del CCCT. Piso 5, consultorio 512",10.485624065073509, -66.85405783838648,4125303305,3,3,2,6,1,0,true,true,true,true,false
+Grupo Odontológico Integral,"Av. Francisco de Miranda. Edificio Cosmos. Mezzanina, Oficina G",10.491782904325134, -66.85740644655007,424-1625828,1,2,1,6,1,50,true,true,true,true,false
+"DENTAL VIP, Especialidades Odontológicas S.C.","Av. Libertador, Multicentro Empresarial del Este, Torre Miranda, Núcleo A, Piso 14, Ofic. 143-A, Chacao, Caracas",10.49255548208667, -66.85410664603498,0212-261.52.51,2,2,1,6,1,30,true,true,true,true,false
+Clínica Dental Hallak,"Calle Cecilio Acosta, Chacao, Caracas 1060, Miranda",10.495885378452531, -66.85430481534499,0414-130.62.90,2,2,1,6,1,20,true,true,true,true,true
+Dra. Maria Pompei Spena (Centro Clínico San José),"Av. José Felix Rivas, con Mohedano, Centro Clínico San José, Nivel 3, Consultorio 31, Chacao, Caracas",10.496094175528613, -66.8535788,0212-265.99.41,1,2,1,6,1,20,false,true,false,true,false
+iDent Centro Odontológico,"Calle Sucre, Edificio Don Emilio Planta Baja. Local B, Caracas 1060, Miranda",10.49440568006756, -66.85390960000001,0212-265.15.12,1,3,1,6,1,30,true,true,true,true,false
+Consultorio Dr. Ana Abreu,Edificio Caro. Piso 2. Oficina 23-A,10.493606883301757, -66.85308940185372,424-1659786,1,2,1,6,1,15,true,true,true,true,false
+Espacio Salud Bucal,Edificio Caro. Piso 3. Oficina 31,10.493587556245803, -66.85290436954645,424-1599442,1,2,1,6,1,35,true,true,true,true,false
+Clínica Dental Dr. Carlos Bosque,Centro Perú. Piso 3. Oficina 34,10.492520943813698, -66.8553773,212-2669597,1,2,1,6,1,20,true,true,true,true,false
+Consultorio Odontológico,"Centro Profesional Miranda. Piso 5, local 5-B",10.491981394558271, -66.85685358650875,212-2646610,1,2,1,6,1,40,true,true,true,true,false
+Od. Jesica De Sousa,"Chacao, Torre EXA, Caracas.",10.490649152507233, -66.85944804844236,424-1595583,1,3,2,6,1,30,true,true,true,true,true
+Romano's Dental,"Sambil, Ccs. Nivel Autopista Plaza Jardin",10.490011217704682, -66.85416822834124,212-6888093,2,3,1,6,1,50,true,true,true,true,false
+Centro de Especialidades Odontológicas,"Av. Araure (Ppal. De Chuao), Edif. CEO, Chuao.",10.482426047598498, -66.8456118576725,0414-324.29.41 / 0212-991.90.66,3,3,2,9,1,100,true,true,true,true,true
+Centro Odontológico Tamanaco,"CCCT, Torre D 210",10.483898255384219, -66.85472529110311,212-9593824,1,3,2,9,1,50,true,true,true,true,false
+BlancoNassif,"CCCT, Pirámide Invertida",10.484417192143015, -66.85508384846365,212-9598458,1,3,2,9,1,80,true,true,false,false,false
+Unidad Odontólogica Los Dos Caminos,"Av. El Carmen, Edif.Centro, Los Dos Caminos",10.494562549366188, -66.83140871822894,212-2370863,2,2,2,10,1,20,true,true,true,true,true
+Zdent,"C.C Millennium Mall, Av. Rómulo Gallegos a Torre de Oficinas, piso 4 4-02, Local N. 202",10.495552462665572, -66.83247329716762,412-6833078,3,3,1,10,1,80,true,true,true,true,true
+CMO DentalClinic,"Sobre Maxi Donas, Torre Empresarial Qvrada, Avenida Sucre de, Nivel Mezanina",10.496480905163581, -66.83430673654675,414-4395532,2,3,1,10,1,60,true,true,true,true,false
+Unidad Radiológica Millenium,"C.C Millennium Mall, Av. Rómulo Gallegos a Torre de oficinas, piso 2, Local N. 202",10.495443405323838, -66.8326975055612,424-2511400,2,3,1,10,1,20,true,true,true,true,true
+Consultorio Odontológico Recalub,"Edificio Matilde, Ala A. Piso 1, Oficina 1-2. Av. Rómulo Gallegos, Av. el Carmen",10.495920011802626, -66.83072649013911,412-4643567,1,3,1,10,1,10,true,true,true,true,true
+Consultorio Odontológico GF,"Av. Francisco de Miranda, Edificio Miravila, Piso 2",10.484094428257377, -66.82047075818761,412-4643567,2,2,1,10,1,10,true,true,true,true,true
+Star Dental Group,"Av. Francisco de Miranda, con Av. Ppal de los Ruices, Centro Empresarial Miranda. Nivel Mezzanina",10.491518108802698, -66.82949419957127,0414-3395198,1,2,1,10,1,15,true,true,false,true,false
+OKYS Dental,"Av. Francisco de Miranda con Calle Los Laboratorios. C.E. QUORUM, piso 2, Oficina 2-F",10.490210912065873, -66.82808387926637,424-1656746,1,3,1,11,1,0,true,true,false,true,true
+BO Medical,"Calle San Isidro, entre Av. Rómulo Gallegos y 4ta transversal",10.492313340678876, -66.82175031492703,0424-1232337,1,1,1,11,1,30,true,true,true,true,false
+Asociación Damas Salesianas,"Av. Romulo Gallegos, Montecristo, Boleita",10.494196838372774, -66.82531839293725,4127274212,1,2,2,11,1,20,true,true,true,true,true
+Sonríe Clínica Odontológica,Av. Principal de las Mercedes,10.482299560268006, -66.8621966352953,212-9936895,3,2,1,5,1,25,true,true,true,true,true
+Sanadent,"Edificio California Mall, Mezzanina, Local 5",10.481509263713692, -66.86208450854156,212-9934014,1,2,1,5,1,40,true,true,true,true,false
+OdontoSpa,Centro Comercial Automercado. Local S-06. Av. Principal de Las Mercedes,10.485988021094645, -66.86502735151907,212-9934019,2,3,1,5,1,20,true,true,true,true,false
+DentalWorld,"Entre 4 av y 1 transversal de los Palos Grandes, Edificio Caroni piso1 Oficinas 2 y 3",10.498872742985284, -66.84292742883625,414-3012221,1,2,1,8,1,40,true,true,true,true,true
+Dra. Carmen Arvelo,"Los Palos Grandes, Edif Pascal TorreB , Piso 1 Of,11-B",10.49837150744799, -66.84175337751448,424-1959035,2,3,3,8,1,20,true,true,true,,true
+OD Mónica Mata,"Zona Colonial de Petare, Calle La Paz, Planta Baja",10.477614271488626, -66.80970984261232,414-1047363,1,2,3,15,1,0,true,,,,true
+Centro Médico Odontológico Corazón de Jesús,"Zona Colonial de Petare, Calle La Paz",10.477405249479558, -66.80776708650876,0212-2381879,1,3,3,15,1,5,true,true,true,true,true
+Mente y Cuerpo Sano,"Av. Habana, esquina con Av. Quito",10.497827898225044, -66.88269427678944,0212-7934744,2,2,3,1,1,40,true,true,true,true,true
+AvilaFlex,"Av. Libertador/ Edf. Lalinea, Torre B, piso 15",10.498283454953016, -66.88160876041157,412-0293627,1,3,3,1,1,20,true,true,true,true,true
+Oral Art,"C.C El Recreo. Torre Sur. Piso 12, oficina 12-2",10.491470233788027, -66.87686590422257,412-6160142,2,3,1,2,1,30,true,true,true,true,true
+Unidad Odontológica Tamanaco,"C.C El Recreo. Torre Sur. Piso 5, oficina 56",10.49148323319516, -66.8771080192612,412-6376616,2,2,2,2,1,20,true,false,true,true,true
+Dr. Pedro J. Dib Aguerrevere,"Centro Profesional del Este,Piso 3, Ofic. 34, Av. Casanova, Calle Villaflor, Sabana Grande",10.492433823913172, -66.87906552755395,0212-762.42.45,1,2,1,2,1,70,false,false,false,true,false
+Ecoclinic,"Av. Libertador, entre avenidas Los Jabillos y Las Acacias, edif Siclar, planta baja",10.497468917722397, -66.87969298671203,0412-579.76.18,2,2,2,2,1,15,true,true,true,true,false
+Odonto Lógica,"Av Libertador, entre avenidas Los Jabillos y Las Acacias, edif Siclar, piso 2, odic. 23",10.497478242044929, -66.87924918038941,0414-298.73.34,2,2,2,2,1,20,true,true,true,true,false
+Danic Dental 2021. Sede Av. Baralt,"Av. Oeste 5, Esq. De Toro a Balconcito, Parroquia Altagracia",10.510916725042977, -66.91760335751829,0424-228 0823,2,3,3,26,2,5,true,true,true,true,true
+Unidad Crismar,"Av. Urdaneta, Centro Profesional Urdaneta",10.507404534439925, -66.9116440536596,0414-208.88.27,2,2,2,23,2,0,true,true,true,true,true
+Umol,"Av. Urdaneta, Edf. Caoma",10.507783511997914, -66.91220731295462,0426-104-88.66,2,2,1,23,2,10,true,false,true,true,false
+Consultorio Odontológico LF,"Av. Fuerzas Armadas, San Luis, Edf. del Valle",10.499605971771283, -66.91028670952964,0212-425.29.28,2,2,2,23,2,0,true,true,false,true,false
+Zona Dental,"Av. Fuerzas Armadas, Esq. Crucesita a San Miguel, Edf, Mireya",10.51090133453851, -66.90804705437836,0212-551-89-51,2,3,2,23,2,5,false,false,false,true,true
+Centro Médico Karam,"Edif. Centro Ejecutivo, La Hoyada",10.503372426384521, -66.91123725911605,"0424-109,44,58",2,2,2,23,2,20,true,true,false,true,false
+Grupo Odonto Médicos,"Mijares a Capilla, Av. Urdaneta, Edificio Insbanca",10.508585690419567, -66.91435548366532,414-0531381,1,3,2,23,2,20,true,true,true,true,true
+Centro Clínico Odontológico,"Av. Lecuna, Diagonal a Nvo. Circo",10.500079422704358, -66.91194510664397,0424-193.77.33,2,2,1,25,2,5,true,true,true,true,true
+Tu Odontóloga La Candelaria,"Av. Urdaneta, Edf. Doral",10.50631383025862, -66.90550883491846,0212-578-30.66,1,3,1,22,2,15,true,true,true,true,true
+Clínica Dental,"Av. Urdaneta Centro Profesional, Ofc. 4c Piso 4",10.507251091475377, -66.9116325576725,0414-265.35.72,2,2,2,22,2,0,true,true,false,true,false
+Centro Odontológico Daolin,"San José, Calle Santa Isabel",10.515153540785365, -66.90925118337934,0212-564.81.70,3,3,1,24,2,0,true,true,true,true,true
+Tu Mundo Dental,"Av. Lecuna, Frente Teatro Municipal",10.500604699340737, -66.91537977786376,0212-484.45.79,1,2,2,28,2,20,true,true,true,true,true
+Clínica Integral VDSG 2011,"Avenida Oeste 16, entre Av. Sur 2 y Sur 4",10.496813574644658, -66.91739569755404,424-1329473,2,2,3,28,2,10,true,true,true,true,true
+Dispensario Santo Domingo Savio,"Av. Guzman Blanco, Vereda 91",10.446860052392374, -66.92653018950755,,1,2,1,43,3,5,true,true,true,true,false
+Odontoestética,"Av. Capitán de Navía Felipe Estévez, Local 6 PB, El Cementerio.",10.478713249351985, -66.916523,0212-633.56.52,2,2,1,38,3,10,true,true,true,true,true
+Consultorio Odontológico,"Calle el Degredo, Nro. 18, Local 18D, El Cementerio.",10.477977499330217, -66.91753872883622,0414-254.08.70,1,3,1,38,3,15,true,true,true,true,false
+Unidad Médica Santa Lucía,"Av. Capitán de Navía Felipe Estévez, entre Bogota y Providencia, Los Castaños, El Cementerio.",10.47887891242557, -66.916308,0414-117.24.38,1,3,1,38,3,5,true,false,false,true,false
+Mana. Especialidades ORTOPLUS,"Av. Principal del Cementerio, Centro Ciudad Comercial El Cementerio, P.A., Local 1-PA.",10.483864097857191, -66.91299642883624,0424-168.05.75,3,3,2,38,3,10,true,true,true,true,true
+Centro de Bienestar Social Las Acacias,"Transveral 7, entre Av. Los Samanes y Calle Atrás de los Totumos, Casa Gladys Mariana #43",10.47679424970842, -66.91136342883624,0212-631.69.82,3,2,1,38,3,20,true,true,true,false,false
+Odonto Angeles,"Av Nueva Gradana, El Peaje.",10.486435386801578, -66.90933220426268,212-6333623,1,2,1,38,3,20,true,true,false,false,true
+"Ortho Denten, CA.","Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 5",10.467293715223272, -66.90475243574332,0426-5139031,2,3,2,41,3,0,true,true,true,true,false
+Denten CA,"Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 6",10.467434305729881, -66.90492028546127,0414-9135053,2,2,2,41,3,0,true,true,true,true,true
+Grupo Médico Odontológico Dra. Zaraell Lopez Rodriguez,"Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 7",10.46739474213956, -66.90472180199069,0212-6723890,1,2,2,41,3,10,true,false,true,true,false
+MCO Grupo Odontológico,"Av. Intercomunal El Valle, Centro Comercial el Valle, Piso 9",10.467220662282218, -66.90472448419975,0412-0119845,1,2,1,41,3,0,true,true,true,true,false
+Unidad Médica y Odontológica Inty Salute,Centro Comercial El Valle / Piso 3,10.467315614943802, -66.9045581872379,414-2455581,1,2,3,41,3,5,true,false,true,true,false
+Centro Médico Alianza,Centro Comercial El Valle / Piso 4,10.467256269533713, -66.90495515417908,416-6322087,1,2,2,41,3,0,true,true,true,false,false
+Dental Art,"Centro Comercial Los Chaguaramos, Nivel PB, Local 19, Los Chagauaramos.",10.486357648938856, -66.88441168220905,0424-206.63.55,1,3,1,46,3,20,true,true,true,true,false
+MENAS RADIOGRAPHIC CENTER,"Centro Comercial Los Chaguaramos, Piso 11, Ofic. 11-7, Los Chaguaramos.",10.486027026688339, -66.88446496986461,0212-661.18.98,1,3,1,46,3,20,true,true,true,true,true
+Undamo,"Calle Risquez, entre Av. Ciencias y Facultad. Qta. Clager, Los Chaguaramos.",10.484110847515284, -66.8886438,0212-661.50.28,3,3,1,46,3,40,true,true,true,true,false
+I.M.Q Dr. Jimenez Rojas,"Calle Humboldt, Edif. Instituto Médico Dr. Jiménez Rojas, Urb. Los Chaguaramos.",10.486080994528692, -66.88634958465501,0414-302.97.33,3,3,1,46,3,30,true,true,true,true,true
+CEM Centro de Especialidades Médicas,"C. C. Los Proceres, Nivel 1, Local CSIIIPI-02, III Etapa, Los Ilustres.",10.473037669318378, -66.89461009692735,0424-144.79.68,2,3,1,48,3,20,true,true,true,true,true
+Centro Médico Odontológico Garcia Lovera,"Av. Intercomunal El Valle, Calle 8",10.459425813985508, -66.91633353156476,0412-6719921,2,2,1,42,3,10,true,false,true,true,false
+Centro Médico Odontológico Salto Angel,"Av. Intercomunal El Valle, Calle 14",10.456461839529657, -66.91858577397056,0212-6823052,1,2,1,42,3,30,true,false,true,true,true
+Unidad Odontológica Integral,"Av. Intercomunal El Valle, Calle 11",10.458072907326727, -66.9177047845779,0212-6812852,1,2,2,42,3,5,false,true,true,true,false
+Clínica Dental FK13.13 C.A,Calle La Paz de Antímano,10.462619336247679, -66.98467989660823,,1,1,1,61,4,10,true,true,false,true,false
+Centro Médico Milenio,"Centro Comercial Los Molinos, San Martín",10.491379494119185, -66.94181110172443,,1,2,1,54,4,10,true,true,false,true,true
+Elohim Grupo de Especialidades Médica,"Centro Comercial Los Molinos, San Martín",10.49130489806025, -66.94174661704507,,1,2,1,54,4,10,true,true,false,true,true
+Clínica Odontológica,"Av. José Antonio Paez, frente a la estación de servicos PDV, El Paraíso el Torreon, piso 2",10.486729921750841, -66.93333792840755,412-0112156,2,3,3,53,4,5,true,true,true,true,true
+Paraiso Dental,"C.C. Centro Paez, El Paraíso",10.490583396025073, -66.9249658,212-4819776,2,3,3,53,4,10,true,false,true,false,false
+Centro Integral,"Avenida Los Samanes , C.C. Euro",10.49072978558696, -66.92446862852901,412-3743622,3,3,3,53,4,10,false,false,false,false,false
+EO Diagnóstico,"Avenida Los Samanes, C.C. Euro",10.490640185452209, -66.92449722564581,212-4814845,2,3,3,53,4,10,false,false,true,true,false
+Centro Médico Odontocosmético Paraíso,"Centro Profesional El Paraiso, piso 1 Oficina 104",10.484389997713832, -66.9359658576725,212-4519957,2,2,1,53,4,10,true,true,true,false,false
+Centro Comunitario de Atención Integral CECAMI,"Calle Principal de Santa Cruz, Las Adjuntas",10.425183673734889, -67.01574248556993,,1,2,2,65,4,5,true,true,false,true,false
+Centro Médico Dr. Vargas,"Calle El Río, Las Adjuntas",10.42580542735316, -67.01574096035844,,1,3,1,65,4,5,true,true,false,true,false
+Clínica Dental Dr. Leonardo Ramirez,"La Paz, Avenida Rotaria",10.487188310770188, -66.94619506248782,414-2114486,1,2,1,55,4,10,true,true,false,true,true
+Centro Médico Odontológico LPG C.A.,C. Los Bloques,10.468629294191686, -66.94512686260805,412-1256897,1,3,2,57,4,5,true,false,true,true,false
+Consultorio Odontológico.,Calle San Antonio,10.469966571139244, -66.94678148356817,212-4717386,1,3,3,57,4,5,true,true,true,true,false
+Consultorio Doctora Grajales Lara.,"Calle San José, C.C. El Colonial",10.469563301312329, -66.94792742883624,412-5907019,1,3,2,57,4,5,false,false,false,true,false
+Grupo Odontológico I.C.E.,"Calle San José, C.C. El Colonial",10.469495428002077, -66.94791972883624,212-8302656,2,1,2,57,4,5,false,false,false,true,true
+Danic Dental 2021. Sede La Vega,"Calle San José, La Vega",10.469217839727024, -66.94771747313008,414-0295339,2,3,3,57,4,5,true,true,true,true,true
+Centro Médico Odontológico Dra. Yeina Oropeza,"C.C. Caracas piso 2, Montalban",10.472432201465999, -66.9601667,212-4420941,2,3,2,58,4,20,false,true,true,false,false
+Especialidades Odontológicas,C.C. La Villa PB. local 1,10.47384210104351, -66.95639962883624,412-3729832,2,3,2,58,4,20,false,true,false,true,false
+Son Rysa,C.C. La Villa PB,10.473309115627236, -66.95623190110368,424-1374093,2,3,2,58,4,20,false,true,false,false,false
+Centro de Especialidades Odontológicas CEO La Villa,C.C. La Villa P1 Montalban,10.473480257174273, -66.95661080640801,0212-4421457/0212-4432745,2,3,3,58,4,20,true,true,true,true,true
+CDZ Tu Sonrisa es Importante,"Centro Comercial Caracas, Piso 2, Montalban 3",10.472421624700191, -66.9602057545765,412-9815746,1,3,3,58,4,20,true,true,true,true,false
+Grupo Médico Popular Caricuao Plaza,Avenida Principal de Ruiz Pineda Centro Comercial Caricuao Plaza,10.43434461415806, -66.99996147116376,,1,3,1,63,4,5,true,true,false,true,true
+Medical Center Ruiz Pineda,UD7 Caricuao Frente a Biblioteca Aquiles Nazoa,10.437330896476794, -66.99221150880118,,1,3,1,63,4,5,true,true,false,true,false
+Centro UD5 Caricuao,UD5 Caricuao Centro Comercial Procar Frente Clínica Popular Caricuao,10.433861165756172, -66.9633245576725,,1,2,1,66,4,5,true,true,false,true,true
+Centro Profesional Baruta,"Calle Bolivar #21, edif, Villa Carmen",10.434256996456698, -66.87561574247776,0412-0179337,2,2,1,68,5,10,,true,true,,
+BaruDent,"Calle Sucre, Caracas 1080, Miranda",10.435462635982628, -66.87355158345987,0212-9422928,3,3,2,68,5,20,true,true,true,true,true
+Unidad Médica Plaza Baruta,"Baruta, Calle Negro Primero",10.434583128084924, -66.87535356086585,0212-9459546,2,3,2,68,5,30,,,true,true,
+Angel Correa (Consultorio Odontológico),"Calle Bolívar con Calle Urdaneta, Edif. Dulcura, Baruta",10.434305469032633, -66.87656168991647,424-8259839,2,3,2,68,5,20,false,true,true,true,true
+Centro Médico Integral Las Minas,AV. Principal Las Minas de Baruta,10.447463864572667, -66.86255998650874,0212-9441351,2,2,2,68,5,5,true,true,true,true,
+Dra. Ana Karina Albero,Carretera Baruta-Las Minas de Baruta,10.447663087391804, -66.86249961652942,0424-2132684,1,1,1,68,5,10,true,true,true,true,true
+Centro Odontomédico Las Minas,Las Minas de Baruta,10.447924993009979, -66.86221736485147,212-9411079,2,3,3,68,5,10,true,true,true,true,true
+Unidad Radiológica 2G Dr. Elina Grippa G.,"C.C. Terra Plaza, piso 2",10.446423407098191, -66.87062289795948,212-9777359,2,3,2,67,5,0,false,false,false,true,true
+Sistema Integral de Salud Oral Sis,"C.C. Terra Plaza, piso 2",10.446888797600886, -66.87076410426324,212-9765469,2,3,2,67,5,80,true,true,true,true,false
+Centro de Planificación Digital Retex TR3SD,"C.C. Terra Plaza, piso 2",10.44680874401853, -66.8709180306535,412-5555277,2,3,1,67,5,0,false,false,false,false,true
+Zonadental,"C.C. Terra Plaza, piso 2",10.446620226585202, -66.87062185547416,424-1719388,2,3,2,67,5,60,true,true,true,true,true
+Unidad Odontológica La Pirámide,"C.C. Pirámide, planta baja",10.453191661591921, -66.87084228835182,412-7774332,2,3,2,67,5,60,true,true,true,true,true
+Duran Studio Dental,"C.C Terras Plaza, nivel C1",10.446738776702828, -66.87066007691271,0414-2223687,2,3,2,67,5,60,true,true,true,true,
+Odonto Tepuy,Edif. Trinidad Tepuy Piso 3,10.431192018276745, -66.84913012904292,424-1622111,2,3,1,71,5,30,true,true,true,true,true
+Dra. Ana Maria Quijano,"Av. Principal de La Trinidad, Caracas 1080, Miranda",10.433679667852928, -66.86383244650187,0212-9444679,2,3,2,69,5,30,true,,,true,
+Centro Odontológico Sorocaima,"Av. Principal de La Trinidad, entre Calle San José y Calle San Enrique",10.43367757553171, -66.86382712528778,212-9451424,2,3,2,69,5,0,false,true,true,true,true
+Dental Center by Dr. Dam Caracas,"Av. Principal de La Trinidad, entre Calle San Pedro y Calle San Ernesto",10.433954444192958, -66.86169884402946,212-9414191,3,3,2,69,5,40,true,true,true,true,true
+Oral-Systems,"Santa Fe, Edif. Artico, piso 1, ofic, 14-A, Av. José María Vargas",10.463623294729164, -66.86561530426299,212-9753542,1,3,3,72,5,0,false,false,true,true,false
+CCS3Dental,C.C. Santa Fe,10.466385994259857, -66.87146780426292,212-9752115,2,3,1,72,5,50,true,true,true,true,false
+DentalSmile,C.C. Santa Fe,10.466741554745044, -66.87143367116376,412-2222375,2,3,1,72,5,40,true,true,true,true,true

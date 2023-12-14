@@ -1,28 +1,37 @@
 nombre,direccion,latitud,longitud,telefono,tamano,limpieza,demanda,localidadId,zonaId,oftalmologiaGeneralDesde,tratamientoGlaucomaCataratas,protesisOculares,tratamientosEspecializados,oncologia,otros
-Centro de Cirugía Oftalmológica (CECOF),"Av. Francisco de Miranda, Torre Cavendes, piso 6.",10.4964082,-66.8496398,0212-8148993 / 0414-3361543,3,2,2,7,1,70,true,true,true,true,true
-Centro Nacional de Retina y Vitrio,"Av. Francisco de Miranda, Torre Delta piso 2, local C-D",10.4953849,-66.8520943,0414-3070670,2,3,1,7,1,80,true,true,true,true,true
-Unidad Oftamologica González Sirit,"Avenida Benaim Pinto, con Av. Luis Roche, Caracas, Miranda",10.504397,-66.8478662,4126137996,1,3,2,7,1,35,true,true,true,true,true
-Plus Óptica,Av. Ppal El Bosque Edificio Torre Credicard Piso P.B Local 18 Urbanización Chacaíto,10.4917383,-66.8702507,0414-915.03.63,1,2,1,4,1,35,true,true,true,false,true
-SOS Servicios Ópticos,C.C Chacaito. Nivel Semisótano,10.4915628,-66.8719597,2129533359,3,3,1,4,1,30,true,true,true,false,false
-Todoptica,C.C Chacaito. Local 152,10.4914513,-66.8722496,2129520674,2,2,2,4,1,30,true,true,true,false,true
-Unioptica,C.C Unico. Nivel Chacaito Local 9-B,10.4901342,-66.8709984,2129520239,2,2,1,4,1,20,true,true,true,false,true
-Optifacil,CC Chacaito semi sótano,10.4918743,-66.8695752,4265178323,1,3,2,4,1,35,true,true,true,false,true
-CODE Centro Oftalmológico Diagnóstico del Este,"Policlínica Americana. Piso 1, consultorio 1-C. El Rosal",10.4896053,-66.8654574,212-9512408,2,2,2,4,1,50,true,true,true,false,true
-Dr. Andreas W. Koch E.,"Policlínica Americana. Piso 6, consultorio 6-C. El Rosal",10.4894104,-66.8671531,212-9516358,2,2,1,6,1,50,true,true,true,false,true
-Vistal Óptica,"Local A, Calle Paez diagonal al hotel Campo Alegre, edf Caracas",10.4946016,-66.8589933,0212-264.53.82,1,3,1,6,1,50,true,true,true,false,true
-Clínica Oftalmológica Campo Alegre,"Calle 2, entre 4ta. Avenida y 2da. Transversal, Campo Alegre",10.4944685,-66.8600672,212-2665016,1,1,1,6,1,0,,,,,
-Centro Oftalmológico Chuao,"Av. Rio de Janeiro, Nro. 80, Chuao",10.4830877,-66.8429701,0212-991.96.28,3,3,1,9,1,80,true,true,true,true,true
-Unidad Oftamólogica Dr. Marcos Sambrano,"Av. Francisco de Miranda , Torre Profesional La California. Piso 7 ofic 7-2",10.480538,-66.8206521,0212-2712297 / 0424-1565828,2,2,1,12,1,40,true,true,true,false,true
-Leo's Óptica,"Av. Francisco de Miranda , C.C Unicentro El Marqués , Mezzanina",10.4834107,-66.8209984,0414-1530684,1,2,1,12,1,30,true,false,false,false,false
-Centro Visión 20/20,Av. Rómulo Gallegos Centro Comercial Aloa,10.4948729,-66.8183043,0212-2342753,1,3,1,12,1,35,true,true,true,false,false
-Bienestar Salud,"Av. Rómulo Gallegos, Centro Aloa, planta principal local M36",10.4948729,-66.8183043,0212-2382441 / 0412- 5304061,2,3,1,12,1,50,true,true,true,false,false
-Visionsalub,"Av Sure, Los dos caminos .Torre Centro ,P 8, Of-22",10.5001734,-66.8341294,0424-1968814,2,2,1,10,1,50,true,true,true,false,false
-Instituto Oftamológico de Tecnología Diagnóstica,"Av. Francisco de Miranda con Av. principal de Los Ruices, Centro Empresarial Miranda , piso 1. Oficina 1-N",10.4915976,-66.8321671,0424-2764029,3,2,1,10,1,60,true,true,true,true,true
-Humana Unidad Oftamológica,"Av. Universidad, Centro Empresarial, Piso 17",10.504085,-66.9154087,414-3690372,2,2,2,23,2,40,true,false,true,false,
-Angelooptic,"Av. Urdaneta, Centro Empresarial, PB",10.5071732,-66.9141975,412-2924290,1,3,2,23,2,20,true,false,true,false,
-Instituto de Otorrinolaringología y Oftalmología,"Av. Cajigal, Nro 48, San Bernardino",10.5131711,-66.9024291,212-5517664,3,3,2,20,2,50,true,true,,,
-Odontoestética,"Av. Capitán de Navía Felipe Estévez, Local 6 PB, El Cementerio.",10.4786394,-66.916523,0212-633.56.52,2,2,1,38,3,25,true,false,true,false,true
-Lecmar Unidad Médico Oftalmológico,"Av Presidente Medina, Edif Segucar P.B, Calles Chile e Internacional. Urb Las Acacias",10.4854279,-66.9038721,0212 634.4537,1,3,1,39,3,60,true,false,true,false,true
-I.M.Q Dr. Jimenez Rojas,"Calle Humboldt, Edif. Instituto Médico Dr. Jiménez Rojas, Urb. Los Chaguaramos.",10.4859122,-66.8863925,0412-129.53.89,3,3,1,46,3,30,true,true,true,false,true
-Unidad Médica Plaza Baruta,"Calle Negro Primero, entre C. Bolívar y Blvr. Cordova, Baruta",10.4345232,-66.877937,212-9459546,3,3,2,68,5,30,false,false,false,false,false
-Almedical,"Centro Comercial Concresa NIvel TD nivel de la radio, Av. Río Caura, Caracas 1080, Distrito Capital",10.4517596,-66.8753538,0424-1901166,2,3,1,67,5,50,true,,true,true,
+Centro de Cirugía Oftalmológica (CECOF),"Av. Francisco de Miranda, Torre Cavendes, piso 6.",10.496571703789932, -66.84704344666683,0212-8148993 / 0414-3361543,3,2,2,7,1,70,true,true,true,true,true
+Centro Nacional de Retina y Vitrio,"Av. Francisco de Miranda, Torre Delta piso 2, local C-D",10.494914881541733, -66.84979683850639,0414-3070670,2,3,1,7,1,80,true,true,true,true,true
+Unidad Oftamologica González Sirit,"Avenida Benaim Pinto, con Av. Luis Roche, Caracas, Miranda",10.504463590747394, -66.84752153614573,412-6137996,1,3,2,7,1,35,true,true,true,true,true
+Asociación Damas Salesianas Complejo Don Bosco,"Av. San Juan Bosco, entre Transv. 6 y 7 (Frente a la Clínica El Ávila)",10.505471339638788, -66.85071915520213,4126395257,2,3,3,7,1,30,true,false,false,false,true
+Plus Óptica,"Av. Ppal. El Bosque, Edificio Torre Credicard, Piso P.B, Local 18 Urbanización Chacaíto",10.491787508202616, -66.86766371747736,0414-915.03.63,1,2,1,4,1,35,true,true,true,false,true
+SOS Servicios Ópticos,C.C. Chacaito. Nivel Semisótano,10.491622173760595, -66.86939405708313,212-9533359,3,3,1,4,1,30,true,true,true,false,false
+Todoptica,C.C. Chacaito. Local 152,10.491491465374972, -66.8696720120449,212-9520674,2,2,2,4,1,30,true,true,true,false,true
+Unioptica,C.C. Unico. Nivel Chacaito Local 9-B,10.49017939156309, -66.86842555307773,212-9520239,2,2,1,4,1,20,true,true,true,false,true
+Optifacil,C.C. Chacaito semi sótano,10.492128805561856, -66.86899584285975,426-5178323,1,3,2,4,1,35,true,true,true,false,true
+CODE Centro Oftalmológico Diagnóstico del Este,"Policlínica Americana. Piso 1, consultorio 1-C. El Rosal",10.489543321475425, -66.86487536065076,212-9512408,2,2,2,4,1,50,true,true,true,false,true
+Dr. Andreas W. Koch E.,"Policlínica Americana. Piso 6, consultorio 6-C. El Rosal",10.489545958859711, -66.86483244530704,212-9516358,2,2,1,6,1,50,true,true,true,false,true
+Vistal Óptica,"Local A, Calle Páez, diagonal al hotel Campo Alegre, Edf. Caracas",10.49475588442298, -66.85767499427389,0212-264.53.82,1,3,1,6,1,50,true,true,true,false,true
+Centro Oftalmológico Chuao,"Av. Rio de Janeiro, Nro. 80, Chuao",10.483132536467227, -66.84288963372347,0212-991.96.28,3,3,1,9,1,80,true,true,true,true,true
+Unidad Oftamólogica Dr. Marcos Sambrano,"Av. Francisco de Miranda , Torre Profesional La California. Piso 7 ofic 7-2",10.4805617233971, -66.81807655486152,0212-2712297 / 0424-1565828,2,2,1,12,1,40,true,true,true,false,true
+Leo's Óptica,"Av. Francisco de Miranda , C.C Unicentro El Marqués , Mezzanina",10.483460426064678, -66.81842472751337,0414-1530684,1,2,1,12,1,30,true,false,false,false,false
+Centro Visión 20/20,Av. Rómulo Gallegos Centro Comercial Aloa,10.494911209431104, -66.81571951779091,0212-2342753,1,3,1,12,1,35,true,true,true,false,false
+Bienestar Salud,"Av. Rómulo Gallegos, Centro Aloa, Planta Principal, Local M36",10.494924396126395, -66.81571683557652,0212-2382441 / 0412- 5304061,2,3,1,12,1,50,true,true,true,false,false
+Asociación Damas Salesianas,"Av. Rómulo Gallegos, Montecristo, Boleita",10.494293755298076, -66.82531779434116,412-7274212,1,2,2,11,1,20,false,false,false,false,false
+Visionsalub,"Av. Sucre,  Torre Centro, PISO 8, Of-22, Los Dos Caminos",10.500322404113323, -66.83388019875144,0424-1968814,2,2,1,10,1,50,true,true,true,false,false
+Instituto Oftamológico de Tecnología Diagnóstica,"Av. Francisco de Miranda con Av. Principal de Los Ruices, Centro Empresarial Miranda , piso 1. Oficina 1-N",10.491806265071562, -66.82954038465628,0424-2764029,3,2,1,10,1,60,true,true,true,true,true
+Mente y Cuerpo Sano,"Av. Habana con Av. Quito, Plaza Venezuela",10.497836482498975, -66.88269035160398,0212-7934744,2,2,3,1,1,20,true,false,false,false,true
+Oftalmología Dr. Juan P. Pierluissi,"Av. Andres Bello, frente al Edif. Belloral",10.504014640651574, -66.88408315305708,212-7823321,1,2,2,1,1,30,true,false,false,false,false
+Optimundo,"Calle Villaflor. Edificio Ofimake, PB, local 1",10.493471882243663, -66.87894075428636,212-7615963,2,3,1,2,1,20,true,false,true,false,true
+Unidad Oftalmológica La Lagunita,"AV. Andrés Bello, Edif. POLICLÍNICA MÉNDEZ GIMÓN Piso 1. Ofc. 15 Urb. Las Palmas",10.503991602268309, -66.88219076501157,212-7820376,1,3,2,18,2,40,true,true,true,true,
+Humana Unidad Oftamológica,"Av. Universidad, Centro Empresarial, Piso 17",10.503758639401113, -66.91255973474941,414-3690372,2,2,2,23,2,40,true,false,true,false,
+Angelooptic,"Av. Urdaneta, Centro Empresarial, PB",10.507161425532026, -66.91160037116384,412-2924290,1,3,2,23,2,20,true,false,true,false,
+Instituto de Otorrinolaringología y Oftalmología,"Av. Cajigal, Nro 48, San Bernardino",10.5131031925382, -66.90210723492208,212-5517664,3,3,2,20,2,50,true,true,,,
+Odontoestética Sur,"Av. Capitán de Navía Felipe Estévez, Local 6 PB, El Cementerio.",10.478897872654933, -66.91650154232813,0212-633.56.52,2,2,1,38,3,25,true,false,true,false,true
+Leemar Unidad Médico Oftalmológico,"Av. Presidente Medina, Edif Segucar P.B, Calles Chile e Internacional. Urb Las Acacias",10.486318778386083, -66.90619405282345,212-634.4537,1,3,1,39,3,60,true,false,true,false,true
+I.M.Q Dr. Jimenez Rojas,"Calle Humboldt, Edif. Instituto Médico Dr. Jiménez Rojas, Urb. Los Chaguaramos.",10.486149567279686, -66.88605990608615,0412-129.53.89,3,3,1,46,3,30,true,true,true,false,true
+Unidad Médica Plaza Baruta,"Calle Negro Primero, entre C. Bolívar y Blvr. Cordova, Baruta",10.434539676267331, -66.8753567398929,212-9459546,3,3,2,68,5,30,false,false,false,false,false
+Almedical,"Centro Comercial Concresa NIvel TD nivel de la radio, Av. Río Caura, Caracas 1080, Distrito Capital",10.451792203288, -66.87277780000348,0424-1901166,2,3,1,67,5,50,true,,true,true,
+Vistamed Centro Oftálmico,"Macaracuay Plaza, Nivel C3",10.467826241933208, -66.81955555714178,424-1823768,2,3,2,73,5,25,true,true,true,false,true
+Unidad Oftálmica de Caracas,"Av. Circunvalación del Sol, Edif. Santa Paula",10.463305830844456, -66.83958043758012,212-9187700,2,3,2,73,5,50,true,true,true,true,true
+Oftalmológico Santa Lucia C.A.,Av. Principal del Cafetal,10.482071345299417, -66.84402727349274,212-9938008,2,3,3,73,5,70,true,true,true,false,
+Clínica Oftalmológica IUMO,Av. Principal de la Trinidad con Calle San José,10.434126064861044, -66.86353151142909,414-3052038,3,3,2,69,5,50,true,true,true,true,true

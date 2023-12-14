@@ -116,7 +116,7 @@ clinica_privada_dict = {
     'ginecologia': 'GINECOLOGÍA',
     'obstetricia': 'OBSTETRICIA',
     'cardiologia': 'CARDIOLOGÍA',
-    'perfilPreoperatorio': 'PERFIL PRE-OPERATORIO',
+    'perfilPreoperatorio': 'PERFIL PRE OPERATORIO',
     'rayosXDeTorax': 'RAYOS X DE TÓRAX',
     'tomografiaAbdominalPelvica': 'TOMOGRAFÍA ABDOMINAL PÉLVICA',
     'resonanciaCerebral': 'RESONANCIA CEREBRAL',
@@ -137,8 +137,60 @@ clinica_privada_dict = {
     'hospitalizacion': 'DÍA DE HOSPITALIZACIÓN',
     'telefono': 'TELÉFONOS'
 }
-grupo_medico_header = [] # TODO Fill
-grupo_medico_dict = {} # TODO Fill
+grupo_medico_header = [
+    "nombre","direccion","latitud","longitud", "telefono",
+    "tamano","limpieza","demanda",
+    "localidadId","zonaId",
+    "medicinaGeneral", "medicinaInterna",
+    "pediatria", "ginecologia", "obstetricia", "cardiologia",
+    "gastro", "neurologia", "medicinaFyR", "observacionesConsulta",
+    "rayosXDeTorax", "tomografiaAbdominalPelvica", "resonanciaCerebral",
+    "ecoAbdominal", "mamografia", "densitometriaOsea", "epirometria",
+    "eeg", "observacionesDiagnostico", "hematologiaCompleta", "perfil20", "perfilTiroideo",
+    "urocultivo", "heces", "orina", "perfilPreoperatorio",
+    "apendicectomia", "colicistectomiaLamparoscopica", "herniorrafiaIngiunal",
+    "cesarea", "partoNormal", "hospitalizacion"
+]
+grupo_medico_dict = {
+    'zonaId': 'ZONA',
+    'nombre': 'NOMBRE',
+    'direccion': 'DIRECCIÓN',
+    'tamano': 'TAMAÑO',
+    'limpieza': 'LIMPIEZA',
+    'demanda': 'DEMANDA',
+    'medicinaGeneral': 'MEDICINA GENERAL',
+    'medicinaInterna': 'MEDICINA INTERNA',
+    'pediatria': 'PEDIATRÍA',
+    'ginecologia': 'GINECOLOGÍA',
+    'obstetricia': 'OBSTETRICIA',
+    'cardiologia': 'CARDIOLOGÍA',
+    'gastro': 'GASTRO',
+    'neurologia': 'NEUROLOGÍA',
+    'medicinaFyR': 'MEDICINA F. Y R.',
+    'rayosXDeTorax': 'RAYOS X DE TÓRAX',
+    'tomografiaAbdominalPelvica': 'TOMOGRAFÍA ABDOMINAL PÉLVICA',
+    'resonanciaCerebral': 'RESONANCIA CEREBRAL',
+    'ecoAbdominal': 'ECO ABDOMINAL',
+    'mamografia': 'MAMOGRAFÍA',
+    'densitometriaOsea': 'DENSITOMETRÍA ÓSEA',
+    'epirometria': 'ESPIROMETRÍA',
+    'eeg': 'EEG',
+    'hematologiaCompleta': 'HEMATOLOGÍA COMPLETA',
+    'perfil20': 'PERFIL 20',
+    'perfilTiroideo': 'PERFIL TIROIDEO',
+    'urocultivo': 'UROCULTIVO',
+    'heces': 'HECES',
+    'orina': 'ORINA',
+    'perfilPreoperatorio': 'PERFIL PRE OPERATORIO',
+    'apendicectomia': 'APENDICECTOMÍA',
+    'colicistectomiaLamparoscopica': 'COLECISTECTOMÍA LAMPAROSCÓPICA',
+    'herniorrafiaIngiunal': 'HERNIORRAFÍA INGUINAL',
+    'cesarea': 'CESÁREA',
+    'partoNormal': 'PARTO NORMAL',
+    'hospitalizacion': 'HOSPITALIZACIÓN',
+    'observacionesConsulta': 'OBSERVACIONES CONSULTAS',
+    'observacionesDiagnostico': "OBSERVACIONES DIAGNÓSTICO"
+}
 
 def get_locations_dictionary() -> dict:
     dirname = os.path.dirname(__file__)
@@ -168,7 +220,9 @@ def get_lat_long(df: pd.DataFrame) -> pd.DataFrame:
     print('Getting latitude and longitude for each route')
     out = pd.DataFrame(columns=['latitud', 'longitud'])
     for index, row in df.iterrows():
-        lat, lon = convert_route_to_lat_long(row['LINK GPS. UBICACIÓN EXACTA'])
+        lat_lon = str(row['COORDENADAS']).split(',')
+        lat = lat_lon[0]
+        lon = lat_lon[1]
         if lon is None or lat is None:
             print('Error on row: ', row['NOMBRE'])
         else:
@@ -296,7 +350,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 3 and sys.argv[1] == 'imagen':
         table_name = sys.argv[1]
         migrations_path = sys.argv[2]
-        download_zips()
+        # download_zips()
         decompress_imagen()
         prepare_imagen(table_name, migrations_path)
         move_imagenes_to_storage()

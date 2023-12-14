@@ -1,5 +1,5 @@
 import { CreateCentroSaludDto } from '../create-centro-salud.dto';
-import { IsNotEmpty, IsCurrency, IsInt, Min, IsOptional } from 'class-validator';
+import { IsNotEmpty, IsCurrency, IsInt, Min, IsOptional, IsString } from 'class-validator';
 const decimals = [0, 1, 2];
 export class CreateGrupoMedicoDto extends CreateCentroSaludDto {
 
@@ -148,5 +148,13 @@ export class CreateGrupoMedicoDto extends CreateCentroSaludDto {
     @IsOptional()
     @IsCurrency( { digits_after_decimal: decimals } )
     hospitalizacion?: number;
+
+    @IsOptional()
+    @IsString()
+    observacionesConsulta?: string;
+
+    @IsOptional()
+    @IsString()
+    observacionesDiagnostico?: string;
 
 }

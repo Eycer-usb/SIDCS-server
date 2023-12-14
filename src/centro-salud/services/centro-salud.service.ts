@@ -32,26 +32,26 @@ export class CentroSaludService {
 
   async findAllCentrosDeSalud() {
     const list = [
-      ...(await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorio Clinico', route: "laboratorio-clinico"}, lab)}),
-      ...((await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centro Odontologico', route: "centro-odontologico"}, odonto)})),
-      ...(await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centro Oftalmologico', route: "centro-oftalmologico"}, oftalmo)}),
-      ...(await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clinica Privada', route: "clinica-privada"}, clinica)}),
-      ...(await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupo Medico', route: "grupo-medico"}, grupo)})
+      ...(await this.labRepository.find()).map(lab => { return Object.assign({tipoCentroSalud: 'Laboratorios Clínicos', route: "laboratorio-clinico"}, lab)}),
+      ...((await this.odontoRepository.find()).map(odonto => { return Object.assign({tipoCentroSalud: 'Centros Odontológicos', route: "centro-odontologico"}, odonto)})),
+      ...(await this.oftalmoRepository.find()).map(oftalmo => { return Object.assign({tipoCentroSalud: 'Centros Oftalmológicos', route: "centro-oftalmologico"}, oftalmo)}),
+      ...(await this.clinicaRepository.find()).map(clinica => { return Object.assign({tipoCentroSalud: 'Clínicas Privadas', route: "clinica-privada"}, clinica)}),
+      ...(await this.grupoRepository.find()).map(grupo => { return Object.assign({tipoCentroSalud: 'Grupos Médicos y U. Especializadas', route: "grupo-medico"}, grupo)})
     ]
     return list;
   }
 
   getIdCS(type:string){
     switch (type) {
-      case 'Laboratorio Clinico':
+      case 'Laboratorios Clínicos':
         return 'laboratorioClinico';
-      case 'Centro Odontologico':
+      case 'Centros Odontológicos':
         return 'centroOdontologico'
-      case 'Centro Oftalmologico':
+      case 'Centros Oftalmológicos':
         return 'centroOftalmologico';
-      case 'Clinica Privada':
+      case 'Clínicas Privadas':
         return 'clinicaPrivada';
-      case 'Grupo Medico':
+      case 'Grupos Médicos y U. Especializadas':
         return 'grupoMedico';
       default:
         throw new NotFoundException(`Type ${type} not found`);
@@ -160,23 +160,23 @@ export class CentroSaludService {
     switch (type) {
       case 'laboratorioClinico':
         repo = this.labRepository;
-        name = 'Laboratorio Clinico'
+        name = 'Laboratorios Clínicos'
         break;
       case 'centroOdontologico':
         repo = this.odontoRepository;
-        name = 'Centro Odontologico'
+        name = 'Centros Odontológicos'
         break;
       case 'centroOftalmologico':
         repo = this.oftalmoRepository;
-        name = 'Centro Oftalmologico'
+        name = 'Centros Oftalmológicos'
         break;
       case 'clinicaPrivada':
         repo = this.clinicaRepository;
-        name = 'Clinica Privada'
+        name = 'Clínicas Privadas'
         break;
       case 'grupoMedico':
         repo = this.grupoRepository;
-        name = 'Grupo Medico'
+        name = 'Grupos Médicos y U. Especializadas'
         break;
       default:
         throw new NotFoundException(`Type ${type} not found`);
